@@ -1,18 +1,24 @@
 # Speedbloom Motors
 
-Static site for an independent used-car dealership. Single self-contained
-`index.html` — vehicle photos are embedded as data URIs, so there are no
-external asset requests and no build step.
+Static site for an independent used-car dealership. No build step, no dependencies —
+`index.html` plus a folder of images.
 
-## Editing
+## Structure
 
-`template.html` (not committed) holds the markup with `{{IMG_*}}` placeholders.
-Rebuild `index.html` by substituting the base64 images back in. Source photos
-are placeholders from Wikimedia Commons; see the credit line in the footer.
+- `index.html` — the whole page (36 KB): head, inline CSS, markup, JSON-LD
+- `img/` — vehicle photography, 700w and 1400w variants served via `srcset`
+- `og-image.jpg` — 1200×630 link-preview card
+- `favicon.*`, `icon-*.png`, `apple-touch-icon.png`, `site.webmanifest` — icon set
+- `robots.txt`, `sitemap.xml`
 
-## Before going live for a real dealership
+All vehicle photography is public domain or CC0, so no attribution is required.
 
-- Remove the template banner at the top of `index.html`
-- Remove the final paragraph of the footer
-- Fill in the "Dealer details go here" block: address, phone, email,
-  NJ dealer licence number, map embed
+## Adapting for a dealership
+
+1. Replace `img/*` with the dealer's own photography (8:5 crop, 1400w and 700w)
+2. Update the six `<article class="car">` blocks and the matching JSON-LD entries
+3. Add address, phone and NJ dealer licence number — the `LocalBusiness` schema has
+   fields waiting for them, and NJ requires the licence number on dealer advertising
+4. Swap every absolute `https://speedbloom.github.io` URL for the live domain:
+   canonical, `og:url`, `og:image`, `twitter:image`, sitemap, robots and JSON-LD
+5. Regenerate `og-image.jpg` with the dealer's name
