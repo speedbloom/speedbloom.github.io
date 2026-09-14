@@ -1,4 +1,44 @@
-<title>Speedbloom Motors</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Speedbloom Motors | Independent Used Cars</title>
+<meta name="description" content="Independent used car dealership with six hand-picked vehicles on the lot, a 168-point inspection we publish in full, posted prices and no dealer prep fees.">
+<link rel="canonical" href="https://speedbloom.github.io/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0E2A33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F4F7F7" media="(prefers-color-scheme: light)">
+<meta name="format-detection" content="telephone=no">
+<meta name="color-scheme" content="light dark">
+
+<!-- icons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- link previews (iMessage, WhatsApp, Slack, social) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Speedbloom Motors">
+<meta property="og:title" content="Speedbloom Motors | Independent Used Cars">
+<meta property="og:description" content="Independent used car dealership with six hand-picked vehicles on the lot, a 168-point inspection we publish in full, posted prices and no dealer prep fees.">
+<meta property="og:url" content="https://speedbloom.github.io/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://speedbloom.github.io/og-image.jpg">
+<meta property="og:image:secure_url" content="https://speedbloom.github.io/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Speedbloom Motors — good cars, honest numbers, no theatre. Six vehicles from $9,850.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Speedbloom Motors | Independent Used Cars">
+<meta name="twitter:description" content="Independent used car dealership with six hand-picked vehicles on the lot, a 168-point inspection we publish in full, posted prices and no dealer prep fees.">
+<meta name="twitter:image" content="https://speedbloom.github.io/og-image.jpg">
+<meta name="twitter:image:alt" content="Speedbloom Motors — six vehicles on the lot, from $9,850.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root{
@@ -198,8 +238,90 @@
   footer a{color:#9FB5BC; text-decoration:none}
   footer a:hover{color:var(--gold)}
   .fine{padding-top:24px; font-size:12px; color:#7A9098; line-height:1.75; max-width:82ch}
-</style>
 
+  /* ================= mobile-first refinements ================= */
+  html{-webkit-text-size-adjust:100%}
+  body{overflow-x:hidden}
+  .w{padding-left:max(18px, env(safe-area-inset-left));
+     padding-right:max(18px, env(safe-area-inset-right))}
+
+  /* fluid type: scales with the viewport instead of jumping at breakpoints */
+  .hero h1{font-size:clamp(2.1rem, 8.4vw, 3.9rem)}
+  .hero p{font-size:clamp(1rem, 4.2vw, 1.19rem)}
+  .head h2, .fin h2, .prose h2{font-size:clamp(1.55rem, 6.2vw, 2.25rem)}
+  .stat .k{font-size:clamp(1.65rem, 7vw, 2.125rem)}
+  .v h3{font-size:clamp(1.12rem, 4.8vw, 1.28rem)}
+  .money .p{font-size:clamp(1.45rem, 6.4vw, 1.69rem)}
+  .prose p.lead{font-size:clamp(1.05rem, 4.4vw, 1.19rem)}
+  summary{font-size:clamp(1rem, 4.3vw, 1.09rem)}
+
+  /* never let a card force a sideways scroll on a narrow phone */
+  .cars{grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr))}
+  .checks{grid-template-columns:repeat(auto-fit,minmax(min(215px,100%),1fr))}
+  .band .w{grid-template-columns:repeat(auto-fit,minmax(min(150px,45%),1fr))}
+
+  /* tap targets: 44px minimum, per iOS guidance */
+  .pill{min-height:44px; display:inline-flex; align-items:center; justify-content:center}
+  .chip{min-height:40px; display:inline-flex; align-items:center}
+  summary{min-height:52px}
+  .hnav a{padding:6px 0; display:inline-block}
+  footer a, .hrs td a{padding:3px 0; display:inline-block}
+
+  /* horizontally scrollable filter chips instead of a wrapped pile */
+  @media (max-width:640px){
+    .chips{flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none;
+           margin-inline:-18px; padding-inline:18px; scroll-snap-type:x proximity}
+    .chips::-webkit-scrollbar{display:none}
+    .chip{flex:0 0 auto; scroll-snap-align:start}
+  }
+
+  /* mobile nav: the desktop list is hidden, so give phones a real menu */
+  .menu{display:none; background:var(--card); border:1.5px solid var(--edge);
+        border-radius:100px; width:44px; height:44px; align-items:center;
+        justify-content:center; cursor:pointer; flex:0 0 auto; color:var(--ink)}
+  .menu svg{width:20px; height:20px}
+  .mnav{display:none; background:var(--card); border-bottom:1px solid var(--edge)}
+  .mnav[data-open="true"]{display:block}
+  .mnav ul{list-style:none; margin:0; padding:6px 0 12px;
+           display:flex; flex-direction:column}
+  .mnav a{display:block; padding:13px 0; font-family:var(--disp); font-weight:600;
+          font-size:17px; color:var(--ink); text-decoration:none;
+          border-bottom:1px solid var(--edge-2)}
+  .mnav li:last-child a{border-bottom:0}
+
+  @media (max-width:940px){
+    .menu{display:flex}
+    header .w{gap:12px}
+    header .pill{padding:11px 16px; font-size:14px}
+    .logo .t{font-size:20px}
+    .bloom{width:34px; height:34px}
+    .bloom svg{width:19px; height:19px}
+  }
+  @media (max-width:420px){
+    .logo .s{display:none}
+    header .pill{padding:11px 14px}
+  }
+
+  /* tighter vertical rhythm on small screens */
+  @media (max-width:640px){
+    section{padding:40px 0}
+    .hero{padding:34px 0 30px}
+    .band .w{padding-top:26px; padding-bottom:26px; gap:20px}
+    .cars{gap:18px}
+    .v .body{padding:16px 16px 18px}
+    .lease, .ck, .slot{padding:19px 18px}
+    .prose h3{margin-top:26px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+  }
+  html{scroll-behavior:smooth}
+  :focus-visible{outline:3px solid var(--gold); outline-offset:2px; border-radius:4px}
+
+</style>
+</head>
+<body>
 <div class="demo">Template preview · <b>Speedbloom Motors</b> is a sample dealership — contact details are intentionally left blank for the dealer to fill in</div>
 
 <header>
@@ -217,8 +339,21 @@
       <li><a href="#about">About</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a class="pill" href="#stock">View Inventory</a>
+    <div style="display:flex; align-items:center; gap:10px">
+      <a class="pill" href="#stock">View Inventory</a>
+      <button class="menu" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mnav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
   </div>
+  <nav class="mnav" id="mnav"><div class="w"><ul>
+    <li><a href="#stock">Inventory</a></li>
+    <li><a href="#inspection">Our Inspection</a></li>
+    <li><a href="#finance">Financing</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul></div></nav>
 </header>
 
 <section class="hero" id="top">
@@ -520,3 +655,72 @@
     </p>
   </div>
 </footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["AutoDealer","LocalBusiness"],
+      "@id": "https://speedbloom.github.io/#dealer",
+      "name": "Speedbloom Motors",
+      "description": "Independent used car dealership with a small hand-picked inventory, a published 168-point inspection, posted prices and no dealer prep fees.",
+      "url": "https://speedbloom.github.io/",
+      "logo": "https://speedbloom.github.io/icon-512.png",
+      "image": "https://speedbloom.github.io/og-image.jpg",
+      "foundingDate": "2009",
+      "priceRange": "$$",
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Cash, Financing",
+      "openingHoursSpecification": [
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"09:00","closes":"19:00"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"09:00","closes":"18:00"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"17:00"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"00:00","closes":"00:00"}
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Vehicle inventory",
+      "numberOfItems": 6,
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"item":{"@type":"Car","name":"2022 Kia Telluride EX AWD","brand":{"@type":"Brand","name":"Kia"},"model":"Telluride","vehicleModelDate":"2022","mileageFromOdometer":{"@type":"QuantitativeValue","value":31700,"unitCode":"SMI"},"driveWheelConfiguration":"https://schema.org/AllWheelDriveConfiguration","offers":{"@type":"Offer","price":"35400","priceCurrency":"USD","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/UsedCondition"}}},
+        {"@type":"ListItem","position":2,"item":{"@type":"Car","name":"2020 Chevrolet Silverado 1500 LT 4x4","brand":{"@type":"Brand","name":"Chevrolet"},"model":"Silverado 1500","vehicleModelDate":"2020","mileageFromOdometer":{"@type":"QuantitativeValue","value":54800,"unitCode":"SMI"},"driveWheelConfiguration":"https://schema.org/FourWheelDriveConfiguration","offers":{"@type":"Offer","price":"32600","priceCurrency":"USD","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/UsedCondition"}}},
+        {"@type":"ListItem","position":3,"item":{"@type":"Car","name":"2020 BMW 330i xDrive","brand":{"@type":"Brand","name":"BMW"},"model":"330i","vehicleModelDate":"2020","mileageFromOdometer":{"@type":"QuantitativeValue","value":41600,"unitCode":"SMI"},"driveWheelConfiguration":"https://schema.org/AllWheelDriveConfiguration","offers":{"@type":"Offer","price":"26750","priceCurrency":"USD","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/UsedCondition"}}},
+        {"@type":"ListItem","position":4,"item":{"@type":"Car","name":"2022 Volkswagen Jetta SE","brand":{"@type":"Brand","name":"Volkswagen"},"model":"Jetta","vehicleModelDate":"2022","mileageFromOdometer":{"@type":"QuantitativeValue","value":27900,"unitCode":"SMI"},"offers":{"@type":"Offer","price":"19400","priceCurrency":"USD","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/UsedCondition"}}},
+        {"@type":"ListItem","position":5,"item":{"@type":"Car","name":"2017 Mazda CX-5 Touring AWD","brand":{"@type":"Brand","name":"Mazda"},"model":"CX-5","vehicleModelDate":"2017","mileageFromOdometer":{"@type":"QuantitativeValue","value":68400,"unitCode":"SMI"},"driveWheelConfiguration":"https://schema.org/AllWheelDriveConfiguration","offers":{"@type":"Offer","price":"17900","priceCurrency":"USD","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/UsedCondition"}}},
+        {"@type":"ListItem","position":6,"item":{"@type":"Car","name":"2012 Subaru Outback 2.5i Premium AWD","brand":{"@type":"Brand","name":"Subaru"},"model":"Outback","vehicleModelDate":"2012","mileageFromOdometer":{"@type":"QuantitativeValue","value":112300,"unitCode":"SMI"},"driveWheelConfiguration":"https://schema.org/AllWheelDriveConfiguration","offers":{"@type":"Offer","price":"9850","priceCurrency":"USD","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/UsedCondition"}}}
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Can I have the car inspected by my own mechanic?","acceptedAnswer":{"@type":"Answer","text":"Yes. Take it to whoever you trust for a pre-purchase inspection. If your mechanic finds something ours missed, we want to know."}},
+        {"@type":"Question","name":"Do you negotiate on price?","acceptedAnswer":{"@type":"Answer","text":"A little, but not much. Prices are set against what the car cost us and what comparable vehicles sell for, not inflated to leave haggling room."}},
+        {"@type":"Question","name":"What warranty comes with the car?","acceptedAnswer":{"@type":"Answer","text":"It depends on the vehicle. Newer cars often have factory powertrain coverage remaining, which transfers at no cost. Older ones are sold as-is under New Jersey's used car law."}},
+        {"@type":"Question","name":"Will you hold a car for me?","acceptedAnswer":{"@type":"Answer","text":"For a couple of days, yes, without a deposit."}},
+        {"@type":"Question","name":"Why are you closed on Sundays?","acceptedAnswer":{"@type":"Answer","text":"New Jersey law prohibits the sale of motor vehicles on Sundays. It applies to every dealer in the state."}},
+        {"@type":"Question","name":"Can you help me buy out my lease?","acceptedAnswer":{"@type":"Answer","text":"Not directly. A lease buyout is a transaction with your leasing company, not a sale from our inventory. We refer that work to a financing partner who specialises in it."}}
+      ]
+    }
+  ]
+}
+</script>
+<script>
+(function(){
+  var b=document.getElementById('menuBtn'), n=document.getElementById('mnav');
+  if(!b||!n) return;
+  b.addEventListener('click',function(){
+    var open = n.getAttribute('data-open')==='true';
+    n.setAttribute('data-open', String(!open));
+    b.setAttribute('aria-expanded', String(!open));
+    b.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+  });
+  n.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){ n.setAttribute('data-open','false');
+      b.setAttribute('aria-expanded','false'); b.setAttribute('aria-label','Open menu'); }
+  });
+})();
+</script>
+</body>
+</html>
