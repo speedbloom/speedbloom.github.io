@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How a Transmission Tells You It's Failing | Drive Thru Deals</title>
+<meta name="description" content="Automatic transmissions fail in stages, and each stage has its own vocabulary of symptoms — delayed engagement, flare, shudder, slip. What each one means, what it costs to answer, and why the same symptom has several possible causes.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/how-a-transmission-fails/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="How a transmission tells you it's failing">
+<meta property="og:description" content="Three stages of trouble, the symptoms that belong to each, and the honest limits of diagnosing any of it from a description.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/how-a-transmission-fails/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/how-a-transmission-fails.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/how-a-transmission-fails.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - How a transmission tells you it's failing">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Condition">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How a transmission tells you it's failing">
+<meta name="twitter:description" content="Three stages of trouble, the symptoms that belong to each, and the honest limits of diagnosing any of it from a description.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/how-a-transmission-fails.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* The device here is a staged rail. Trouble arrives in an order, so the page
+     is built as three stages hung off a vertical line, each with a severity
+     meter that fills further than the one above it and a cost class rather
+     than a dollar figure. */
+
+  .rail{position:relative; margin:36px 0 10px; padding-left:34px}
+  .rail::before{
+    content:""; position:absolute; left:9px; top:8px; bottom:8px;
+    width:2px; background:linear-gradient(to bottom,var(--line-2),var(--lime));
+  }
+  .stg{position:relative; margin:0 0 30px; padding:0 0 26px; border-bottom:1px solid var(--line)}
+  .stg:last-child{border-bottom:0; padding-bottom:0}
+  .stg::before{
+    content:""; position:absolute; left:-32px; top:7px;
+    width:12px; height:12px; border-radius:50%;
+    background:var(--navy-900); border:2px solid var(--lime);
+  }
+  .stg .tag{
+    display:block; font-size:11px; font-weight:600; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--faint); margin:0 0 5px;
+  }
+  .stg h3{margin:0 0 4px}
+  .meter{
+    display:flex; align-items:center; gap:11px; margin:12px 0 16px;
+  }
+  .meter .track{
+    flex:1; height:6px; border-radius:99px; background:var(--navy-700);
+    border:1px solid var(--line); overflow:hidden;
+  }
+  .meter .fill{display:block; height:100%; background:var(--lime)}
+  .meter .cls{
+    font-family:var(--disp); font-weight:600; font-size:12px;
+    letter-spacing:.03em; color:var(--lime); white-space:nowrap;
+  }
+  .sym{margin:0; padding:0; list-style:none}
+  .sym li{
+    margin:0 0 13px; padding-left:17px; position:relative;
+    font-size:15.5px; line-height:1.62; color:var(--muted);
+  }
+  .sym li::before{
+    content:""; position:absolute; left:0; top:10px;
+    width:6px; height:1px; background:var(--line-2);
+  }
+  .sym b{color:var(--white); font-weight:600}
+  .cost{
+    margin:18px 0 0; padding:13px 15px; border-radius:12px;
+    background:var(--navy-800); border:1px solid var(--line);
+    font-size:14.5px; line-height:1.6; color:var(--muted);
+  }
+  .cost b{
+    display:block; font-family:var(--disp); font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--white); margin-bottom:5px;
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/condition/">Condition</a>
+  </div>
+
+  <div class="kicker">Condition</div>
+  <h1>How a transmission tells you it's failing</h1>
+  <p class="standfirst">Almost nothing about a transmission fails all at once. It
+     degrades along a fairly predictable path, and it announces each step of that
+     path in a language most drivers have never been taught to hear — which is why
+     the usual story is "it was fine and then it wasn't."</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>6 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>A conventional automatic is a hydraulic machine with a computer bolted to it.
+     A pump pressurizes fluid, a valve body full of passages and electrically
+     operated solenoids routes that pressure, and the pressure squeezes packs of
+     friction plates together to hold and release parts of a gearset. The fluid is
+     doing three jobs at once — transmitting force, carrying heat away, and
+     providing the exact friction characteristic the clutch packs were designed
+     around. A continuously variable transmission substitutes a steel belt or chain
+     running between two adjustable pulleys; a dual-clutch unit substitutes two
+     clutches and a manual-style gearset shifted by a mechatronic actuator. The
+     details differ. The pattern of decline does not, because in all three designs
+     the same thing is happening: a friction surface is wearing, heat is building,
+     and the control system is quietly compensating until it runs out of room.</p>
+
+  <p>That compensation is the reason the early stage is so easy to miss. Modern
+     transmission control units adapt. As clutches wear, the computer raises line
+     pressure and adjusts the timing of each apply to keep the shift feeling the
+     way the engineers intended. It does this well, and it does it invisibly, right
+     up until the point where there is no adjustment left to make.</p>
+
+  <div class="rail">
+
+    <div class="stg">
+      <span class="tag">Stage one · early</span>
+      <h3>The unit is compensating, and occasionally missing</h3>
+      <div class="meter">
+        <span class="track"><span class="fill" style="width:24%"></span></span>
+        <span class="cls">Service-level</span>
+      </div>
+      <ul class="sym">
+        <li><b>A delay when you select a gear.</b> You move the lever to Drive or
+          Reverse and the car takes a beat longer than it used to before anything
+          engages. Usually worse cold, better once warm. Cold-only delay points at
+          fluid and seals; delay at any temperature is a bigger flag.</li>
+        <li><b>One shift that flares.</b> Engine revs rise briefly between gears, as
+          if the transmission let go before it caught. Often a single shift — the
+          2–3, say — and only under a particular throttle load.</li>
+        <li><b>A shudder at light throttle.</b> A fine vibration, like driving over
+          rumble strips, at steady cruise. This is frequently the torque converter
+          lockup clutch chattering rather than slipping cleanly.</li>
+        <li><b>Fluid that has changed.</b> Dark, cloudy, or with a scorched smell
+          instead of the sharpish chemical one it should have.</li>
+      </ul>
+      <div class="cost">
+        <b>What answering it costs</b>
+        At this stage the plausible fixes are still small: a fluid and filter
+        service if the unit takes one, a solenoid, a sensor, a software
+        recalibration. Diagnosis is cheap here relative to what it's worth.
+      </div>
+    </div>
+
+    <div class="stg">
+      <span class="tag">Stage two · middle</span>
+      <h3>It is slipping under load, and the computer knows</h3>
+      <div class="meter">
+        <span class="track"><span class="fill" style="width:58%"></span></span>
+        <span class="cls">Component-level</span>
+      </div>
+      <ul class="sym">
+        <li><b>Repeatable slip on demand.</b> Merging onto the highway, the engine
+          climbs several hundred rpm with no corresponding change in road speed.
+          The line between "this is how the torque converter behaves" and "this is
+          a clutch pack letting go" is the repeatability: a slip you can produce on
+          request, at the same point, is a slip.</li>
+        <li><b>Harsh or banging shifts.</b> The opposite of stage one's softness.
+          Raised line pressure applies clutches faster and harder, which is the
+          control unit trading refinement for grip.</li>
+        <li><b>Limp mode.</b> The car locks itself into a single gear, usually with
+          a warning light. It has decided that protecting itself outranks driving
+          properly. Cycling the ignition often clears it temporarily, which is not
+          the same as fixing it.</li>
+        <li><b>Stored codes.</b> Ratio-error and solenoid-performance codes are the
+          unit filing a complaint in writing. A scan is worth doing before any
+          other conversation happens.</li>
+      </ul>
+      <div class="cost">
+        <b>What answering it costs</b>
+        Now you are usually into a component: a valve body, a solenoid pack, a
+        mechatronic unit, a torque converter. Substantially more than a service,
+        substantially less than a transmission — and the range is wide enough that
+        a quote from a transmission specialist is the only useful number.
+      </div>
+    </div>
+
+    <div class="stg">
+      <span class="tag">Stage three · late</span>
+      <h3>Something inside has come apart</h3>
+      <div class="meter">
+        <span class="track"><span class="fill" style="width:100%"></span></span>
+        <span class="cls">Unit-level</span>
+      </div>
+      <ul class="sym">
+        <li><b>A gear that isn't there.</b> The car will move in some selections and
+          not others. Reverse is often first to go.</li>
+        <li><b>Gross slip.</b> Engine revs freely, the car creeps. Nothing is being
+          held.</li>
+        <li><b>Noise that changes with road speed.</b> A whine or growl tied to
+          vehicle speed rather than engine speed, present in more than one gear.</li>
+        <li><b>Metal in the pan or on the magnet.</b> Fine gray paste is normal wear
+          on a magnet. Flakes, chunks and glitter suspended in the fluid are the
+          inside of the transmission redistributing itself.</li>
+      </ul>
+      <div class="cost">
+        <b>What answering it costs</b>
+        A rebuild or a replacement unit, plus the labor to remove and reinstall it,
+        which on a transverse front-drive car is not trivial. This is the number
+        that gets a car sent to auction instead of onto a front row.
+      </div>
+    </div>
+
+  </div>
+
+  <h2>What this page cannot do</h2>
+
+  <p>It cannot diagnose your car, and neither can anything else written in prose.
+     Every symptom above has more than one plausible cause, and several of them
+     have causes that live outside the transmission entirely.</p>
+
+  <p>A shudder under light load may be a lockup clutch — or an engine misfire that
+     only appears under that specific load, or a failing motor mount letting the
+     drivetrain move, or a worn constant-velocity joint. A whine that rises with
+     road speed may be the transmission, a wheel bearing, or a tire wear pattern
+     doing an impression of both — that last one is common enough that
+     <a href="/articles/reading-a-tire/">reading the tread</a> is a sensible first
+     move. A harsh shift can be a transmission complaint, or it can be the adaptive
+     strategy having been wiped by a battery disconnect and not yet relearned. A
+     "slipping" complaint on a CVT is sometimes the way that design behaves by
+     design, and sometimes the belt.</p>
+
+  <p>The useful sequence is: scan for stored codes, check the fluid if the unit
+     allows it, then have somebody who works on transmissions all day drive the car
+     with you. A description is a starting point. It is not a diagnosis, and anyone
+     who gives you one over the phone is guessing.</p>
+
+  <h2>The fluid question</h2>
+
+  <p>There is a widely held belief that changing the fluid in a neglected
+     transmission will finish it off. The mechanism usually offered is that fresh
+     fluid, with its detergent package and its designed friction characteristic,
+     behaves differently against clutches that have already glazed and worn to fit
+     the old fluid. Whether that holds up as a general rule is genuinely disputed
+     among people who do this professionally, and we are not going to settle it in
+     a blog post.</p>
+
+  <p>What we will say is this: whether your transmission has a serviceable filter,
+     whether it has a dipstick at all, what fluid specification it requires, and
+     whether the manufacturer describes that fluid as a lifetime fill are all
+     questions with a single authoritative answer, and it is in your owner's manual
+     or available from a franchise service department with your VIN. Not from a
+     forum, and not from us.</p>
+
+  <h2>Checking one on a car you're considering</h2>
+
+  <p>Drive it cold. That is the single most valuable condition, and it is the one a
+     seller who knows will quietly deny you by having the car warmed up and idling
+     when you arrive. From cold: select Reverse, count the beat before it engages,
+     then Drive, same count. Then drive it gently through every upshift, watching
+     the tachometer rather than listening. Then find somewhere legal to ask for
+     full throttle once and feel each upshift under load. Then let it coast down
+     and feel the downshifts. Then do it all again once the car is hot, because
+     some faults only exist at temperature and some only exist below it.</p>
+
+  <p>Scan it. A code reader that costs less than a tank of fuel will tell you
+     whether the transmission has filed complaints, and — just as usefully —
+     whether the readiness monitors have been recently cleared, which is what
+     happens when somebody erases a light before a sale. That trick is common
+     enough that we treat freshly cleared monitors as information in itself.</p>
+
+  <div class="note">
+    <p><b>How we handle it here.</b> Every car we buy gets driven cold before it
+       gets driven anywhere else, and the transmission section of our 168-point
+       inspection is published with the car rather than summarized. When a unit
+       shows stage-two behavior we don't recondition around it — that is one of the
+       specific calls that sends a car back out, and we've
+       <a href="/articles/the-car-we-sent-to-auction/">written up one of them</a>.</p>
+  </div>
+
+  <p class="endnote">General information for used car buyers, not a diagnostic
+     procedure and not a substitute for inspection by a qualified transmission
+     technician. Symptoms described here have multiple possible causes. No service
+     interval, fluid specification or manufacturer requirement is stated on this
+     page; confirm all of them for your specific vehicle in the owner's manual or
+     with a franchise service department using your VIN.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/what-each-noise-means/">What each noise means
+        <span>A sound-by-sound reference, organized by when the noise happens — and honest about how many causes each one has.</span></a></li>
+      <li><a href="/articles/the-cooling-system/">The cooling system, and why it kills engines
+        <span>The loop drawn out, then the chain of failures that turns a small leak into a scrapped engine.</span></a></li>
+      <li><a href="/articles/the-car-we-sent-to-auction/">The car we sent to auction
+        <span>One car we bought, inspected, and decided not to sell — and the arithmetic of that call.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/how-a-transmission-fails/#article",
+   "headline": "How a transmission tells you it's failing",
+   "description": "Automatic transmissions fail in stages, and each stage has its own vocabulary of symptoms — delayed engagement, flare, shudder, slip. What each one means, what it costs to answer, and why the same symptom has several possible causes.",
+   "url": "https://drivethrudeals.online/articles/how-a-transmission-fails/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Condition",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/how-a-transmission-fails.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/how-a-transmission-fails/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Condition","item":"https://drivethrudeals.online/articles/condition/"},
+    {"@type":"ListItem","position":4,"name":"How a transmission tells you it's failing"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

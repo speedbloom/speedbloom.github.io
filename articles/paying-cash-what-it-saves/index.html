@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paying Cash: What It Actually Saves | Drive Thru Deals</title>
+<meta name="description" content="A $19,400 car, paid two ways. The interest avoided is $3,442.75; the honest net is $1,967.05 - and there is a rate at which the whole thing flips, exactly.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/paying-cash-what-it-saves/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Paying cash: what it actually saves">
+<meta property="og:description" content="The arithmetic on both sides of the beam, including the case against paying cash.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/paying-cash-what-it-saves/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/paying-cash-what-it-saves.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/paying-cash-what-it-saves.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Paying cash: what it actually saves">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Money">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Paying cash: what it actually saves">
+<meta name="twitter:description" content="The arithmetic on both sides of the beam, including the case against paying cash.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/paying-cash-what-it-saves.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Device: a balance beam. Everything cash saves hangs on one side, everything
+     it costs on the other, and the net sits underneath where both can be seen. */
+  .beam{display:grid; grid-template-columns:1fr; gap:14px; margin:32px 0 8px}
+  .sh{
+    font-family:var(--disp); font-weight:700; font-size:13px; letter-spacing:.1em;
+    text-transform:uppercase; margin:0;
+  }
+  .sh.l{color:var(--lime)}
+  .sh.r{color:#FF8F87}
+  .item{border-left:3px solid var(--line-2); padding:1px 0 1px 17px}
+  .item.l{border-left-color:var(--lime)}
+  .item.r{border-left-color:#FF8F87}
+  .item .amt{
+    display:block; font-family:var(--disp); font-weight:700; font-size:21px;
+    letter-spacing:-.02em; color:var(--white); font-variant-numeric:tabular-nums;
+  }
+  .item .amt.soft{color:var(--muted); font-size:17px}
+  .item .lb{display:block; margin-top:3px; font-size:14.5px; line-height:1.6; color:var(--muted)}
+
+  @media (min-width:720px){
+    .beam{grid-template-columns:1fr 1fr; column-gap:44px; position:relative}
+    .beam::before{
+      content:""; position:absolute; left:50%; top:4px; bottom:4px;
+      width:1px; background:var(--line-2);
+    }
+    .sh.l,.item.l{grid-column:1; text-align:right}
+    .sh.r,.item.r{grid-column:2}
+    .item.l{
+      border-left:0; border-right:3px solid var(--lime);
+      padding:1px 17px 1px 0;
+    }
+  }
+
+  .net{
+    margin:30px 0; padding:22px; border-radius:18px;
+    background:var(--navy-700); border:1px solid var(--line-2);
+  }
+  .net .big{
+    font-family:var(--disp); font-weight:800; font-size:clamp(32px,6.6vw,46px);
+    letter-spacing:-.03em; line-height:1.05; color:var(--lime);
+    font-variant-numeric:tabular-nums;
+  }
+  .net p{margin:12px 0 0; font-size:15px; color:var(--muted)}
+  .net p:last-child{margin-bottom:0}
+
+  .runs{margin:28px 0; border-top:1px solid var(--line-2)}
+  .runs > div{
+    display:grid; grid-template-columns:1fr auto; gap:3px 18px;
+    padding:15px 0; border-bottom:1px solid var(--line); align-items:baseline;
+  }
+  .runs .h{font-family:var(--disp); font-weight:600; font-size:16px; color:var(--white)}
+  .runs .r{
+    font-family:var(--disp); font-weight:700; font-size:19px;
+    color:var(--lime); font-variant-numeric:tabular-nums; white-space:nowrap;
+  }
+  .runs .r.zero{color:var(--white)}
+  .runs .d{grid-column:1/-1; margin:5px 0 0; font-size:14px; color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/money/">Money</a>
+  </div>
+
+  <div class="kicker">Money</div>
+  <h1>Paying cash: what it actually saves</h1>
+  <p class="standfirst">Less than the interest number, more than nothing, and the
+     difference between those two figures is where most of the bad advice on this
+     subject lives. Here is the whole beam, both sides, with the case against
+     paying cash given its full weight.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>One car, out the door at <strong>$19,400.00</strong>. Two ways to pay for it.
+     Either you hand over $19,400 and own it, or you keep the $19,400 somewhere it
+     earns something and make payments out of it. The comparison has to be that
+     one, because "pay cash or finance" while pretending the cash disappears in
+     both cases is not a comparison at all.</p>
+
+  <p>Assumptions, all illustrative and all stated so you can change them: an
+     <strong>8.25%</strong> APR over <strong>48 months</strong>, and the money, if
+     kept, earning <strong>4.00%</strong> a year compounded monthly. The loan
+     payment is <strong>$475.89</strong>.</p>
+
+  <div class="beam">
+    <p class="sh l">What paying cash saves</p>
+    <p class="sh r">What paying cash costs</p>
+
+    <div class="item l">
+      <span class="amt">$3,442.75</span>
+      <span class="lb">Total interest on the 48-month loan. This is the number
+        everyone quotes, and it is correctly computed — total of payments
+        $22,842.75 against $19,400.00 financed.</span>
+    </div>
+    <div class="item r">
+      <span class="amt">$1,475.70</span>
+      <span class="lb">What the $19,400 would have earned, in month-48 dollars, if
+        it had stayed invested at 4.00% while the payments were drawn out of
+        it.</span>
+    </div>
+
+    <div class="item l">
+      <span class="amt soft">No exposure</span>
+      <span class="lb">Nothing to be upside down on. No
+        <a href="/articles/gap-insurance-examined/">gap question</a>, no balance to
+        clear before you can sell, no lender on the title.</span>
+    </div>
+    <div class="item r">
+      <span class="amt soft">No liquid buffer</span>
+      <span class="lb">The money is now a car. It cannot pay a medical bill or
+        cover two months without income, and getting it back means selling the
+        vehicle.</span>
+    </div>
+
+    <div class="item l">
+      <span class="amt soft">One decision</span>
+      <span class="lb">No application, no rate, no term, no finance office, and
+        nothing to compare afterward and regret.</span>
+    </div>
+    <div class="item r">
+      <span class="amt soft">No payment history</span>
+      <span class="lb">An installment loan repaid on time becomes part of your
+        credit file. How much that is worth depends on the scoring model and on
+        what is already in your file, so it is a footnote, not a reason.</span>
+    </div>
+  </div>
+
+  <div class="net">
+    <div class="big">$1,967.05</div>
+    <p>The honest net advantage to paying cash on this deal, under these
+       assumptions — not $3,442.75. The interest avoided minus what the money would
+       have earned, both measured at month 48. Subtract them yourself: $3,442.75
+       &minus; $1,475.70.</p>
+  </div>
+
+  <h2>Run it again at different rates</h2>
+
+  <p>The whole comparison turns on one relationship: what you would pay to borrow
+     against what your money would earn. Same car, same term, same 4.00% on the
+     cash — only the borrowing rate moves.</p>
+
+  <div class="runs">
+    <div>
+      <span class="h">Borrow at 8.25%</span>
+      <span class="r">$1,967.05</span>
+      <p class="d">Payment $475.89, total interest $3,442.75. Cash wins
+        comfortably.</p>
+    </div>
+    <div>
+      <span class="h">Borrow at 4.90%</span>
+      <span class="r">$408.21</span>
+      <p class="d">Payment $445.89, total interest $2,002.74. Cash still wins, but
+        by an amount that would not survive a single unexpected repair.</p>
+    </div>
+    <div>
+      <span class="h">Borrow at 4.00%</span>
+      <span class="r zero">$0.00</span>
+      <p class="d">Payment $438.03, total interest $1,625.68. Exactly nothing
+        separates them — not approximately, exactly.</p>
+    </div>
+  </div>
+
+  <p>That last row is not a coincidence and it is worth understanding, because it
+     is the only rule in this article that does not depend on our assumptions.
+     <strong>When the rate you borrow at equals the rate your money earns, the two
+     options cost precisely the same.</strong> The cash flows are identical; only
+     the direction of the interest changes. Above that line, cash is ahead. Below
+     it, borrowing is.</p>
+
+  <p>So the question is never "should I pay cash." It is: <em>can I borrow for less
+     than my money makes, and by how much, and is the difference large enough to be
+     worth the loan?</em></p>
+
+  <h2>The case against paying cash</h2>
+
+  <h3>It converts flexible money into a car</h3>
+  <p>This is the strongest argument and it has nothing to do with rates. Money in
+     an account solves problems. Money in a car solves exactly one problem, and it
+     can only be released by selling the thing you bought it to have. A buyer who
+     pays cash and is then short in March has not saved $1,967.05 — they have
+     bought $1,967.05 for a price they will pay later, possibly at a much worse
+     rate, on a credit card.</p>
+
+  <h3>The advantage is smaller than the headline</h3>
+  <p>Almost every version of this argument you will read quotes the interest
+     figure alone. On this deal that overstates the benefit by
+     <strong>$1,475.70</strong> — 43% of the number. It is not dishonest so much as
+     incomplete, but the incompleteness always runs the same direction.</p>
+
+  <h3>It ends the deal early</h3>
+  <p>A dealership that arranges your financing has a second source of revenue in
+     the transaction. Announcing "I'm paying cash" in the first two minutes removes
+     that, and it can make the price conversation harder rather than easier. Settle
+     the out-the-door price first. How you intend to pay it is not anybody's
+     business until there is a number to pay.</p>
+
+  <h2>What we would actually tell you at the desk</h2>
+
+  <p>Pay cash if you have the cash <em>and</em> still have a cushion behind it,
+     and if the rate you would be offered is meaningfully above what your money is
+     doing. Finance if the rate is close to what your money earns, or if paying
+     cash would empty you out — and in that case put something down anyway, because
+     <a href="/articles/the-down-payment-question/">a down payment does its work
+     early</a>.</p>
+
+  <p>One practical note. "Cash" in a car deal almost never means currency; it
+     means a certified check or a wire, which is cleaner for everyone and avoids
+     the federal reporting obligations that attach to large currency payments. Call
+     ahead and ask what form the dealership takes, because finding out at the desk
+     costs you a trip to the bank.</p>
+
+  <div class="note">
+    <p><b>The comparison to actually run.</b> Not "interest versus zero." Put your
+       own borrowing rate next to the rate your own money is earning. If the loan
+       rate is higher, cash is ahead by roughly the gap between them applied to a
+       shrinking balance — and if the loan rate is lower, the arithmetic says
+       borrow, whatever anyone's instincts say.</p>
+  </div>
+
+  <p class="endnote">All figures computed from full 48-month amortization schedules
+     on $19,400.00 and a month-by-month accumulation of the retained cash at the
+     stated rate, verified to the cent; the 4.00% borrowing case returns exactly
+     $0.00, which is the arithmetic checking itself. The APRs and the 4.00% return
+     are illustrative assumptions, not quotes, offers, forecasts or advertised
+     rates, and no investment return is being promised or predicted. Nothing on this
+     page is financial or tax advice.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/the-five-year-number/">The five-year number
+        <span>Payment, fuel, insurance, tires, service - sixty months of one car, added up.</span></a></li>
+      <li><a href="/articles/the-down-payment-question/">How much to put down
+        <span>Three down payments on one car, followed to their consequences.</span></a></li>
+      <li><a href="/articles/why-we-post-the-price/">Why we post the price
+        <span>An argument for putting the number on the windshield, from the people who have to live with it.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/paying-cash-what-it-saves/#article",
+   "headline": "Paying cash: what it actually saves",
+   "description": "A $19,400 car, paid two ways. The interest avoided is $3,442.75; the honest net is $1,967.05 - and there is a rate at which the whole thing flips, exactly.",
+   "url": "https://drivethrudeals.online/articles/paying-cash-what-it-saves/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Money",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/paying-cash-what-it-saves.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/paying-cash-what-it-saves/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Money","item":"https://drivethrudeals.online/articles/money/"},
+    {"@type":"ListItem","position":4,"name":"Paying cash: what it actually saves"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Longer-Term Trick: 48 Months vs 84, Worked Out | Drive Thru Deals</title>
+<meta name="description" content="The same used car, the same monthly payment, two loan terms. Full year-by-year amortization for both, the month the loan balance finally crosses the car's value, and what to ask for instead of a payment.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/the-longer-term-trick/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="The longer-term trick">
+<meta property="og:description" content="Two loans on the same car, two dollars apart in monthly payment, and $7,461 of daylight between them. All of it shown.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/the-longer-term-trick/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/the-longer-term-trick.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/the-longer-term-trick.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - The longer-term trick">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Money">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The longer-term trick">
+<meta name="twitter:description" content="Two loans on the same car, two dollars apart in monthly payment, and $7,461 of daylight between them. All of it shown.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/the-longer-term-trick.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* This piece is worked arithmetic. The device is the table: numbers carry the
+     argument, prose only says what changed between one table and the next. */
+
+  .tbl{margin:30px 0}
+  .tbl > .scroll{overflow-x:auto; -webkit-overflow-scrolling:touch}
+  .tbl > .scroll table{margin:0}
+  .tbl > .cap{
+    margin:11px 0 0; font-size:12.5px; line-height:1.55; color:var(--faint);
+  }
+  .tbl > h3{margin:0 0 2px}
+
+  table.amt{font-variant-numeric:tabular-nums; min-width:520px}
+  table.amt.wide{min-width:660px}
+  table.amt th:not(:first-child),
+  table.amt td:not(:first-child){text-align:right; white-space:nowrap}
+  table.amt td:first-child{color:var(--white); white-space:nowrap}
+  table.amt tr.tot td{
+    color:var(--white); font-weight:600;
+    border-top:1px solid var(--line-2); border-bottom:0;
+  }
+  table.amt tr.tot td:first-child{font-weight:500; color:var(--muted)}
+  td.neg{color:#FF8F87}
+  td.pos{color:var(--lime)}
+  td.off{color:var(--faint)}
+
+  .vs{display:grid; gap:13px; margin:30px 0}
+  @media (min-width:600px){ .vs{grid-template-columns:1fr 1fr} }
+  .vs > div{
+    background:var(--navy-800); border:1px solid var(--line);
+    border-radius:16px; padding:19px 20px 21px;
+  }
+  .vs .tag{
+    font-family:var(--body); font-weight:600; font-size:11px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--faint); margin:0 0 12px;
+  }
+  .vs .pmt{
+    font-family:var(--disp); font-weight:800; line-height:1;
+    font-size:clamp(32px,7vw,42px); letter-spacing:-.035em;
+    color:var(--lime); font-variant-numeric:tabular-nums;
+  }
+  .vs .per{
+    font-family:var(--body); font-weight:400; font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--faint); margin:9px 0 0;
+  }
+  .vs table{margin:15px 0 0; font-size:14px; font-variant-numeric:tabular-nums}
+  .vs td{padding:7px 0; border-bottom:1px solid var(--line)}
+  .vs tr:last-child td{border-bottom:0; padding-bottom:0}
+  .vs td:first-child{color:var(--faint)}
+  .vs td:last-child{text-align:right; color:var(--white); white-space:nowrap}
+
+  .result{
+    display:flex; flex-wrap:wrap; align-items:baseline;
+    justify-content:space-between; gap:12px 22px;
+    margin:34px 0; padding:22px 0;
+    border-top:2px solid var(--lime); border-bottom:2px solid var(--lime);
+  }
+  .result .lab{font-size:14.5px; line-height:1.55; color:var(--muted); max-width:38ch}
+  .result .lab b{color:var(--white)}
+  .result .n{
+    font-family:var(--disp); font-weight:800; line-height:.95;
+    font-size:clamp(34px,8vw,50px); letter-spacing:-.035em;
+    color:var(--lime); font-variant-numeric:tabular-nums; white-space:nowrap;
+  }
+
+  .ask{width:100%; margin:26px 0; border-collapse:collapse}
+  .ask td{padding:15px 0; border-bottom:1px solid var(--line); vertical-align:top}
+  .ask tr:first-child td{border-top:1px solid var(--line)}
+  .ask td:first-child{
+    width:42%; padding-right:22px; color:var(--white);
+    font-family:var(--disp); font-weight:600; font-size:16px;
+    letter-spacing:-.015em; line-height:1.35;
+  }
+  .ask td:last-child{color:var(--muted); font-size:14.5px; line-height:1.6}
+  @media (max-width:560px){
+    .ask td{display:block; border-bottom:0; padding:0}
+    .ask td:first-child{width:auto; padding:16px 0 6px}
+    .ask td:last-child{padding:0 0 16px; border-bottom:1px solid var(--line)}
+    .ask tr:first-child td:first-child{border-top:0}
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/money/">Money</a>
+  </div>
+
+  <div class="kicker">Money</div>
+  <h1>The longer-term trick</h1>
+  <p class="standfirst">Two loans on the same car, arranged so the monthly payments
+     land two dollars apart. One of them costs $7,461 more than the other, and
+     nothing on the worksheet will tell you which. Here is all of the arithmetic,
+     so you can check it.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>6 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>A monthly payment is not a price. It is the output of three inputs — amount financed,
+     rate, and number of months — and an enormous number of combinations of those
+     three produce the same payment. That is not a flaw in the math; it is why the
+     conversation so often steers toward the payment and away from what made it.</p>
+
+  <p>So let's take one car, price it honestly, and finance it two ways.
+     Illustrative rates, but the arithmetic below is real amortization and adds up
+     to the penny.</p>
+
+  <h2>The car</h2>
+
+  <div class="tbl">
+    <div class="scroll">
+      <table class="amt">
+        <thead>
+          <tr><th>Out-the-door, itemized</th><th>Amount</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Vehicle, posted on the windshield</td><td>$23,400.00</td></tr>
+          <tr><td>New Jersey sales tax (6.625%)</td><td>$1,550.25</td></tr>
+          <tr><td>Title</td><td>$60.00</td></tr>
+          <tr><td>Registration</td><td>$85.75</td></tr>
+          <tr><td>Documentary fee</td><td>$299.00</td></tr>
+          <tr class="tot"><td>Out-the-door price</td><td>$25,395.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cap">Illustrative. Title and registration are state charges that vary
+       by vehicle; there is no dealer prep and no etch on this sheet because we
+       don't charge either.</p>
+  </div>
+
+  <p>One car, one price, no discount on either side of what follows. The only things that change between the two columns are how
+     much cash goes down on day one and how many months the loan runs. Longer terms
+     are commonly priced at higher rates, so the seven-year column carries a higher
+     APR — not a trick in itself, but part of what this one relies on.</p>
+
+  <h2>The two loans</h2>
+
+  <div class="vs">
+    <div>
+      <p class="tag">Loan A — 48 months</p>
+      <div class="pmt">$410.84</div>
+      <p class="per">per month</p>
+      <table>
+        <tr><td>Cash down</td><td>$8,400.00</td></tr>
+        <tr><td>Amount financed</td><td>$16,995.00</td></tr>
+        <tr><td>APR</td><td>7.49%</td></tr>
+        <tr><td>Payments</td><td>48</td></tr>
+      </table>
+    </div>
+    <div>
+      <p class="tag">Loan B — 84 months</p>
+      <div class="pmt">$412.87</div>
+      <p class="per">per month</p>
+      <table>
+        <tr><td>Cash down</td><td>$900.00</td></tr>
+        <tr><td>Amount financed</td><td>$24,495.00</td></tr>
+        <tr><td>APR</td><td>10.49%</td></tr>
+        <tr><td>Payments</td><td>84</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <p>Two dollars and three cents apart. If the only number you are given is the
+     monthly payment, these two deals are indistinguishable — and one of them will
+     be presented as the better one, because it asks for $7,500 less on the day.
+     Everything that follows is what that $7,500 costs.</p>
+
+  <h2>Where every payment goes</h2>
+
+  <p>The mechanism is ordinary. Each month, interest is charged on whatever you
+     still owe, and the rest of your payment reduces the balance. Early on, when
+     the balance is high, most of the payment is interest. The longer the term and
+     the higher the rate, the longer that stays true.</p>
+
+  <div class="tbl">
+    <h3>Loan A — 48 months at 7.49%</h3>
+    <div class="scroll">
+      <table class="amt">
+        <thead>
+          <tr><th>Year</th><th>Paid</th><th>Interest</th><th>Principal</th><th>Balance at year end</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>$4,930.08</td><td>$1,144.72</td><td>$3,785.36</td><td>$13,209.64</td></tr>
+          <tr><td>2</td><td>$4,930.08</td><td>$851.27</td><td>$4,078.81</td><td>$9,130.83</td></tr>
+          <tr><td>3</td><td>$4,930.08</td><td>$535.03</td><td>$4,395.05</td><td>$4,735.78</td></tr>
+          <tr><td>4</td><td>$4,930.12</td><td>$194.34</td><td>$4,735.78</td><td>$0.00</td></tr>
+          <tr class="tot"><td>Total</td><td>$19,720.36</td><td>$2,725.36</td><td>$16,995.00</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cap">Illustrative. Final payment differs by four cents to clear the
+       balance exactly, as real schedules do.</p>
+  </div>
+
+  <div class="tbl">
+    <h3>Loan B — 84 months at 10.49%</h3>
+    <div class="scroll">
+      <table class="amt">
+        <thead>
+          <tr><th>Year</th><th>Paid</th><th>Interest</th><th>Principal</th><th>Balance at year end</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>$4,954.44</td><td>$2,451.46</td><td>$2,502.98</td><td>$21,992.02</td></tr>
+          <tr><td>2</td><td>$4,954.44</td><td>$2,175.89</td><td>$2,778.55</td><td>$19,213.47</td></tr>
+          <tr><td>3</td><td>$4,954.44</td><td>$1,870.00</td><td>$3,084.44</td><td>$16,129.03</td></tr>
+          <tr><td>4</td><td>$4,954.44</td><td>$1,530.41</td><td>$3,424.03</td><td>$12,705.00</td></tr>
+          <tr><td>5</td><td>$4,954.44</td><td>$1,153.44</td><td>$3,801.00</td><td>$8,904.00</td></tr>
+          <tr><td>6</td><td>$4,954.44</td><td>$734.99</td><td>$4,219.45</td><td>$4,684.55</td></tr>
+          <tr><td>7</td><td>$4,955.00</td><td>$270.45</td><td>$4,684.55</td><td>$0.00</td></tr>
+          <tr class="tot"><td>Total</td><td>$34,681.64</td><td>$10,186.64</td><td>$24,495.00</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cap">Illustrative. Same formula, same method, different term and rate.</p>
+  </div>
+
+  <p>Look at the first year of each. Loan A retires $3,785 of the car in twelve
+     months. Loan B retires $2,503 — and pays $2,451 in interest to do it, which is
+     to say that in year one, almost exactly half of every payment is rent on the
+     money. Loan B's balance after three full years of paying is still higher than
+     Loan A's balance after one.</p>
+
+  <h2>What it comes to</h2>
+
+  <div class="tbl">
+    <div class="scroll">
+      <table class="amt">
+        <thead>
+          <tr><th>&nbsp;</th><th>Loan A — 48 mo</th><th>Loan B — 84 mo</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Cash down</td><td>$8,400.00</td><td>$900.00</td></tr>
+          <tr><td>Monthly payment</td><td>$410.84</td><td>$412.87</td></tr>
+          <tr><td>Total of payments</td><td>$19,720.36</td><td>$34,681.64</td></tr>
+          <tr><td>Total cash out</td><td>$28,120.36</td><td>$35,581.64</td></tr>
+          <tr><td>Of which, the car</td><td>$25,395.00</td><td>$25,395.00</td></tr>
+          <tr class="tot"><td>Of which, interest</td><td>$2,725.36</td><td>$10,186.64</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cap">Illustrative. Both columns buy the identical car at the identical
+       out-the-door price, so the entire difference in total cash out is interest.</p>
+  </div>
+
+  <div class="result">
+    <p class="lab"><b>What the longer term costs.</b> Same car, same price, same
+       monthly payment to within two dollars — and $7,461.28 more paid out, all of
+       it interest.</p>
+    <div class="n">$7,461.28</div>
+  </div>
+
+  <p>The obvious objection is that Loan B kept $7,500 in your pocket on the
+     day, and that is true. It is also the point: keeping $7,500 for seven years
+     cost $7,461.28. Nobody states it that way, which is why it reaches you as "we
+     can get you into it for about four hundred a month."</p>
+
+  <h2>The part that isn't on the worksheet</h2>
+
+  <p>Total interest is the visible cost. The other one shows up only if your life
+     changes — a job, a move, a growing family, a deer on Route 9. The question
+     then is not what you have paid but what you still owe against what the car is
+     worth.</p>
+
+  <p>Below, the same two loans against an illustrative resale curve: roughly
+     twelve and a half percent of value shed per year, starting from what the car
+     would fetch as a trade on day one rather than its retail price. Real
+     depreciation is lumpier and varies by model, mileage and market. The shape,
+     though, is not controversial.</p>
+
+  <div class="tbl">
+    <div class="scroll">
+      <table class="amt wide">
+        <thead>
+          <tr>
+            <th>Month</th><th>Car worth</th>
+            <th>A owes</th><th>A equity</th>
+            <th>B owes</th><th>B equity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Day one</td><td>$20,500</td><td>$16,995.00</td><td class="pos">+$3,505.00</td><td>$24,495.00</td><td class="neg">&minus;$3,995.00</td></tr>
+          <tr><td>12</td><td>$17,900</td><td>$13,209.64</td><td class="pos">+$4,690.36</td><td>$21,992.02</td><td class="neg">&minus;$4,092.02</td></tr>
+          <tr><td>24</td><td>$15,700</td><td>$9,130.83</td><td class="pos">+$6,569.17</td><td>$19,213.47</td><td class="neg">&minus;$3,513.47</td></tr>
+          <tr><td>36</td><td>$13,700</td><td>$4,735.78</td><td class="pos">+$8,964.22</td><td>$16,129.03</td><td class="neg">&minus;$2,429.03</td></tr>
+          <tr><td>48</td><td>$12,000</td><td>$0.00</td><td class="pos">+$12,000.00</td><td>$12,705.00</td><td class="neg">&minus;$705.00</td></tr>
+          <tr><td>52</td><td>$11,500</td><td class="off">paid off</td><td class="pos">+$11,500.00</td><td>$11,481.84</td><td class="pos">+$18.16</td></tr>
+          <tr><td>60</td><td>$10,500</td><td class="off">paid off</td><td class="pos">+$10,500.00</td><td>$8,904.00</td><td class="pos">+$1,596.00</td></tr>
+          <tr><td>72</td><td>$9,200</td><td class="off">paid off</td><td class="pos">+$9,200.00</td><td>$4,684.55</td><td class="pos">+$4,515.45</td></tr>
+          <tr><td>84</td><td>$8,100</td><td class="off">paid off</td><td class="pos">+$8,100.00</td><td>$0.00</td><td class="pos">+$8,100.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="cap">Illustrative. Resale values are a smooth assumed curve, not a
+       forecast for any particular vehicle. Loan balances are exact.</p>
+  </div>
+
+  <p>Loan A is never underwater — not for a single month — because the down payment
+     started it ahead of the curve and the balance falls faster than the car does.
+     Loan B is underwater from the moment the paperwork is signed, bottoms
+     out about $4,094 behind in the tenth month, and does not climb back to level
+     until <strong>month 52</strong>. That is four years and four months in which
+     the car cannot be sold, traded or totaled without a check for the
+     difference.</p>
+
+  <p>This is where negative equity gets rolled. A buyer eighteen months into
+     Loan B needs a different car, is about $3,840 short, and is offered the tidy
+     fix of adding the shortfall to the next loan — which starts that one underwater
+     too, on a longer term, and goes around again with a larger number each lap. It
+     is what happens when the term is the lever that gets pulled.</p>
+
+  <h2>What to ask for instead of a payment</h2>
+
+  <p>None of this requires you to distrust anyone. It requires four questions, and
+     the arithmetic that answers them is the arithmetic on this page.</p>
+
+  <table class="ask">
+    <tr>
+      <td>What is the out-the-door price, itemized?</td>
+      <td>Vehicle, tax, title, registration, doc fee. Every other figure in a car
+        deal can be moved around to make a different figure look better. This one
+        can't, which is why it is the only number worth agreeing on first.</td>
+    </tr>
+    <tr>
+      <td>What is the amount financed?</td>
+      <td>Out-the-door price minus your down payment, plus anything rolled in. If it
+        is larger than that subtraction, something was added — and now is the moment
+        to ask what, not after signing.</td>
+    </tr>
+    <tr>
+      <td>What APR did the lender approve, and what APR is on this contract?</td>
+      <td>These are two different questions with occasionally two different answers.
+        Asking is the only thing that puts the difference on the table.</td>
+    </tr>
+    <tr>
+      <td>How many payments, and what do they total?</td>
+      <td>Payment times term, minus amount financed, equals the interest. It takes
+        ten seconds on a phone and it produces the single number the monthly-payment
+        conversation is structured to keep out of view.</td>
+    </tr>
+  </table>
+
+  <p>There is nothing wrong with a long loan chosen deliberately. Cash has
+     uses, and a lower payment can be the difference between a reliable car and a
+     gamble. What is worth refusing is choosing it without being shown what it costs
+     — and $7,461.28, on a $23,400 car, is not a rounding error.</p>
+
+  <p>We put the price on the windshield so the first question is already answered
+     before you walk over. The other three are yours to ask anywhere you buy a car,
+     including here.</p>
+
+  <p class="endnote">All figures here are illustrative. The loans use the standard
+     amortization formula, monthly compounding, rounded to the cent, with a final
+     payment adjusted to clear the balance exactly. Rates, down payments, fees and
+     resale values were chosen to make the comparison legible; they are not quotes,
+     offers of credit or predictions. Nothing here is financial advice.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/what-a-dealer-makes-on-a-used-car/">What a dealer actually makes on a used car
+        <span>The auction price, the pack, the floorplan interest and the three places the real margin hides.</span></a></li>
+      <li><a href="/articles/the-last-twenty-minutes/">The last twenty minutes
+        <span>The finance office, what gets sold in it, and why it comes after you have stopped negotiating.</span></a></li>
+      <li><a href="/articles/where-you-buy-changes-what-you-pay/">Where you buy changes what you pay
+        <span>Franchise, independent, big-box, private party — the same car, four different sets of costs.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/the-longer-term-trick/#article",
+   "headline": "The longer-term trick",
+   "description": "The same used car, the same monthly payment, two loan terms. Full year-by-year amortization for both, the month the loan balance finally crosses the car's value, and what to ask for instead of a payment.",
+   "url": "https://drivethrudeals.online/articles/the-longer-term-trick/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Money",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/the-longer-term-trick.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/the-longer-term-trick/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Money","item":"https://drivethrudeals.online/articles/money/"},
+    {"@type":"ListItem","position":4,"name":"The longer-term trick"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

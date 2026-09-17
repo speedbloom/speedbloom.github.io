@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Last Twenty Minutes | Drive Thru Deals</title>
+<meta name="description" content="A descending clock for the twenty minutes before you sign: the out-the-door number, the Buyer's Guide, the VIN, the APR, the term, the add-ons, the trade payoff, and the blanks.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/the-last-twenty-minutes/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="The last twenty minutes">
+<meta property="og:description" content="Everything worth checking before you sign, as a countdown you can hold up on your phone.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/the-last-twenty-minutes/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/the-last-twenty-minutes.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/the-last-twenty-minutes.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - The last twenty minutes">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Paperwork">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The last twenty minutes">
+<meta name="twitter:description" content="Everything worth checking before you sign, as a countdown you can hold up on your phone.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/the-last-twenty-minutes.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* This piece is a clock. The device is a descending column of times on a
+     vertical rule - built to be legible held up on a phone at a desk. */
+  .clock{margin:34px 0 10px}
+  .tick{
+    position:relative;
+    display:grid; grid-template-columns:86px 1fr; column-gap:26px;
+    padding:0 0 30px;
+  }
+  .tick::before{                      /* the rule that connects the times */
+    content:""; position:absolute; left:98px; top:6px; bottom:0;
+    width:1px; background:var(--line-2);
+  }
+  .tick:last-child::before{bottom:auto; height:16px}
+  .tick::after{                       /* the marker sitting on the rule */
+    content:""; position:absolute; left:94px; top:10px;
+    width:9px; height:9px; border-radius:50%;
+    background:var(--lime); box-shadow:0 0 0 5px var(--navy-900);
+  }
+  .tick > h2{
+    grid-column:1; margin:0; text-align:right;
+    font-family:var(--disp); font-weight:800; font-size:26px;
+    letter-spacing:-.035em; line-height:1.05; color:var(--lime);
+    font-variant-numeric:tabular-nums; font-feature-settings:"tnum" 1;
+  }
+  .tick .tag{
+    grid-column:1; text-align:right; margin-top:7px;
+    font-size:10.5px; font-weight:600; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--faint); line-height:1.35;
+  }
+  .tick .do{grid-column:2; grid-row:1 / span 2; margin:0}
+  .tick .do p{margin:0 0 13px; font-size:15.5px; line-height:1.62; color:var(--muted)}
+  .tick .do p:last-child{margin-bottom:0}
+  .tick .do p:first-child{color:var(--white); font-size:16.5px}
+  .tick .do b{color:var(--white); font-weight:600}
+  .stop{
+    background:var(--navy-700); border:1px solid var(--line-2);
+    border-radius:18px; padding:20px 22px; margin:30px 0 0;
+    font-size:15.5px; line-height:1.62; color:var(--muted);
+  }
+  .stop b{color:var(--white)}
+  .stop :last-child{margin-bottom:0}
+  @media (max-width:520px){
+    .tick{grid-template-columns:62px 1fr; column-gap:20px}
+    .tick::before{left:72px}
+    .tick::after{left:68px}
+    .tick > h2{font-size:21px}
+    .tick .tag{font-size:9.5px; letter-spacing:.1em}
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/paperwork/">Paperwork</a>
+  </div>
+
+  <div class="kicker">Paperwork</div>
+  <h1>The last twenty minutes</h1>
+  <p class="standfirst">Nearly everything that goes wrong in a car deal goes wrong
+     in the twenty minutes before a signature, when the shopping is over, the keys
+     are on the desk and reading carefully feels rude. Here is that window as a
+     countdown — what to look at, in what order, and what a good answer sounds
+     like.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>6 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>None of this is adversarial. At a lot where the numbers were straight from the
+     beginning, the whole countdown takes about four minutes and confirms what you
+     already knew. That's the point of running it: it costs nothing when everything
+     is right, and it is the only thing that helps when something isn't. Do it in
+     order, out loud if you like, and don't apologize for it.</p>
+
+  <div class="clock">
+
+    <div class="tick">
+      <h2>20:00</h2>
+      <div class="tag">The number</div>
+      <div class="do">
+        <p>Put the advertised price and the out-the-door total side by side.</p>
+        <p>You should have an itemized sheet: vehicle price, sales tax, title,
+           registration, and the documentary fee. Every one of those is a separate
+           line with its own number, and the sum is what leaves your account. If
+           the only figure anyone has said out loud so far is a monthly payment,
+           stop here — a payment is an outcome of four variables and tells you
+           nothing about any of them.</p>
+        <p>Check the vehicle price against what the car was advertised at. It
+           should match exactly. If it doesn't, ask what the difference is and get
+           the answer as a named line item rather than an explanation.</p>
+      </div>
+    </div>
+
+    <div class="tick">
+      <h2>16:00</h2>
+      <div class="tag">The sticker</div>
+      <div class="do">
+        <p>Read the Buyer's Guide, the window sticker, all of it.</p>
+        <p>Federal rules require dealers to display a Buyer's Guide on most used
+           vehicles offered for sale, and its terms become part of your sales
+           contract — it overrides anything in the contract that contradicts it.
+           So the box that's checked on it matters: a warranty, with its duration
+           and the percentage of parts and labor covered, or <b>As Is</b>, meaning
+           the dealership takes on no responsibility for repairs after the sale.</p>
+        <p>New Jersey also has a used car lemon law with age and mileage thresholds
+           of its own, and whether a particular car falls inside them is worth
+           confirming rather than assuming in either direction. If a salesperson
+           made a verbal promise about a repair, it belongs in writing here or on
+           the contract — not in a text message, and not in anyone's memory.</p>
+      </div>
+    </div>
+
+    <div class="tick">
+      <h2>12:00</h2>
+      <div class="tag">The car</div>
+      <div class="do">
+        <p>Match the VIN on the contract to the VIN on the car.</p>
+        <p>Seventeen characters, read one at a time, from the plate at the base of
+           the windshield or the sticker in the driver's door jamb. Not from the
+           brochure, not from the listing — from the vehicle you are about to own.
+           This takes fifteen seconds and catches the rare but genuinely miserable
+           error of paperwork drawn up for a similar car on the same lot.</p>
+        <p>While you're there, check the odometer figure on the disclosure against
+           the number currently on the dash, and check the year, model and trim.
+           A trim level typed wrong follows the car into its title and its
+           insurance and is tedious to unwind later.</p>
+      </div>
+    </div>
+
+    <div class="tick">
+      <h2>09:00</h2>
+      <div class="tag">The rate</div>
+      <div class="do">
+        <p>Find the APR box and compare it to the rate you were quoted.</p>
+        <p>A retail installment contract carries a set of federally required
+           disclosures in their own boxes: the annual percentage rate, the finance
+           charge, the amount financed, and the total of payments. The APR is the
+           one to check first, and the useful question if it has moved is not
+           <em>what's my rate</em> but <b>what rate did the lender approve me
+           at</b>. Dealerships are generally permitted to write a contract above
+           the approved rate and keep some of the difference. That's legal and it's
+           disclosed in the sense that the number is printed in front of you — it
+           is just rarely explained.</p>
+        <p>Then check the amount financed. It should be the out-the-door total from
+           20:00, minus your down payment, minus whatever equity your trade
+           carries. If it's larger, something was added between those two numbers.</p>
+      </div>
+    </div>
+
+    <div class="tick">
+      <h2>06:00</h2>
+      <div class="tag">The term</div>
+      <div class="do">
+        <p>Count the months. Then read the total of payments.</p>
+        <p>The term is the easiest thing in the deal to move and the easiest to
+           stop noticing, because it changes the payment without changing the
+           price. If the monthly number came down at some point in the afternoon
+           and nothing else visibly changed, the months almost certainly went up.
+           Seventy-two and eighty-four month contracts on used cars are common now
+           and are not automatically a bad idea, but they should be a decision you
+           made rather than one that arrived.</p>
+        <p>The total of payments box tells you what the whole thing costs. Compare
+           it to the price of the car. If the gap is uncomfortable, that is real
+           information, and the fix is a shorter term or a larger down payment, not
+           a different feeling about it.</p>
+      </div>
+    </div>
+
+    <div class="tick">
+      <h2>03:00</h2>
+      <div class="tag">Add-ons</div>
+      <div class="do">
+        <p>Look for anything on the contract you did not ask for.</p>
+        <p>Service contracts, gap coverage, VIN etching, paint and fabric
+           protection, key replacement, tire and wheel, nitrogen in the tires. Each
+           of these should appear as its own line, with its own price, and most
+           require their own signature or initial. If any of them is present and
+           you did not request it, it comes off — that is a straightforward
+           request and it does not require a debate.</p>
+        <p>Some of these are genuinely worth buying — gap coverage in particular can
+           make sense on a long loan with a small down payment. The reliable test is
+           that anything worth buying today is still worth buying on Thursday, so a
+           product that can't survive being thought about overnight is telling you
+           what it is. Ask what it costs as a cash number, not as an effect on the
+           payment.</p>
+      </div>
+    </div>
+
+    <div class="tick">
+      <h2>01:00</h2>
+      <div class="tag">Your trade</div>
+      <div class="do">
+        <p>Confirm the payoff amount, who sends it, and by when.</p>
+        <p>If you're trading a financed car, the dealership is agreeing to pay off
+           your existing loan. Find the payoff figure on the paperwork and check it
+           against the quote from your own lender, including the good-through date
+           — payoff quotes expire, and interest keeps accruing until the check
+           actually lands. Ask what happens if the payoff comes up short, and get
+           the answer in writing on the contract rather than as reassurance.</p>
+        <p>Then keep making your payment if one falls due before the loan closes
+           out. A payoff in transit is not a payoff received, and your credit file
+           doesn't know the difference. Any refund of overpaid interest gets sorted
+           out afterward; a missed payment doesn't.</p>
+      </div>
+    </div>
+
+    <div class="tick">
+      <h2>00:00</h2>
+      <div class="tag">Blanks</div>
+      <div class="do">
+        <p>Nothing blank. Anywhere. Then sign.</p>
+        <p>Turn every page over. Any empty field on a document you are signing —
+           a price, a date, a mileage, a term, a name — gets filled in or crossed
+           out before your pen touches it, including on the forms nobody reads. If
+           something is meant to be corrected later, it gets corrected now, and if
+           it genuinely can't be, the signing waits.</p>
+        <p>Ask directly whether the financing is final and approved, or whether the
+           sale is conditional on approval that hasn't happened yet. Those are
+           different deals, and the second one can bring you back to the desk for a
+           different rate. Then take a full copy of everything you signed before
+           you leave, and photograph the signature pages with your phone on the way
+           out. It takes a minute and it is the cheapest insurance in the
+           building.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="stop">
+    <p><b>The one thing worth being stubborn about.</b> Not one item on this clock
+       requires you to be confrontational, and none of it is unusual to ask for.
+       If asking slows the room down or changes the temperature, that reaction is
+       the finding — it is more useful than anything printed on the page in front
+       of you. Standing up and coming back tomorrow costs you a day. The
+       alternative costs you for the length of the loan.</p>
+  </div>
+
+  <h2>Why we publish a countdown</h2>
+
+  <p>We put every price on the windshield and write the out-the-door number down
+     before anyone signs anything, which makes this checklist easier to run on us
+     than on most places — deliberately. A dealership that has arranged its numbers
+     so they survive being read carefully has removed its own temptation along with
+     yours. Nothing here is a trick you have to be clever to catch. It's twenty
+     minutes of attention at the one moment the deal stops being reversible.</p>
+
+  <p class="endnote">General information for New Jersey buyers, not legal advice.
+     Federal disclosure requirements and state used vehicle law both change, and
+     the terms of any individual contract govern that transaction — anything on
+     this page that matters to your deal is worth verifying against the documents
+     in front of you and, where the amounts are large, with your own attorney or
+     your own lender.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/as-is-in-new-jersey/">As-is in New Jersey
+        <span>What those two words on the window sticker do and don't settle.</span></a></li>
+      <li><a href="/articles/what-a-dealer-makes-on-a-used-car/">What a dealer actually makes on a used car
+        <span>The auction price, the pack, the floorplan interest and the three places the real money hides.</span></a></li>
+      <li><a href="/articles/why-we-post-the-price/">Why we post the price
+        <span>An argument for putting the number on the windshield, from the people who have to live with it.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/the-last-twenty-minutes/#article",
+   "headline": "The last twenty minutes",
+   "description": "A descending clock for the twenty minutes before you sign: the out-the-door number, the Buyer's Guide, the VIN, the APR, the term, the add-ons, the trade payoff, and the blanks.",
+   "url": "https://drivethrudeals.online/articles/the-last-twenty-minutes/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Paperwork",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/the-last-twenty-minutes.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/the-last-twenty-minutes/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Paperwork","item":"https://drivethrudeals.online/articles/paperwork/"},
+    {"@type":"ListItem","position":4,"name":"The last twenty minutes"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

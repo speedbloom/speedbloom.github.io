@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Negative Equity, Drawn | Drive Thru Deals</title>
+<meta name="description" content="One chart: the loan balance and the car's value over 72 months, with the gap between them shaded. The shortfall peaks at $1,746.73 in month 18 and does not close until month 43.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/negative-equity-drawn/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Negative equity, drawn">
+<meta property="og:description" content="Two lines and the space between them. Why a car can be worth less than its loan for nearly four years, and what closes the gap.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/negative-equity-drawn/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/negative-equity-drawn.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/negative-equity-drawn.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Negative equity, drawn">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Money">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Negative equity, drawn">
+<meta name="twitter:description" content="Two lines and the space between them. Why a car can be worth less than its loan for nearly four years, and what closes the gap.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/negative-equity-drawn.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Device: one hand-drawn chart, then a set of readings taken off it. Every
+     plotted coordinate is computed from the same schedule quoted in the prose. */
+  .figure{
+    margin:32px 0 10px; background:var(--navy-800);
+    border:1px solid var(--line); border-radius:18px; padding:16px 14px 14px;
+  }
+  .figure svg{width:100%; height:auto; display:block}
+  .figure figcaption{
+    margin:13px 4px 0; font-size:12.5px; line-height:1.55; color:var(--faint);
+  }
+
+  .chart-grid{stroke:var(--line-2); stroke-width:1}
+  .chart-axis{stroke:var(--line-2); stroke-width:1}
+  .chart-gap{fill:var(--lime); opacity:.16}
+  .chart-bal{fill:none; stroke:var(--lime); stroke-width:2.4; stroke-linejoin:round; stroke-linecap:round}
+  .chart-val{fill:none; stroke:var(--muted); stroke-width:2.4; stroke-linejoin:round; stroke-linecap:round; stroke-dasharray:6 4}
+  .chart-mark{stroke:var(--muted); stroke-width:1.2}
+  .chart-dot{fill:var(--lime); stroke:var(--navy-800); stroke-width:2}
+  .chart-lab{fill:var(--faint); font-family:'Inter',system-ui,sans-serif; font-size:11px}
+  .chart-lab.r{text-anchor:end}
+  .chart-lab.c{text-anchor:middle}
+  .chart-key{fill:var(--muted); font-family:'Inter',system-ui,sans-serif; font-size:11.5px}
+  .chart-note{fill:var(--lime); font-family:'Inter',system-ui,sans-serif; font-size:11.5px; font-weight:600}
+
+  .reads{margin:34px 0 8px; counter-reset:read}
+  .reads > div{
+    display:grid; grid-template-columns:auto 1fr; gap:4px 16px;
+    padding:16px 0; border-bottom:1px solid var(--line); align-items:baseline;
+  }
+  .reads > div:first-child{border-top:1px solid var(--line)}
+  .reads .at{
+    font-family:var(--disp); font-weight:800; font-size:12px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--lime); white-space:nowrap;
+    padding-top:3px;
+  }
+  .reads h3{margin:0; font-size:18px}
+  .reads p{grid-column:2; margin:7px 0 0; font-size:15px; color:var(--muted)}
+  .reads p b{color:var(--white); font-weight:600; font-variant-numeric:tabular-nums}
+  @media (max-width:520px){
+    .reads > div{grid-template-columns:1fr}
+    .reads p{grid-column:1}
+  }
+
+  .spec{
+    border-top:1px solid var(--line-2); border-bottom:1px solid var(--line-2);
+    padding:15px 0; margin:28px 0; font-size:14.5px; line-height:1.7;
+    color:var(--muted);
+  }
+  .spec b{color:var(--white); font-weight:600; font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/money/">Money</a>
+  </div>
+
+  <div class="kicker">Money</div>
+  <h1>Negative equity, drawn</h1>
+  <p class="standfirst">Being upside down on a car is not a moral failing or an
+     exotic event. It is the ordinary consequence of two curves with different
+     shapes, and it is much easier to understand when somebody draws it.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>5 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Negative equity means one thing: the loan balance is larger than the car is
+     worth. It matters only at moments when those two numbers are compared —
+     selling, trading, or a total loss. The rest of the time it sits there
+     invisibly, which is why people discover it at the worst possible moment.</p>
+
+  <p>So here is a deal, drawn. The figures come from a full amortization schedule
+     and a stated depreciation assumption; every coordinate on the chart is the
+     same number quoted in the text.</p>
+
+  <p class="spec">Vehicle <b>$21,000.00</b> · New Jersey sales tax at 6.625%
+     <b>$1,391.25</b> · title, registration and documentary fee <b>$305.00</b> ·
+     out the door <b>$22,696.25</b> · down payment <b>$1,000.00</b> · amount
+     financed <b>$21,696.25</b> · illustrative APR <b>9.25%</b> over
+     <b>72 months</b> · payment <b>$393.78</b>. Value assumed to fall <b>18%</b> a
+     year, smoothly, from the $21,000 vehicle price.</p>
+
+  <figure class="figure">
+  <svg viewBox="0 0 480 320" role="img" aria-labelledby="neq-t neq-d" xmlns="http://www.w3.org/2000/svg">
+    <title id="neq-t">Loan balance against assumed vehicle value over 72 months</title>
+    <desc id="neq-d">Two lines starting near $21,000. The loan balance begins above the vehicle value and stays above it until month 43, after which the value line is higher. The shaded area between them is the negative equity, widest at month 18.</desc>
+    <line class="chart-grid" x1="54.0" y1="282.0" x2="466.0" y2="282.0"></line>
+    <text class="chart-lab r" x="45.0" y="286.0">$0</text>
+    <line class="chart-grid" x1="54.0" y1="215.5" x2="466.0" y2="215.5"></line>
+    <text class="chart-lab r" x="45.0" y="219.5">$6k</text>
+    <line class="chart-grid" x1="54.0" y1="149.0" x2="466.0" y2="149.0"></line>
+    <text class="chart-lab r" x="45.0" y="153.0">$12k</text>
+    <line class="chart-grid" x1="54.0" y1="82.5" x2="466.0" y2="82.5"></line>
+    <text class="chart-lab r" x="45.0" y="86.5">$18k</text>
+    <line class="chart-grid" x1="54.0" y1="16.0" x2="466.0" y2="16.0"></line>
+    <text class="chart-lab r" x="45.0" y="20.0">$24k</text>
+    <polygon class="chart-gap" points="54.0,41.5 59.7,44.0 65.4,46.6 71.2,49.1 76.9,51.7 82.6,54.3 88.3,56.9 94.1,59.5 99.8,62.2 105.5,64.8 111.2,67.5 116.9,70.2 122.7,73.0 128.4,75.7 134.1,78.5 139.8,81.3 145.6,84.1 151.3,87.0 157.0,89.8 162.7,92.7 168.4,95.6 174.2,98.5 179.9,101.5 185.6,104.5 191.3,107.4 197.1,110.5 202.8,113.5 208.5,116.6 214.2,119.7 219.9,122.8 225.7,125.9 231.4,129.1 237.1,132.3 242.8,135.5 248.6,138.7 254.3,142.0 260.0,145.3 265.7,148.6 271.4,151.9 277.2,155.3 282.9,158.6 288.6,162.1 294.3,165.5 295.4,166.1 294.3,165.8 288.6,163.9 282.9,161.9 277.2,159.9 271.4,157.8 265.7,155.8 260.0,153.7 254.3,151.5 248.6,149.4 242.8,147.1 237.1,144.9 231.4,142.6 225.7,140.3 219.9,137.9 214.2,135.5 208.5,133.1 202.8,130.6 197.1,128.1 191.3,125.5 185.6,122.9 179.9,120.2 174.2,117.5 168.4,114.8 162.7,112.0 157.0,109.2 151.3,106.3 145.6,103.4 139.8,100.4 134.1,97.4 128.4,94.3 122.7,91.1 116.9,88.0 111.2,84.7 105.5,81.4 99.8,78.1 94.1,74.7 88.3,71.2 82.6,67.7 76.9,64.1 71.2,60.5 65.4,56.8 59.7,53.1 54.0,49.2"></polygon>
+    <polyline class="chart-val" points="54.0,49.2 71.2,60.5 88.3,71.2 105.5,81.4 122.7,91.1 139.8,100.4 157.0,109.2 174.2,117.5 191.3,125.5 208.5,133.1 225.7,140.3 242.8,147.1 260.0,153.7 277.2,159.9 294.3,165.8 311.5,171.4 328.7,176.8 345.8,181.9 363.0,186.7 380.2,191.3 397.3,195.7 414.5,199.9 431.7,203.9 448.8,207.6 466.0,211.2"></polyline>
+    <polyline class="chart-bal" points="54.0,41.5 71.2,49.1 88.3,56.9 105.5,64.8 122.7,73.0 139.8,81.3 157.0,89.8 174.2,98.5 191.3,107.4 208.5,116.6 225.7,125.9 242.8,135.5 260.0,145.3 277.2,155.3 294.3,165.5 311.5,176.0 328.7,186.7 345.8,197.7 363.0,208.9 380.2,220.4 397.3,232.2 414.5,244.2 431.7,256.5 448.8,269.1 466.0,282.0"></polyline>
+    <line class="chart-mark" x1="157.0" y1="89.8" x2="157.0" y2="109.2"></line>
+    <line class="chart-mark" x1="153.0" y1="89.8" x2="161.0" y2="89.8"></line>
+    <line class="chart-mark" x1="153.0" y1="109.2" x2="161.0" y2="109.2"></line>
+    <line class="chart-mark" x1="157.0" y1="89.8" x2="163.0" y2="79"></line>
+    <text class="chart-note" x="167.0" y="76">widest gap $1,746.73 &#183; month 18</text>
+    <circle class="chart-dot" cx="295.4" cy="166.1" r="4.5"></circle>
+    <line class="chart-mark" x1="298.4" y1="162.1" x2="307.4" y2="153"></line>
+    <text class="chart-note" x="311.4" y="150">lines cross &#183; month 43</text>
+    <line class="chart-axis" x1="54.0" y1="282.0" x2="466.0" y2="282.0"></line>
+    <line class="chart-axis" x1="54.0" y1="16.0" x2="54.0" y2="282.0"></line>
+    <line class="chart-axis" x1="54.0" y1="282.0" x2="54.0" y2="287.0"></line>
+    <text class="chart-lab c" x="54.0" y="300.0">0</text>
+    <line class="chart-axis" x1="122.7" y1="282.0" x2="122.7" y2="287.0"></line>
+    <text class="chart-lab c" x="122.7" y="300.0">12</text>
+    <line class="chart-axis" x1="191.3" y1="282.0" x2="191.3" y2="287.0"></line>
+    <text class="chart-lab c" x="191.3" y="300.0">24</text>
+    <line class="chart-axis" x1="260.0" y1="282.0" x2="260.0" y2="287.0"></line>
+    <text class="chart-lab c" x="260.0" y="300.0">36</text>
+    <line class="chart-axis" x1="328.7" y1="282.0" x2="328.7" y2="287.0"></line>
+    <text class="chart-lab c" x="328.7" y="300.0">48</text>
+    <line class="chart-axis" x1="397.3" y1="282.0" x2="397.3" y2="287.0"></line>
+    <text class="chart-lab c" x="397.3" y="300.0">60</text>
+    <line class="chart-axis" x1="466.0" y1="282.0" x2="466.0" y2="287.0"></line>
+    <text class="chart-lab c" x="466.0" y="300.0">72</text>
+    <text class="chart-lab c" x="260.0" y="316.0">months since purchase</text>
+    <line class="chart-bal" x1="300" y1="34" x2="322" y2="34"></line>
+    <text class="chart-key" x="328" y="38">Loan balance</text>
+    <line class="chart-val" x1="300" y1="52" x2="322" y2="52"></line>
+    <text class="chart-key" x="328" y="56">Assumed value</text>
+  </svg>
+  <figcaption>Loan balance from a full 72-month amortization schedule on $21,696.25
+     at an illustrative 9.25% APR, plotted every three months, against a vehicle value
+     assumed to fall 18% a year from $21,000. The shaded area is negative equity:
+     $696.25 at delivery, $1,746.73 at its widest in month 18, closed in month 43.
+     Illustrative figures, not a forecast.</figcaption>
+  </figure>
+
+  <h2>Five readings off the chart</h2>
+
+  <div class="reads">
+
+    <div>
+      <span class="at">Month 0</span>
+      <h3>You are already behind</h3>
+      <p>Balance <b>$21,696.25</b>, value <b>$21,000.00</b> — a shortfall of
+         <b>$696.25</b> before the car has turned a wheel. Nothing went wrong. The
+         sales tax and the fees were financed, and they are not part of what the
+         car is worth to anyone else.</p>
+    </div>
+
+    <div>
+      <span class="at">Month 18</span>
+      <h3>The widest point</h3>
+      <p>Balance <b>$17,340.10</b>, value <b>$15,593.37</b>, shortfall
+         <b>$1,746.73</b>. This is the peak, and it arrives a year and a half in —
+         the gap gets <em>worse</em> before it gets better, because early payments
+         are mostly interest while the value keeps falling on its own schedule.</p>
+    </div>
+
+    <div>
+      <span class="at">Month 43</span>
+      <h3>The lines cross</h3>
+      <p>Month 42 ends with a balance of <b>$10,511.33</b> against a value of
+         <b>$10,484.98</b> — still $26.35 short. Month 43 ends at
+         <b>$10,198.57</b> against <b>$10,313.01</b>. That is the first month with
+         equity in it, forty-three payments into a seventy-two-payment loan.</p>
+    </div>
+
+    <div>
+      <span class="at">Month 48</span>
+      <h3>Daylight</h3>
+      <p>Balance <b>$8,598.25</b>, value <b>$9,494.56</b>. Now there is
+         <b>$896.31</b> of equity, and it grows quickly from here because the
+         principal portion of each payment is at its largest while the
+         depreciation curve is flattening.</p>
+    </div>
+
+    <div>
+      <span class="at">Month 60</span>
+      <h3>Why the end feels different</h3>
+      <p>Balance <b>$4,497.25</b>, value <b>$7,785.54</b> — <b>$3,288.29</b> to the
+         good, with a year still to run. The last stretch of a long loan is the
+         only part that builds equity fast, which is exactly the part people trade
+         out of before reaching.</p>
+    </div>
+
+  </div>
+
+  <h2>Why the shape is that shape</h2>
+
+  <p>The two lines are governed by completely unrelated forces, and that is the
+     whole story.</p>
+
+  <p>The balance line falls slowly at first because each early payment is mostly
+     interest. On this loan the first payment is $393.78, of which
+     <strong>$167.24</strong> is interest — 42.5% of it never touches the balance.
+     By the sixtieth payment the interest portion is down to <strong>$37.41</strong>, and the
+     line drops steeply.</p>
+
+  <p>The value line does the opposite. It falls fastest at the beginning, when the
+     car is newest, and flattens as it ages — the assumption here is a constant
+     18% a year, which produces a curve that loses $3,780.00 in year one and
+     $2,541.67 in year three. Two curves, one concave and one convex, starting a few hundred
+     dollars apart. They have to cross somewhere, and where they cross is decided
+     by the term and the down payment.</p>
+
+  <h2>Four things that push the crossing later</h2>
+
+  <p><strong>A longer term.</strong> It is the single largest lever. Stretching the
+     same loan flattens the balance line and moves the crossing months further out
+     — the only reason a six-year loan produces forty-three months of negative
+     equity where a four-year loan on the same car would produce almost none.</p>
+
+  <p><strong>Little or nothing down.</strong> The balance line simply starts
+     higher. <a href="/articles/the-down-payment-question/">Put $4,500 down on a
+     $17,200 car</a> under the same assumption and the crossing never happens
+     because the lines never touch.</p>
+
+  <p><strong>Financing the tax and fees.</strong> The $1,696.25 of tax and fees in
+     this deal is money that buys no resale value at all. It is the entire reason
+     the shortfall exists in month 0.</p>
+
+  <p><strong>Rolling a previous shortfall in.</strong> If a trade-in still owes
+     more than it is worth and the difference is added to the new loan, the
+     balance line starts higher again — and the next car inherits the gap. That is
+     how two ordinary deals become one bad one.</p>
+
+  <h2>What it actually costs you</h2>
+
+  <p>Nothing, most months. The chart is irrelevant while you are simply driving.
+     It becomes real in exactly three circumstances: you want to sell or trade
+     before the crossing, in which case you must bring the difference in cash; the
+     car is stolen or written off before the crossing, which is the case
+     <a href="/articles/gap-insurance-examined/">gap coverage exists for</a>; or
+     life changes and the payment stops being affordable, and selling is not
+     available as a way out.</p>
+
+  <p>That third one is the underrated one. Negative equity does not cost money so
+     much as it removes an option — and the option it removes is the one you want
+     when things go wrong.</p>
+
+  <h2>What we would rather you did</h2>
+
+  <p>Pick the term first and the payment second. A shorter loan on a slightly
+     cheaper car closes the gap faster than a longer loan on a nicer one, every
+     time, and the car you actually want is usually inside that constraint if you
+     shop the whole lot instead of one row of it.</p>
+
+  <p>And if you are trading in something you still owe on, ask for the two numbers
+     separately: what the trade is worth, and what is owed on it. Those get
+     combined on a worksheet almost immediately, and once they are combined you can
+     no longer see which one you were negotiating.</p>
+
+  <p class="endnote">Every plotted point and every figure in the text comes from the
+     same 72-month amortization schedule, computed to the cent from the stated
+     amount financed and illustrative APR. The value line is an assumption — a
+     constant 18% a year, chosen to make the geometry legible — and is not a
+     forecast for any vehicle, model or market. Rates shown are illustrative and
+     are not offers of credit. Nothing on this page is financial advice.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/gap-insurance-examined/">Gap insurance, examined
+        <span>A decision flow: when the coverage earns its cost, and when it is money for nothing.</span></a></li>
+      <li><a href="/articles/the-down-payment-question/">How much to put down
+        <span>Three down payments on one car, followed to their consequences.</span></a></li>
+      <li><a href="/articles/the-longer-term-trick/">The longer-term trick
+        <span>The same car, the same monthly payment, two terms - and full amortization for both.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/negative-equity-drawn/#article",
+   "headline": "Negative equity, drawn",
+   "description": "One chart: the loan balance and the car's value over 72 months, with the gap between them shaded. The shortfall peaks at $1,746.73 in month 18 and does not close until month 43.",
+   "url": "https://drivethrudeals.online/articles/negative-equity-drawn/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Money",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/negative-equity-drawn.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/negative-equity-drawn/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Money","item":"https://drivethrudeals.online/articles/money/"},
+    {"@type":"ListItem","position":4,"name":"Negative equity, drawn"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

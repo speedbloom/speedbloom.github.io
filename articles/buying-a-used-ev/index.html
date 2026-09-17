@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Buying a Used EV | Drive Thru Deals</title>
+<meta name="description" content="What battery degradation actually is, how to read a state-of-health readout and what makes one comparable, the charging history worth asking for, and the parts of a used electric car that have nothing to do with the battery.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/buying-a-used-ev/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Buying a used EV">
+<meta property="og:description" content="Degradation, charging history, and the readouts worth asking for — plus what a state-of-health number is and isn't.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/buying-a-used-ev/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/buying-a-used-ev.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/buying-a-used-ev.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Buying a used EV">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Condition">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Buying a used EV">
+<meta name="twitter:description" content="Degradation, charging history, and the readouts worth asking for — plus what a state-of-health number is and isn't.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/buying-a-used-ev.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Built like a specification sheet rather than an article: hanging labels in
+     the left column, the substance in the right, hairlines between. Nothing is
+     boxed, because the point of the piece is that the information is plain and
+     obtainable — you just have to ask for it in the right words. */
+
+  .rd{margin:30px 0; border-top:1px solid var(--line-2)}
+  .rd > div{
+    display:grid; grid-template-columns:1fr; gap:4px 20px;
+    padding:16px 0; border-bottom:1px solid var(--line);
+  }
+  @media (min-width:620px){
+    .rd > div{grid-template-columns:128px 1fr; gap:0 24px}
+  }
+  .rd dt, .rd .k{
+    font-family:var(--disp); font-weight:600; font-size:11px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--lime);
+    line-height:1.5; padding-top:3px;
+  }
+  .rd p{margin:0; font-size:15.5px; line-height:1.64; color:var(--muted)}
+  .rd p + p{margin-top:10px}
+  .rd p strong{color:var(--white)}
+
+  .asks{margin:30px 0; padding:0; list-style:none; counter-reset:a}
+  .asks li{
+    counter-increment:a; position:relative;
+    padding:16px 0 16px 46px; border-bottom:1px solid var(--line);
+  }
+  .asks li::before{
+    content:counter(a,decimal-leading-zero); position:absolute; left:0; top:17px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:13px; color:var(--faint); font-variant-numeric:tabular-nums;
+  }
+  .asks h3{margin:0 0 6px; font-size:16.5px}
+  .asks p{margin:0; font-size:15px; line-height:1.62; color:var(--muted)}
+  .asks q{
+    display:block; margin:9px 0 0; padding-left:14px;
+    border-left:2px solid var(--lime); quotes:none;
+    font-size:14.5px; line-height:1.6; color:var(--white);
+  }
+  .flat{
+    margin:34px 0; padding:18px 20px; border-radius:14px;
+    background:var(--navy-800); border:1px solid var(--line);
+  }
+  .flat h3{margin:0 0 10px; font-size:17px}
+  .flat p{margin:0 0 12px; font-size:15px; line-height:1.62; color:var(--muted)}
+  .flat p:last-child{margin-bottom:0}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/condition/">Condition</a>
+  </div>
+
+  <div class="kicker">Condition</div>
+  <h1>Buying a used EV</h1>
+  <p class="standfirst">Most of an electric car is simpler than the thing it
+     replaced: no oil, no exhaust, no timing components, brakes that barely wear.
+     Nearly all of the risk has been consolidated into one component, and nearly all
+     of the useful buying work is therefore about getting an honest, dated,
+     comparable description of that component.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>7 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>We are not going to print degradation percentages or range figures on this
+     page. Any number we gave you would be an average of things that are not alike
+     — different chemistries, different thermal designs, different climates,
+     different owners — and you would then carry it into a negotiation about a
+     specific car, where it would be worse than useless. What follows is the
+     mechanism, and the method for getting the real numbers for the actual car.</p>
+
+  <h2>What degradation actually is</h2>
+
+  <p>Two things happen to a lithium-ion pack as it ages, and they are separate.
+     <strong>Capacity fade</strong> means the pack holds less energy than it did
+     when new, which is what people mean by "degradation" and what shows up as lost
+     range. <strong>Resistance rise</strong> means the pack has become less willing
+     to move energy quickly, which shows up as slower charging and, in extreme
+     cases, reduced power — and it doesn't always track capacity fade.</p>
+
+  <p>What drives both: calendar time, which happens whether the car is driven or
+     parked; heat, which is the most consistently damaging variable; time spent
+     sitting at a very high state of charge; deep discharges; and high-rate DC fast
+     charging, particularly when the pack is already warm. The design of the car's
+     thermal management matters too — a pack with active liquid cooling has a
+     meaningfully different exposure to a hot summer than one relying on air. That
+     is a fact about how the car was engineered, and it's a fair question to ask
+     before you look at any individual example.</p>
+
+  <p>One more thing worth knowing: degradation is usually faster early on and then
+     flattens out. That means a young car with visible loss is not necessarily on a
+     steeper trajectory than an older one that has settled — and it also means no
+     one can extrapolate a straight line into the future from two data points.</p>
+
+  <h2>Three numbers people confuse</h2>
+
+  <p>The <strong>EPA label range</strong> is a test-cycle figure produced for a new
+     vehicle under defined conditions. It is a comparison tool between models. It
+     was never a promise about your commute, and it has nothing to say about a
+     six-year-old example of the same car.</p>
+
+  <p>The <strong>range estimate on the dashboard</strong> — the "guess-o-meter" —
+     is a rolling prediction built from recent energy consumption. Drive gently for
+     a week and it rises; tow something up a hill and it collapses. It is a
+     forecast of your driving, not a measurement of your battery, and reading
+     battery health from it is the single most common mistake buyers make.</p>
+
+  <p>The <strong>state of health</strong> is the number you actually want: the
+     vehicle's own estimate of present usable capacity relative to its original
+     capacity. It is still an estimate, computed by software. But it is the only one
+     of the three that is trying to describe the pack.</p>
+
+  <h2>Reading a state-of-health readout</h2>
+
+  <div class="rd">
+    <div>
+      <span class="k">Where to get it</span>
+      <p>On some cars it's displayed in a service or battery menu on the car's own
+         screen. On others it takes an OBD-II adapter and an app that understands
+         that model's parameters. On most, a franchise service department can run a
+         proper battery health check and print it. Ask for all three routes and use
+         whichever the car supports.</p>
+    </div>
+    <div>
+      <span class="k">What it is</span>
+      <p>A calculated estimate, not a direct measurement. The battery management
+         system infers capacity from charge and discharge behavior over time, and it
+         refines that estimate when the car experiences wide swings in state of
+         charge. A pack that has only been cycled in a narrow band may carry a
+         stale figure.</p>
+    </div>
+    <div>
+      <span class="k">Comparability</span>
+      <p>Different tools and apps compute health differently, so two readouts on
+         the same car can disagree without either being wrong. <strong>Compare like
+         with like:</strong> same method, same tool, and always with a date. A
+         screenshot with no date and no named source is not evidence of
+         anything.</p>
+    </div>
+    <div>
+      <span class="k">Cross-checks</span>
+      <p>Do not rely on one figure. Check it against the car's reported usable
+         energy, against how much energy an actual drive consumed for the distance
+         covered, and against how the charging rate behaves. A car whose health
+         figure looks fine but whose fast-charging rate tapers unusually early is
+         telling you something the single number didn't.</p>
+    </div>
+    <div>
+      <span class="k">What it isn't</span>
+      <p>A prediction. Nothing measurable today establishes how much life remains,
+         because the trajectory depends on how the next owner charges, parks and
+         drives. It also isn't a warranty determination — whether a pack qualifies
+         for coverage is decided by the manufacturer under its own criteria.</p>
+    </div>
+  </div>
+
+  <h2>What to ask for</h2>
+
+  <p>These are the requests, roughly in order of how much they settle. The wording
+     matters less than the specificity; what you are trying to avoid is a
+     conversation conducted entirely in reassurances.</p>
+
+  <ol class="asks">
+    <li>
+      <h3>A dated battery health report, run while you watch</h3>
+      <p>Not a screenshot from last spring. Ask that it be produced during the
+         viewing, from the car's own menu or by a franchise service department, with
+         the date and the source on it.</p>
+      <q>Can we pull the battery health readout together today, and can I have it
+         in writing with the date on it?</q>
+    </li>
+    <li>
+      <h3>The charging pattern</h3>
+      <p>Daily charging habits do more to a pack over years than total mileage
+         does. Some vehicles and apps record fast-charging sessions; where that data
+         exists, ask to see it rather than to hear about it.</p>
+      <q>What did you set the daily charge limit to? Did you leave it plugged in at
+         full? How often did you use fast chargers, and does the car show a count?</q>
+    </li>
+    <li>
+      <h3>Where it lived</h3>
+      <p>Garaged or on the street, and in what climate. A car that spent its life
+         in sustained heat has had a harder time than the odometer suggests. New
+         Jersey is relatively kind on this axis — but plenty of used cars here
+         arrived from somewhere that isn't.</p>
+      <q>Was it garaged? Has it always been in this region?</q>
+    </li>
+    <li>
+      <h3>High-voltage service history</h3>
+      <p>Any module or pack replacement, any work on the pack's cooling loop, any
+         high-voltage fault codes. A replaced pack is not a bad thing — it may be
+         the best thing about the car — but it changes everything about the age of
+         what you're buying.</p>
+      <q>Has the pack or any module ever been serviced or replaced? Can I see the
+         repair order?</q>
+    </li>
+    <li>
+      <h3>Remaining coverage, verified by VIN</h3>
+      <p>High-voltage components are typically covered separately from the rest of
+         the vehicle, and the terms differ by manufacturer, model year and where the
+         car was first sold. Do not accept anyone's summary — including ours. Call a
+         franchise service department with the VIN and ask what remains and whether
+         it transfers.</p>
+    </li>
+    <li>
+      <h3>Software, accounts and hardware</h3>
+      <p>Confirm the car is on current software and can still receive updates, that
+         the previous owner's account and phone keys have been removed, that any
+         connected services transfer, and that the charging equipment that came with
+         the car — mobile connector, adapters — is actually present. Those adapters
+         are not cheap to replace and are frequently missing.</p>
+    </li>
+  </ol>
+
+  <div class="flat">
+    <h3>The parts that have nothing to do with the battery</h3>
+    <p><strong>Tires.</strong> Electric cars are heavy and deliver torque
+       instantly, and both of those consume tires faster than an equivalent
+       gasoline car. Check that the fitted tires carry an appropriate load rating,
+       and read the wear — the tread on a used EV
+       <a href="/articles/reading-a-tire/">tells you a lot about how it was
+       driven</a>.</p>
+    <p><strong>Brakes.</strong> Regenerative braking does most of the slowing, so
+       pads last unusually well. The flip side is that discs which are rarely used
+       can corrode, particularly through a salted New Jersey winter, and a used EV
+       sometimes needs brake work for rust rather than for wear. Look at the rotor
+       faces and edges.</p>
+    <p><strong>The 12-volt battery.</strong> Electric cars still have one, it still
+       runs the computers and the contactors, and when it dies the car can be
+       thoroughly stranded in ways that look far more alarming than the cause. Ask
+       when it was last replaced and have it tested.</p>
+    <p><strong>The charge port.</strong> Inspect the pins and the latch for damage
+       and corrosion, and test that the car actually takes a charge — on an AC
+       charger and, if you can arrange it, on a DC fast charger. Watch the rate it
+       accepts and whether it holds it. Do this after a drive, when the pack is
+       warm, because cold packs charge slowly by design and you don't want to
+       misread a normal behavior as a fault.</p>
+  </div>
+
+  <h2>And the New Jersey part</h2>
+
+  <p>Cold weather reduces usable range — batteries deliver less when cold and cabin
+     heating draws real energy — and the size of that effect depends on the car's
+     heating design and on your commute. It is temporary; the range returns in
+     spring. But if your winter drive already sits near the edge of what a used
+     pack will do on a full charge, plan around the version of the car that exists
+     in February, not the one you're test-driving in September.</p>
+
+  <div class="note">
+    <p><b>How we handle it here.</b> Any electric car on our lot is listed with a
+       dated state-of-health readout, the tool used to produce it named, and the
+       12-volt battery load-tested — all inside the published 168-point inspection.
+       Where the car can't produce a health figure we say that plainly rather than
+       substituting an estimate, and we tell you which charging equipment is in the
+       trunk.</p>
+  </div>
+
+  <p class="endnote">General information for used car buyers, not a diagnostic
+     procedure and not a substitute for inspection by a qualified technician. High
+     voltage systems are dangerous and should only be serviced by trained
+     personnel. This page states no range, capacity, degradation figure or warranty
+     term for any vehicle; those vary and must be confirmed for the specific VIN
+     with the manufacturer or a franchise service department.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/hybrid-battery-health/">Hybrid battery health
+        <span>Assessing a traction pack without specialist tools, and the limits of every observation.</span></a></li>
+      <li><a href="/articles/reading-a-tire/">Reading a tire
+        <span>The sidewall decoded, and what a wear pattern says about the car rather than the tire.</span></a></li>
+      <li><a href="/articles/what-the-history-report-misses/">What the history report misses
+        <span>The things that never make it into a report, and why the paperwork trail has holes in it.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/buying-a-used-ev/#article",
+   "headline": "Buying a used EV",
+   "description": "What battery degradation actually is, how to read a state-of-health readout and what makes one comparable, the charging history worth asking for, and the parts of a used electric car that have nothing to do with the battery.",
+   "url": "https://drivethrudeals.online/articles/buying-a-used-ev/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Condition",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/buying-a-used-ev.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/buying-a-used-ev/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Condition","item":"https://drivethrudeals.online/articles/condition/"},
+    {"@type":"ListItem","position":4,"name":"Buying a used EV"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

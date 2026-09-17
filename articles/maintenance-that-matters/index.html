@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maintenance That Actually Matters | Drive Thru Deals</title>
+<meta name="description" content="A maintenance list ranked by what happens when you skip it, not by how often a sticker says to do it - from the items that end a car to the ones that only cost you comfort.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/maintenance-that-matters/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Maintenance that actually matters">
+<meta property="og:description" content="Ranked by the consequence of skipping it, from the items that end a car to the ones that only cost you comfort.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/maintenance-that-matters/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/maintenance-that-matters.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/maintenance-that-matters.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Maintenance that actually matters">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Owning">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maintenance that actually matters">
+<meta name="twitter:description" content="Ranked by the consequence of skipping it, from the items that end a car to the ones that only cost you comfort.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/maintenance-that-matters.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* A consequence ladder. Items descend from "this ends the car" to "this costs
+     you comfort". The rank numeral is large and the tier chip carries the color,
+     so the page can be skimmed by severity alone. */
+  .ladder{margin:38px 0; counter-reset:rung}
+  .rung{
+    display:grid; grid-template-columns:auto 1fr; gap:4px 16px;
+    padding:22px 0; border-top:1px solid var(--line);
+  }
+  .rung:last-child{border-bottom:1px solid var(--line)}
+  .rank{
+    font-family:var(--disp); font-weight:800; font-size:30px; line-height:1;
+    color:var(--faint); font-variant-numeric:tabular-nums; padding-top:2px;
+  }
+  .rung h2{margin:0; font-size:clamp(20px,3.6vw,25px); align-self:center}
+  .rung .tier{
+    grid-column:2; margin:8px 0 0; display:inline-block; justify-self:start;
+    font-family:var(--disp); font-size:10.5px; font-weight:700;
+    letter-spacing:.14em; text-transform:uppercase;
+    padding:4px 10px; border-radius:999px; border:1px solid var(--line-2);
+    color:var(--muted);
+  }
+  .t1{background:#2A0A0A; border-color:#5E1A16 !important; color:#FF8F87 !important}
+  .t2{background:#2A1B04; border-color:#5E3F10 !important; color:#F2B950 !important}
+  .t3{background:var(--navy-700); color:var(--muted) !important}
+  .rung .what{grid-column:2; margin:13px 0 0; font-size:16px; color:var(--muted)}
+  .rung .skip{
+    grid-column:2; margin:12px 0 0; padding:12px 14px;
+    background:var(--navy-800); border-left:3px solid var(--line-2);
+    border-radius:0 10px 10px 0; font-size:15px; line-height:1.6; color:var(--muted);
+  }
+  .rung .skip b{color:var(--white)}
+  .rung .skip::before{
+    content:"If you skip it"; display:block; font-family:var(--disp);
+    font-size:10.5px; font-weight:700; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--faint); margin-bottom:5px;
+  }
+  @media (max-width:520px){
+    .rung{grid-template-columns:1fr; gap:2px}
+    .rank{font-size:22px}
+    .rung .tier,.rung .what,.rung .skip{grid-column:1}
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/owning/">Owning</a>
+  </div>
+
+  <div class="kicker">Owning</div>
+  <h1>Maintenance that actually matters</h1>
+  <p class="standfirst">Every maintenance list you have ever been handed is sorted by
+     interval. That sorting is useful to a service department and nearly useless to
+     you, because it says nothing about which line to do first when the money is
+     finite. So here is the same list sorted by consequence.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>6 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>One thing has to be said before the list, and it is not a formality. <strong>We
+     are not telling you when to do any of this.</strong> Service intervals, fluid
+     specifications and capacities are set by the company that built your car, they
+     differ by model, engine, year and how the car is used, and they live in your
+     owner's manual. Anyone quoting you a universal mileage figure — including a
+     windshield sticker from a quick-lube — is quoting a policy, not your car.</p>
+
+  <p>What this page ranks is something the manual does not tell you: what actually
+     happens if a line goes undone. A maintenance schedule treats every entry as
+     equally obligatory. Reality does not. Some of these items, neglected, end the
+     car. Some end a component. Some cost you money slowly, and a few cost you
+     nothing but comfort. When the budget only stretches to three of them, that
+     ordering is the only thing that matters.</p>
+
+  <div class="ladder">
+
+    <div class="rung">
+      <span class="rank">01</span>
+      <h2>Tires — pressure, depth, and age</h2>
+      <span class="tier t1">Consequence: control</span>
+      <p class="what">Four contact patches, each about the size of your hand, carry
+         every input you give the car. Nothing else on this list has that job.
+         Pressure is free to check and drifts constantly, especially across a New
+         Jersey fall. Depth and age you can read yourself.</p>
+      <p class="skip">Stopping distance goes up, wet grip goes down first and goes
+         down sharply, and a tire that is old enough for the rubber to have hardened
+         can look fine and behave badly. <b>This is the only item on the list whose
+         failure mode is a loss of control rather than a bill.</b></p>
+    </div>
+
+    <div class="rung">
+      <span class="rank">02</span>
+      <h2>Brakes — pads, fluid, and the noise</h2>
+      <span class="tier t1">Consequence: control, then cascade</span>
+      <p class="what">Brake pads are designed to be consumed and replaced. Brake
+         fluid is hygroscopic, meaning it absorbs moisture from the air over time,
+         and moisture is what lowers its boiling point.</p>
+      <p class="skip">A pad run past its friction material starts cutting the rotor,
+         which converts a routine job into a larger one — that is the cheap version.
+         <b>The expensive version is a pedal that goes soft on a long descent</b>
+         because the fluid has aged. Brakes give a lot of warning, by sound and by
+         feel, and almost nobody who gets hurt was unwarned.</p>
+    </div>
+
+    <div class="rung">
+      <span class="rank">03</span>
+      <h2>The cooling system</h2>
+      <span class="tier t1">Consequence: the engine, quickly</span>
+      <p class="what">Coolant level, the condition of the hoses, the cap, and — above
+         all — whether you are topping it off regularly. A cooling system that needs
+         topping off has a leak, even if you never see a puddle.</p>
+      <p class="skip">This is the fastest route from a small part to a dead engine
+         that exists on a car. A hose, a thermostat or a water pump is an ordinary
+         repair. <b>The overheat that follows one of them failing can warp a cylinder
+         head or breach a head gasket in the space of a single exit ramp</b>, and
+         that repair can cost more than an older car is worth. If the temperature
+         gauge climbs, pull over. Do not try to make the next exit.</p>
+    </div>
+
+    <div class="rung">
+      <span class="rank">04</span>
+      <h2>Engine oil — level first, changes second</h2>
+      <span class="tier t1">Consequence: the engine, slowly</span>
+      <p class="what">Two separate habits get confused here. Changing the oil on the
+         manufacturer's schedule is one. <strong>Checking the level between changes
+         is the other</strong>, and it is the one people skip. Plenty of healthy
+         engines use some oil between services; an engine that is low has no reserve
+         when something goes wrong.</p>
+      <p class="skip">Oil starvation damages bearings and, on a turbocharged engine,
+         the turbo — quietly, cumulatively, and without a warning light until it is
+         far along. <b>A replacement engine is one of the few bills that can exceed
+         what a used car is worth.</b> Checking the dipstick costs a minute a
+         month.</p>
+    </div>
+
+    <div class="rung">
+      <span class="rank">05</span>
+      <h2>The timing belt, if your engine has one</h2>
+      <span class="tier t1">Consequence: potentially terminal, without warning</span>
+      <p class="what">Some engines drive the camshafts with a rubber belt that is a
+         scheduled replacement item; others use a chain that is not. Which one you
+         have, and whether your engine is the kind where valves and pistons occupy
+         the same space at different times, are two facts worth establishing on day
+         one. Your manual and your mechanic can both answer them.</p>
+      <p class="skip">A belt gives no symptoms and then gives out. On an engine where
+         the valves and pistons can meet, <b>that is an instant, catastrophic
+         internal failure from a part that was due for replacement on a
+         schedule</b> — the single most avoidable large repair in this whole list.
+         This is exactly why we ask for the belt receipt on any belt-driven car we
+         buy.</p>
+    </div>
+
+    <div class="rung">
+      <span class="rank">06</span>
+      <h2>Transmission fluid</h2>
+      <span class="tier t2">Consequence: a component that rivals the car's value</span>
+      <p class="what">Practice here varies more than anywhere else on the list. Some
+         manufacturers publish a service for it; some describe the fill as lasting
+         the life of the unit; some specify a fluid that cannot be substituted. Read
+         the manual for <em>your</em> car rather than applying a rule you heard about
+         a different one.</p>
+      <p class="skip">Automatic transmissions rarely announce themselves early. When
+         they do — a shift that hesitates, a flare between gears, a shudder at light
+         throttle — the useful window is already closing. <b>A rebuild or a
+         replacement unit is the repair most likely to end an otherwise good
+         car.</b></p>
+    </div>
+
+    <div class="rung">
+      <span class="rank">07</span>
+      <h2>Steering and suspension joints</h2>
+      <span class="tier t2">Consequence: tires, handling, inspection</span>
+      <p class="what">Ball joints, tie rod ends, control arm bushings, the boots that
+         keep grease in and grit out. These wear invisibly and are checked on a lift
+         in about four minutes.</p>
+      <p class="skip">The routine outcome is a car that eats a set of tires
+         unevenly and no longer tracks straight, which is money leaving slowly. The
+         rare outcome, on a joint left long past worn, is a separation. In between
+         sits a New Jersey inspection you fail.</p>
+    </div>
+
+    <div class="rung">
+      <span class="rank">08</span>
+      <h2>Wipers, washer fluid, and every bulb</h2>
+      <span class="tier t2">Consequence: seeing and being seen</span>
+      <p class="what">The cheapest safety items on any car, and the ones most
+         reliably ignored until the first hard rain in November or the first salt
+         spray off a truck on the Parkway.</p>
+      <p class="skip">A smeared windshield at dusk in the rain is a genuine hazard
+         that costs about the price of lunch to eliminate. A dead brake light is
+         invisible to you by definition and obvious to the officer behind you.</p>
+    </div>
+
+    <div class="rung">
+      <span class="rank">09</span>
+      <h2>Battery and charging</h2>
+      <span class="tier t3">Consequence: stranding, not damage</span>
+      <p class="what">Batteries degrade gradually and then fail on the first properly
+         cold morning. Most shops will test one in a few minutes at no charge, and
+         the test is far more informative than the age.</p>
+      <p class="skip">You get stranded. Unpleasant and inconvenient, occasionally
+         expensive in tow fees — but it does not damage the car, which is precisely
+         why it ranks here and not higher.</p>
+    </div>
+
+    <div class="rung">
+      <span class="rank">10</span>
+      <h2>Filters, rotation, alignment</h2>
+      <span class="tier t3">Consequence: money and comfort, over time</span>
+      <p class="what">Engine air filter, cabin air filter, rotating the tires,
+         correcting the alignment. Real maintenance with real value — and the part of
+         the list that gets sold hardest, because it is easy to sell.</p>
+      <p class="skip">A tired engine filter and a skipped rotation cost you
+         efficiency and tire life gradually. A cabin filter left in place costs you a
+         musty vent and nothing else. <b>Worth doing. Never worth doing before
+         anything above it.</b></p>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <h2>The question to ask at the counter</h2>
+
+  <p>When a service advisor hands you a list, the useful question is not "how much?"
+     It is: <strong>"Which of these is in the manufacturer's schedule for this car,
+     and which is the shop recommending?"</strong> Both categories can be legitimate.
+     They are not the same category, and a shop that answers that question cleanly
+     and without irritation has just told you a great deal about itself.</p>
+
+  <p>The follow-up is the one from this page: <em>if I do nothing about this line,
+     what happens and how fast?</em> An honest answer sounds like "the car will use a
+     little more fuel" or "the rotor will get cut and the job doubles." A vague
+     answer about the engine running better is not an answer.</p>
+
+  <div class="note">
+    <p><b>What we do with this list.</b> Everything in the top five gets checked and
+       documented before a car goes out our door, and the findings are published in
+       the inspection report rather than summarized. It is the cheapest honesty
+       available to a small lot: the items that end cars are the items worth writing
+       down.</p>
+  </div>
+
+  <p class="endnote">No service interval, fluid capacity or part life is stated
+     anywhere on this page, deliberately. Those figures belong to your car's
+     manufacturer and appear in its owner's manual and maintenance schedule. This
+     page ranks consequences, not timing.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/finding-a-mechanic/">Finding a mechanic you can keep
+        <span>How to evaluate a shop, including the things a good one does that you can see for yourself.</span></a></li>
+      <li><a href="/articles/when-a-repair-isnt-worth-it/">When a repair isn't worth it
+        <span>The arithmetic that settles it, worked through four ordinary cases.</span></a></li>
+      <li><a href="/articles/reading-a-tire/">Reading a tire
+        <span>Date codes, load ratings, and the wear patterns that are really telling you about something else.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/maintenance-that-matters/#article",
+   "headline": "Maintenance that actually matters",
+   "description": "A maintenance list ranked by what happens when you skip it, not by how often a sticker says to do it - from the items that end a car to the ones that only cost you comfort.",
+   "url": "https://drivethrudeals.online/articles/maintenance-that-matters/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Owning",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/maintenance-that-matters.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/maintenance-that-matters/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Owning","item":"https://drivethrudeals.online/articles/owning/"},
+    {"@type":"ListItem","position":4,"name":"Maintenance that actually matters"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Timing Belt or Chain | Drive Thru Deals</title>
+<meta name="description" content="What a timing belt and a timing chain each do, how they fail differently, why an interference engine changes the stakes — and a method for finding your own car's replacement interval instead of trusting a number off a forum.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/timing-belt-or-chain/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Timing belt or chain">
+<meta property="og:description" content="Two ways to keep a camshaft in step with a crankshaft, two entirely different failure modes — and how to find out which one your car has.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/timing-belt-or-chain/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/timing-belt-or-chain.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/timing-belt-or-chain.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Timing belt or chain">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Condition">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Timing belt or chain">
+<meta name="twitter:description" content="Two ways to keep a camshaft in step with a crankshaft, two entirely different failure modes — and how to find out which one your car has.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/timing-belt-or-chain.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Two designs answering the same question, so the device is a spine: one
+     attribute in the middle, the belt's answer on the left, the chain's on the
+     right. Below 640px the spine becomes a header band and the two answers
+     stack, which is the only way this stays readable on a phone. */
+
+  .vs{margin:34px 0 8px; border-top:1px solid var(--line-2)}
+  .vhead{
+    display:none; font-family:var(--disp); font-weight:700; font-size:13px;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--faint);
+    padding:12px 0 0;
+  }
+  .vrow{border-bottom:1px solid var(--line); padding:6px 0 16px}
+  .vrow .attr{
+    display:block; font-family:var(--disp); font-weight:600; font-size:12px;
+    letter-spacing:.13em; text-transform:uppercase; color:var(--lime);
+    padding:14px 0 8px;
+  }
+  .vrow .side{font-size:15px; line-height:1.62; color:var(--muted); padding:0 0 10px}
+  .vrow .side:last-child{padding-bottom:0}
+  .vrow .side b{
+    display:block; font-family:var(--disp); font-weight:600; font-size:11.5px;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--white);
+    margin-bottom:4px;
+  }
+  @media (min-width:640px){
+    .vhead{display:grid; grid-template-columns:1fr 128px 1fr; gap:0 18px; text-align:center}
+    .vhead span:first-child{text-align:right; color:var(--white)}
+    .vhead span:last-child{text-align:left; color:var(--white)}
+    .vrow{
+      display:grid; grid-template-columns:1fr 128px 1fr; gap:0 18px;
+      align-items:center; padding:16px 0;
+    }
+    .vrow .attr{
+      order:2; text-align:center; padding:0;
+      border-left:1px solid var(--line); border-right:1px solid var(--line);
+      align-self:stretch; display:flex; align-items:center; justify-content:center;
+      line-height:1.35;
+    }
+    .vrow .side{padding:0}
+    .vrow .side:first-child{order:1; text-align:right}
+    .vrow .side:last-child{order:3}
+    .vrow .side b{display:none}
+  }
+
+  .find{
+    margin:36px 0; padding:24px 22px 10px;
+    background:var(--navy-800); border:1px solid var(--line-2); border-radius:18px;
+  }
+  .find > h2{margin:0 0 6px; font-size:clamp(21px,3.6vw,26px)}
+  .find > p{font-size:15px; color:var(--muted)}
+  .find ol{list-style:none; margin:20px 0 0; padding:0; counter-reset:f}
+  .find li{
+    counter-increment:f; position:relative; padding:0 0 20px 44px;
+    margin:0 0 18px; border-bottom:1px solid var(--line);
+    font-size:15.5px; line-height:1.62; color:var(--muted);
+  }
+  .find li:last-child{border-bottom:0}
+  .find li::before{
+    content:counter(f); position:absolute; left:0; top:-2px;
+    font-family:var(--disp); font-weight:800; font-size:22px;
+    color:var(--lime); font-variant-numeric:tabular-nums;
+  }
+  .find li b{color:var(--white); font-weight:600}
+  .warn{
+    margin:30px 0; padding:16px 18px; border-radius:14px;
+    border:1px dashed var(--line-2); background:rgba(100,220,60,.05);
+    font-size:15px; line-height:1.62; color:var(--muted);
+  }
+  .warn b{color:var(--white)}
+  .warn :last-child{margin-bottom:0}
+  .cap{margin:14px 4px 0; font-size:13px; line-height:1.6; color:var(--faint)}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/condition/">Condition</a>
+  </div>
+
+  <div class="kicker">Condition</div>
+  <h1>Timing belt or chain</h1>
+  <p class="standfirst">One of these is a maintenance item with a deadline and a
+     price attached. The other is a component that usually outlives the deadline
+     conversation entirely. Knowing which one is in the car in front of you changes
+     what that car is worth to you — and it is a question with a definite answer
+     you can get in about ten minutes.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>7 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>The job is simple to state. The crankshaft turns as the pistons go up and
+     down. The camshafts open and close the valves. Those two things must stay in
+     an exact relationship with each other, forever, or the valves open at the
+     wrong moment. Something has to connect them and hold that relationship under
+     load, through heat cycles, at every engine speed. Manufacturers solve it with
+     a toothed belt or with a chain, and the choice has consequences all the way
+     down to what you should offer for a used car.</p>
+
+  <h2>Why the stakes depend on the engine, not the part</h2>
+
+  <p>Engines fall into two camps. In a <strong>non-interference</strong> design,
+     the pistons and the fully open valves never occupy the same space, so if the
+     timing is lost the engine simply stops. You get a tow bill and a repair. In an
+     <strong>interference</strong> design — which is most of what's been built in
+     recent decades, because it allows higher compression and better breathing —
+     the valve and the piston do share space, just never at the same instant. Take
+     away the thing that guarantees "never at the same instant" and the piston hits
+     the valve at speed. Bent valves at minimum; damaged pistons, guides and
+     sometimes a head beyond that.</p>
+
+  <p>So the honest version of the question isn't "belt or chain." It is "belt or
+     chain, <em>and</em> interference or not." A belt on a non-interference engine
+     is an inconvenience waiting to happen. A belt on an interference engine is a
+     dated obligation, and buying a used car with an unknown one is buying a
+     countdown you can't see.</p>
+
+  <h2>The two designs, side by side</h2>
+
+  <div class="vs">
+    <div class="vhead"><span>Belt</span><span></span><span>Chain</span></div>
+
+    <div class="vrow">
+      <div class="side"><b>Belt</b>Reinforced polymer with molded teeth, usually
+        running dry behind a plastic cover, with a tensioner and idler pulleys.
+        Some designs instead run the belt inside the engine, in oil.</div>
+      <span class="attr">What it is</span>
+      <div class="side"><b>Chain</b>A metal roller or silent chain running inside
+        the engine, lubricated by engine oil, held taut by a hydraulic tensioner
+        that works off oil pressure and guided by plastic-faced rails.</div>
+    </div>
+
+    <div class="vrow">
+      <div class="side"><b>Belt</b>Quieter, lighter, cheaper to manufacture, and
+        undemanding about oil quality because it usually never touches any.</div>
+      <span class="attr">Why a maker picks it</span>
+      <div class="side"><b>Chain</b>Designed to last the life of the engine, so no
+        scheduled replacement appears in the maintenance book — a genuine selling
+        point and a lower cost of ownership on paper.</div>
+    </div>
+
+    <div class="vrow">
+      <div class="side"><b>Belt</b>Wears from the inside. Teeth shear, the backing
+        cracks, or the tensioner or an idler bearing seizes and takes the belt with
+        it. The belt is often not even the part that fails first.</div>
+      <span class="attr">How it fails</span>
+      <div class="side"><b>Chain</b>Stretches — really, the pins and bushings wear
+        so the chain grows longer. Guides wear through. The tensioner loses its
+        ability to take up slack, especially if oil pressure is poor.</div>
+    </div>
+
+    <div class="vrow">
+      <div class="side"><b>Belt</b>Essentially none you can rely on. It is a
+        time-and-mileage item precisely because it gives no useful warning, and
+        looking at an exposed section tells you very little about the rest.</div>
+      <span class="attr">Warning it gives</span>
+      <div class="side"><b>Chain</b>Often a rattle for a second or two at cold
+        start, before oil pressure fills the tensioner. Later, a constant rattle,
+        rough running, and timing-correlation codes as the cam drifts out of
+        step.</div>
+    </div>
+
+    <div class="vrow">
+      <div class="side"><b>Belt</b>Labor to get the front of the engine apart,
+        which is most of the bill. The kit usually includes the tensioner and
+        idlers, and on many engines the water pump is driven by the belt and is
+        replaced at the same time because it is already exposed.</div>
+      <span class="attr">What the job involves</span>
+      <div class="side"><b>Chain</b>A deeper job than a belt when it does need
+        doing — the chain lives behind a cover sealed to the block, and on
+        transverse engines access can be genuinely awkward.</div>
+    </div>
+
+    <div class="vrow">
+      <div class="side"><b>Belt</b>Was it done, when, by whom, and did the kit
+        include the tensioner and the pump? No paperwork means assume not done.</div>
+      <span class="attr">What to ask used</span>
+      <div class="side"><b>Chain</b>Has it rattled on cold start? Has the oil been
+        changed on schedule with the specified grade? A chain's worst enemy is
+        neglected oil.</div>
+    </div>
+  </div>
+
+  <p class="cap">A chain is not a maintenance-free part. It is an oil-maintenance part. The
+     tensioner that holds it is hydraulic, the guides that steer it are plastic,
+     and both live on whatever oil the previous owner decided to run.</p>
+
+  <h2>Finding your car's actual interval</h2>
+
+  <p>We are not going to print a mileage figure here, and you should be suspicious
+     of any page that does. Intervals differ by engine, by model year, and
+     sometimes by market; many are stated as a mileage <em>or</em> a number of
+     years, whichever comes first, which matters enormously on a low-mileage car
+     that has been sitting. Rubber ages on a calendar even when the odometer
+     doesn't move. Here is how to get the real number for the car you actually
+     have.</p>
+
+  <div class="find">
+    <h2>The lookup, in order</h2>
+    <p>Each step is more work than the last. Most people get their answer at step
+       one or two.</p>
+    <ol>
+      <li><b>Open the owner's manual to the maintenance schedule.</b> This is the
+        authoritative source and it is free. If the timing belt has a service
+        interval, it will be a line item in that schedule. If you see no belt line
+        anywhere in the schedule, that is meaningful — but confirm it rather than
+        conclude it.</li>
+      <li><b>No manual in the glovebox? Get the digital one.</b> Nearly every
+        manufacturer publishes owner's manuals and maintenance schedules on their
+        owner site, and most will serve you the exact book for your car if you
+        enter the VIN. That specificity is the point — the VIN removes the guessing
+        about which engine you have.</li>
+      <li><b>Call a franchise service department with the VIN in your hand.</b>
+        Ask four questions, in these words: <em>Does this engine use a timing belt
+        or a chain? Is it an interference engine? What is the published replacement
+        interval, in miles and in years? Is the water pump driven by the belt?</em>
+        They have this in front of them daily. Most will answer it on the phone in
+        two minutes, and it is the one source that is both free and
+        vehicle-specific.</li>
+      <li><b>Now find out whether it has been done.</b> A line item on a dated
+        repair order naming a timing belt kit. A shop's sticker inside the hood or
+        on the timing cover with a date and mileage. A receipt listing the parts.
+        The seller's memory does not count, and neither does "the last guy said he
+        did it." No paper, no credit.</li>
+      <li><b>If it's a chain, redirect the question to the oil.</b> Ask for oil
+        change records, the intervals actually used, and whether the specified
+        grade and specification were followed. Then cold-start the car yourself and
+        listen for the first two seconds before anything else happens — see
+        below.</li>
+    </ol>
+  </div>
+
+  <div class="warn">
+    <p><b>Do the cold start yourself.</b> Arrange to see the car before it has been
+       driven that day. Stand at the front of the engine, not in the cabin, and
+       listen through the first seconds after it catches. A brief hard rattle that
+       clears as oil pressure comes up is the classic chain-and-tensioner
+       complaint, and it is worth a conversation and a scan for timing-correlation
+       codes. It can also be an exhaust manifold leak, a lifter bleeding down, or a
+       loose heat shield — which is exactly why it earns an inspection rather than
+       a verdict.</p>
+  </div>
+
+  <h2>What it means for the price</h2>
+
+  <p>A belt-driven interference engine with no documentation of the belt having
+     been changed, and enough miles or years on it to be near or past the published
+     interval, has a known repair sitting inside the purchase. That is not a reason
+     to walk away. It is a reason to price the car as though the job is due,
+     because it is, and to get a real quote from a shop before you agree on
+     anything. The failure mode is expensive enough that gambling on it is a bad
+     trade even at good odds.</p>
+
+  <p>A chain engine is the easier buy on this one axis, and that is worth
+     something, but "chain" is not a clean bill of health. It moves the
+     conversation from the belt to the oil, and oil history is
+     <a href="/articles/reading-used-engine-oil/">something you can partly read
+     yourself</a> in about twenty seconds with a rag.</p>
+
+  <div class="note">
+    <p><b>How we handle it here.</b> Before a car goes on our front row we look up
+       whether its engine is belt or chain and whether it is an interference
+       design, by VIN, and we put what we found — including "no documentation of
+       replacement" when that's the truth — in the published inspection. If the
+       belt is due, we either do it or we say plainly that it hasn't been done. We
+       don't let a buyer discover it later.</p>
+  </div>
+
+  <p class="endnote">General information for used car buyers. This page states no
+     replacement interval, service schedule or engine specification for any
+     vehicle; intervals vary by engine and model year and are set by the
+     manufacturer. Confirm yours in the owner's manual or with a franchise service
+     department using your VIN before making any decision. Not a substitute for
+     inspection by a qualified technician.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/reading-used-engine-oil/">Reading used engine oil
+        <span>What the color, the level and the smell on a dipstick can and can't tell you about how a car was kept.</span></a></li>
+      <li><a href="/articles/buying-a-used-turbo-car/">Buying a used turbo car
+        <span>What forced induction adds, what it asks of the oil, and the failure modes worth checking for.</span></a></li>
+      <li><a href="/articles/what-the-history-report-misses/">What the history report misses
+        <span>The things that never make it into a report, and why the paperwork trail has holes in it.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/timing-belt-or-chain/#article",
+   "headline": "Timing belt or chain",
+   "description": "What a timing belt and a timing chain each do, how they fail differently, why an interference engine changes the stakes — and a method for finding your own car's replacement interval instead of trusting a number off a forum.",
+   "url": "https://drivethrudeals.online/articles/timing-belt-or-chain/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Condition",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/timing-belt-or-chain.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/timing-belt-or-chain/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Condition","item":"https://drivethrudeals.online/articles/condition/"},
+    {"@type":"ListItem","position":4,"name":"Timing belt or chain"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

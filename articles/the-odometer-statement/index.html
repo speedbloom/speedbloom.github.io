@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Odometer Statement | Drive Thru Deals</title>
+<meta name="description" content="Why a written mileage disclosure exists at every change of ownership, what the three status boxes mean, the physical evidence that contradicts a rolled-back number, and the order to check it in.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/the-odometer-statement/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="The odometer statement">
+<meta property="og:description" content="Why the disclosure exists, what the three status boxes mean, and the evidence that argues with a number.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/the-odometer-statement/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/the-odometer-statement.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/the-odometer-statement.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - The odometer statement">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Paperwork">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The odometer statement">
+<meta name="twitter:description" content="Why the disclosure exists, what the three status boxes mean, and the evidence that argues with a number.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/the-odometer-statement.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Built around a rendered odometer. A strip of digit cells opens each of the
+     three status conditions, so the thing being discussed is on screen while it
+     is discussed. Evidence is then laid out as a grid of small cards - each one
+     an observation, not an argument. */
+  .odo{margin:32px 0 26px}
+  .odo .cap{
+    font-family:var(--disp); font-weight:700; font-size:10.5px;
+    letter-spacing:.2em; text-transform:uppercase; color:var(--faint);
+    margin-bottom:10px;
+  }
+  .odo .case{
+    display:inline-flex; gap:4px; padding:11px 12px; border-radius:9px;
+    background:#00081A; border:1px solid var(--line-2);
+    box-shadow:inset 0 2px 9px rgba(0,0,0,.65);
+  }
+  .odo .d{
+    min-width:27px; padding:7px 0; text-align:center; border-radius:4px;
+    background:linear-gradient(#0C1C3C,#040D24);
+    font-family:var(--disp); font-weight:700; font-size:22px; line-height:1;
+    color:var(--white); font-variant-numeric:tabular-nums;
+    border:1px solid rgba(255,255,255,.07);
+  }
+  .odo .d.alt{background:linear-gradient(#2B1113,#150708); color:#FF8F87}
+  .odo .unit{
+    align-self:center; margin-left:10px; font-size:11px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--faint);
+  }
+  .odo .say{margin:13px 0 0; font-size:15px; color:var(--muted); line-height:1.62}
+  .odo .say b{color:var(--white)}
+  .flags{display:grid; gap:12px; margin:28px 0}
+  @media (min-width:640px){ .flags{grid-template-columns:1fr 1fr} }
+  .flag{
+    border:1px solid var(--line); border-left:3px solid var(--lime);
+    border-radius:0 13px 13px 0; padding:15px 17px; background:var(--navy-800);
+  }
+  .flag h3{margin:0 0 6px; font-size:15.5px}
+  .flag p{margin:0; font-size:14.5px; line-height:1.6; color:var(--muted)}
+  .steps{counter-reset:s; list-style:none; margin:26px 0; padding:0}
+  .steps li{
+    counter-increment:s; position:relative; padding:0 0 15px 34px;
+    font-size:15.5px; color:var(--muted); line-height:1.62;
+  }
+  .steps li::before{
+    content:counter(s) ".";
+    position:absolute; left:0; top:0;
+    font-family:var(--disp); font-weight:700; font-size:15px; color:var(--lime);
+  }
+  .steps b{color:var(--white)}
+  .caution{
+    border:1px solid rgba(255,143,135,.32); background:rgba(255,143,135,.05);
+    border-radius:16px; padding:19px 21px; margin:34px 0;
+    font-size:15px; line-height:1.62; color:var(--muted);
+  }
+  .caution b{color:#FF8F87}
+  .caution :last-child{margin-bottom:0}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/paperwork/">Paperwork</a>
+  </div>
+
+  <div class="kicker">Paperwork</div>
+  <h1>The odometer statement</h1>
+  <p class="standfirst">A number that costs nothing to change and moves the price
+     of a car more than almost anything else. That combination is why there is a
+     signed federal disclosure attached to it, and why the disclosure is worth
+     reading rather than initialing.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>5 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>When a vehicle changes hands, federal law requires the seller to disclose
+     the mileage in writing and the buyer to acknowledge it. On most modern
+     transfers that disclosure lives on the title itself, in the assignment block
+     on the reverse. Some categories of vehicle are exempt, and the exemption
+     rules have been revised in recent years — so do not assume an older car is
+     outside the requirement. Confirm the current position with the New Jersey
+     Motor Vehicle Commission rather than with a memory of how it used to work.</p>
+
+  <p>Beside the mileage figure sit the status boxes. They do most of the real
+     work, and almost nobody reads them.</p>
+
+  <div class="odo">
+    <div class="cap">Status: actual mileage</div>
+    <div class="case">
+      <span class="d">0</span><span class="d">8</span><span class="d">4</span>
+      <span class="d">2</span><span class="d">1</span><span class="d">9</span>
+      <span class="unit">mi</span>
+    </div>
+    <p class="say">The ordinary case. The seller is stating that the figure shown
+       is the vehicle's true accumulated mileage. <b>This is a statement of fact
+       made under signature</b>, which is precisely what makes it useful — and
+       what makes getting it wrong a serious matter rather than a clerical
+       one.</p>
+  </div>
+
+  <div class="odo">
+    <div class="cap">Status: not actual mileage</div>
+    <div class="case">
+      <span class="d alt">0</span><span class="d alt">8</span><span class="d alt">4</span>
+      <span class="d alt">2</span><span class="d alt">1</span><span class="d alt">9</span>
+      <span class="unit">mi · discrepancy</span>
+    </div>
+    <p class="say">The seller is stating that the reading does not reflect the
+       vehicle's true mileage. This can be innocent — a cluster was replaced after
+       a failure, a repair shop reset something it should not have — and it can be
+       the residue of something that was not innocent at all. Either way,
+       <b>the notation follows the vehicle permanently</b> and travels onto every
+       title issued afterward. A car carrying it is worth less, is harder to
+       finance, and is harder to sell again.</p>
+  </div>
+
+  <div class="odo">
+    <div class="cap">Status: exceeds mechanical limits</div>
+    <div class="case">
+      <span class="d">9</span><span class="d">9</span><span class="d">9</span>
+      <span class="d">9</span><span class="d">9</span>
+      <span class="unit">mi · rolled over</span>
+    </div>
+    <p class="say">A survivor of mechanical instrument clusters, which ran out of
+       digits and began again at zero. You will meet this mostly on genuinely old
+       vehicles. <b>It means the true figure is the displayed one plus a full
+       revolution of the counter</b>, and it is not a red flag by itself — it is
+       a disclosure doing exactly its job.</p>
+  </div>
+
+  <h2>Why the disclosure exists at all</h2>
+
+  <p>Because mileage is the second most powerful input into a used car's value
+     after condition, and unlike condition it is expressed as a single number that
+     a buyer will accept without inspection. A mechanical odometer could be wound
+     back with hand tools. A digital one is a value held in memory, and the
+     equipment to rewrite it is neither expensive nor difficult to find. The
+     protection is therefore not technical. It is documentary: a signed statement,
+     preserved on the title, repeated at every transfer, creating a chain that can
+     be examined afterward.</p>
+
+  <p>That is the whole design. Nobody is stopping the number from being changed.
+     They are making sure somebody's signature is attached to it when it is.</p>
+
+  <h2>What tampering looks like from the outside</h2>
+
+  <p>A rolled-back odometer is a lie about one number, and the rest of the car
+     goes on telling the truth. The evidence below is observational — none of it
+     proves anything on its own, and all of it is worth noticing when several
+     items point the same direction.</p>
+
+  <div class="flags">
+    <div class="flag">
+      <h3>Wear that outruns the reading</h3>
+      <p>Pedal rubber worn through to a shine, a steering wheel polished smooth on
+         the upper rim, a driver's seat bolster collapsed on the outboard side.
+         These are contact points and they wear on a schedule the odometer cannot
+         edit.</p>
+    </div>
+    <div class="flag">
+      <h3>Records that read higher than the dash</h3>
+      <p>Oil change stickers in the door jamb, inspection documents, service
+         invoices and tire shop receipts all carry mileage. Any one of them higher
+         than the current display ends the conversation.</p>
+    </div>
+    <div class="flag">
+      <h3>A history report that steps backward</h3>
+      <p>Reported readings should climb. A drop between two entries is obvious. A
+         long, flat stretch is subtler and worth asking about — though note what a
+         report can and cannot see, which we covered in
+         <a href="/articles/what-the-history-report-misses/">what the history
+         report misses</a>.</p>
+    </div>
+    <div class="flag">
+      <h3>Replaced instrument cluster</h3>
+      <p>Not sinister by itself; clusters fail. But a replacement should come with
+         paperwork and, where required, a disclosure. Ask for both. Fresh
+         screwdriver marks around the dash bezel of an otherwise untouched car are
+         worth a question.</p>
+    </div>
+    <div class="flag">
+      <h3>Consumables that do not match</h3>
+      <p>A full set of tires, brakes and belts consistent with a much older,
+         harder-working car than the number suggests. Conversely, original factory
+         tires on a reading that should have consumed two sets.</p>
+    </div>
+    <div class="flag">
+      <h3>A seller who volunteers the mileage first</h3>
+      <p>Weak evidence and included honestly as such. But the number that gets
+         mentioned before you ask, twice, on a car whose interior argues with it,
+         is worth noting.</p>
+    </div>
+  </div>
+
+  <h2>What to check, in order</h2>
+
+  <ol class="steps">
+    <li>Read the <b>status boxes</b> on the title before you read the number
+        beside them. Anything other than a clean actual-mileage mark changes the
+        car you are looking at.</li>
+    <li>Photograph the <b>dash reading</b> and the <b>title reading</b> together.
+        They should agree, allowing for the driving done since the title was
+        issued.</li>
+    <li>Open the driver's door and read the <b>service stickers</b>. Check the
+        jamb, the windshield corner and the underside of the hood.</li>
+    <li>Pull a <b>history report</b> and read the reported readings as a sequence
+        rather than as a verdict.</li>
+    <li>Sit in the driver's seat and look at the <b>three contact points</b> —
+        pedals, wheel rim, seat bolster — and ask whether they belong to the
+        number on the dash.</li>
+    <li>If anything disagrees, <b>say so out loud and watch the answer.</b> An
+        honest seller with a replaced cluster has the invoice. That is the whole
+        test.</li>
+  </ol>
+
+  <h2>If you think a number was altered</h2>
+
+  <p>Odometer fraud is both a federal matter and a state consumer protection
+     matter, and the remedies available to a buyer can be meaningful. We are not
+     going to characterize them here — the specifics depend on facts we do not
+     have and on statutes that change. Take the documents you already collected to
+     the New Jersey Division of Consumer Affairs, and speak to an attorney
+     licensed in New Jersey. The photographs from step two are the reason you will
+     be taken seriously.</p>
+
+  <div class="caution">
+    <p><b>General information, not legal advice.</b> This page explains how
+       mileage disclosure generally works and what to observe. It is not a legal
+       opinion, it is not specific to any transaction, and the exemptions,
+       procedures and remedies in this area are set by federal and New Jersey law
+       and change over time. Confirm current requirements with the New Jersey
+       Motor Vehicle Commission or the New Jersey Division of Consumer Affairs.</p>
+  </div>
+
+  <h2>What we do about it</h2>
+
+  <p>We photograph the cluster the day a car arrives, before anything is touched,
+     and that photograph goes into the file with the auction or trade paperwork.
+     It appears again in the published inspection. Six cars at a time means every
+     one of them is individually accountable, and a mileage question we cannot
+     answer is a car we do not buy. That is less a moral position than an
+     operational one: a number nobody can verify is a number that will cost us at
+     resale, and we do not have inventory to spare.</p>
+
+  <p class="endnote">Written for New Jersey buyers in September 2026. No statute,
+     penalty, exemption age or mileage threshold is quoted here on purpose — those
+     change and are best read from the source. Verify with the New Jersey Motor
+     Vehicle Commission and the New Jersey Division of Consumer Affairs.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/the-title-explained/">The title, explained
+        <span>Field by field across a certificate of title, including the box the mileage sits in.</span></a></li>
+      <li><a href="/articles/what-the-history-report-misses/">What the history report misses
+        <span>A clean report is evidence of nothing being reported, which is not the same thing.</span></a></li>
+      <li><a href="/articles/salvage-rebuilt-and-flood/">Salvage, rebuilt and flood titles
+        <span>The other notations that follow a car permanently, and what each one does to it.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/the-odometer-statement/#article",
+   "headline": "The odometer statement",
+   "description": "Why a written mileage disclosure exists at every change of ownership, what the three status boxes mean, the physical evidence that contradicts a rolled-back number, and the order to check it in.",
+   "url": "https://drivethrudeals.online/articles/the-odometer-statement/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Paperwork",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/the-odometer-statement.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/the-odometer-statement/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Paperwork","item":"https://drivethrudeals.online/articles/paperwork/"},
+    {"@type":"ListItem","position":4,"name":"The odometer statement"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

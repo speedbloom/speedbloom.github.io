@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reading Brake Wear | Drive Thru Deals</title>
+<meta name="description" content="What a brake pad and rotor look like in cross-section, what three stages of wear actually look like through the wheel, and the four measurements that settle the question — with where to find the limit for your car.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/reading-brake-wear/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Reading brake wear">
+<meta property="og:description" content="A cross-section, three stages of wear, and the four measurements that settle it.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/reading-brake-wear/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/reading-brake-wear.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/reading-brake-wear.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Reading brake wear">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Condition">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reading brake wear">
+<meta name="twitter:description" content="A cross-section, three stages of wear, and the four measurements that settle it.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/reading-brake-wear.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Drawn piece. One hand-built cross-section carries the anatomy, three small
+     stage drawings carry the wear, and a measurement reference closes it. All
+     strokes and fills use the page tokens so it reads on the navy. */
+
+  .fig{
+    margin:34px 0; padding:18px 14px 16px;
+    background:var(--navy-800); border:1px solid var(--line); border-radius:18px;
+  }
+  @media (max-width:520px){ .fig{margin-left:-8px; margin-right:-8px; padding:14px 10px 12px} }
+  .fig svg{width:100%; height:auto; display:block}
+  .cap{margin:15px 4px 0; font-size:13px; line-height:1.6; color:var(--faint)}
+  .cap b{color:var(--muted); font-weight:600}
+
+  /* --- cross-section --- */
+  .xs .metal{fill:rgba(255,255,255,.08); stroke:var(--line-2); stroke-width:1}
+  .xs .iron{fill:var(--navy-600); stroke:var(--line-2); stroke-width:1}
+  .xs .pad{fill:rgba(100,220,60,.20); stroke:var(--lime); stroke-width:1.2}
+  .xs .vane{fill:none; stroke:var(--line-2); stroke-width:1.1}
+  .xs .lead{fill:none; stroke:var(--line-2); stroke-width:1}
+  .xs .dot{fill:var(--lime)}
+  .xs .lbl{font-family:'Outfit',system-ui,sans-serif; font-weight:600; font-size:14px; fill:var(--white)}
+  .xs .sub{font-family:'Inter',system-ui,sans-serif; font-size:12px; fill:var(--muted)}
+
+  /* --- three wear stages --- */
+  .stages{display:grid; grid-template-columns:1fr; gap:14px; margin:34px 0}
+  @media (min-width:620px){ .stages{grid-template-columns:repeat(3,1fr); gap:16px} }
+  .scard{
+    background:var(--navy-800); border:1px solid var(--line);
+    border-radius:16px; padding:13px 13px 16px;
+  }
+  .scard svg{width:100%; height:auto; display:block}
+  .scard h3{font-size:16px; margin:12px 0 6px; letter-spacing:-.01em}
+  .scard p{margin:0; font-size:13.6px; line-height:1.55; color:var(--muted)}
+  .scard .verdict{
+    display:block; margin-top:9px; font-size:12px; letter-spacing:.05em;
+    text-transform:uppercase; font-weight:600; color:var(--lime);
+  }
+  .sg .iron{fill:var(--navy-600); stroke:var(--line-2); stroke-width:1}
+  .sg .back{fill:rgba(255,255,255,.10); stroke:var(--line-2); stroke-width:1}
+  .sg .fric{fill:rgba(100,220,60,.22); stroke:var(--lime); stroke-width:1.2}
+  .sg .thin{fill:rgba(100,220,60,.10); stroke:var(--lime); stroke-width:1.2}
+  .sg .dim{fill:none; stroke:var(--muted); stroke-width:1}
+  .sg .dlbl{font-family:'Inter',system-ui,sans-serif; font-size:11px; fill:var(--muted)}
+  .sg .vane{fill:none; stroke:var(--line-2); stroke-width:1}
+
+  /* --- measurement reference --- */
+  .meas{margin:30px 0; border-top:1px solid var(--line-2)}
+  .mrow{padding:16px 0; border-bottom:1px solid var(--line)}
+  .mrow h3{margin:0 0 10px; font-size:17px}
+  .mgrid{display:grid; grid-template-columns:1fr; gap:8px}
+  @media (min-width:600px){ .mgrid{grid-template-columns:1fr 1fr; gap:10px 22px} }
+  .mgrid div{font-size:14.5px; line-height:1.55; color:var(--muted)}
+  .mgrid span{
+    display:block; font-size:11px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--faint); margin-bottom:3px;
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/condition/">Condition</a>
+  </div>
+
+  <div class="kicker">Condition</div>
+  <h1>Reading brake wear</h1>
+  <p class="standfirst">Brakes are unusual among wearing parts: most of the
+     evidence is visible from outside the car, through the spokes of the wheel, in
+     about ten seconds. What stops people is not access. It is not knowing which
+     of the surfaces in there is the one that matters.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>5 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>A disc brake is four parts doing one job. The rotor spins with the wheel. Two
+     pads sit on either side of it, not touching. A caliper holds the pads and,
+     when you press the pedal, squeezes them against the rotor hard enough to turn
+     motion into heat. Everything that wears, wears because of that last sentence.</p>
+
+  <div class="fig">
+    <svg class="xs" viewBox="0 0 400 360" role="img" aria-labelledby="xstitle">
+      <title id="xstitle">A disc brake seen in cross-section. A caliper bridges over the
+        rotor. On the inboard side a hydraulic piston presses a pad against the rotor
+        face; on the outboard side the caliper fingers press the second pad. Each pad is
+        friction material bonded to a steel backing plate. The rotor is two iron faces
+        separated by cooling vanes.</title>
+
+      <!-- top callouts -->
+      <text class="lbl" x="8" y="24">Piston</text>
+      <text class="sub" x="8" y="42">Hydraulic pressure</text>
+      <text class="sub" x="8" y="58">pushes it outward</text>
+      <path class="lead" d="M30 70 V88 H130 V168"/>
+      <circle class="dot" cx="130" cy="168" r="2.6"/>
+
+      <text class="lbl" x="146" y="24">Friction material</text>
+      <text class="sub" x="146" y="42">The part that is</text>
+      <text class="sub" x="146" y="58">meant to wear away</text>
+      <path class="lead" d="M171 70 V148"/>
+      <circle class="dot" cx="171" cy="148" r="2.6"/>
+
+      <text class="lbl" x="300" y="24">Rotor</text>
+      <text class="sub" x="300" y="42">Wears too,</text>
+      <text class="sub" x="300" y="58">in thickness</text>
+      <path class="lead" d="M318 70 V88 H229 V124"/>
+      <circle class="dot" cx="229" cy="124" r="2.6"/>
+
+      <!-- caliper -->
+      <rect class="metal" x="96" y="100" width="206" height="20" rx="8"/>
+      <rect class="metal" x="96" y="100" width="52" height="180" rx="8"/>
+      <rect class="metal" x="272" y="100" width="30" height="180" rx="8"/>
+      <rect class="metal" x="112" y="170" width="36" height="56" rx="4"/>
+
+      <!-- inboard pad -->
+      <rect class="metal" x="148" y="150" width="12" height="96"/>
+      <rect class="pad" x="160" y="150" width="22" height="96"/>
+
+      <!-- rotor -->
+      <rect class="iron" x="182" y="126" width="18" height="190"/>
+      <rect class="iron" x="220" y="126" width="18" height="190"/>
+      <path class="vane" d="M200 140 L220 160 M200 176 L220 196 M200 212 L220 232 M200 248 L220 268 M200 284 L220 304"/>
+
+      <!-- outboard pad -->
+      <rect class="pad" x="238" y="150" width="22" height="96"/>
+      <rect class="metal" x="260" y="150" width="12" height="96"/>
+
+      <!-- bottom callouts -->
+      <path class="lead" d="M210 300 V332 H96 V338"/>
+      <circle class="dot" cx="210" cy="300" r="2.6"/>
+      <text class="lbl" x="8" y="352">Cooling vanes</text>
+
+      <path class="lead" d="M154 258 V332 H286 V338"/>
+      <circle class="dot" cx="154" cy="258" r="2.6"/>
+      <text class="lbl" x="248" y="352">Backing plate</text>
+    </svg>
+    <p class="cap"><b>Figure 1.</b> A vented front disc brake, cut through and
+       flattened. Drawn schematically — real calipers are shaped around the
+       suspension and look nothing like a box — but the stack is right, and the
+       stack is what you are reading when you look through a wheel.</p>
+  </div>
+
+  <p>The green in that drawing is the only part designed to disappear. Friction
+     material is a consumable, bonded or riveted to a steel backing plate that is
+     not. When people say a car "needs brakes," nine times out of ten they mean
+     that green layer has gotten thin. The failure everyone is trying to avoid is
+     what happens after it runs out: steel backing plate directly against iron
+     rotor, a noise like a trapped animal, and a rotor that is no longer
+     resurfaceable.</p>
+
+  <h2>Three stages, seen through the wheel</h2>
+
+  <p>You do not need the wheel off to do this. Turn the front wheels to full lock
+     and the inboard face of the rotor and the edge of the outer pad come into
+     plain view. A flashlight helps more than you would think.</p>
+
+  <div class="stages">
+
+    <div class="scard">
+      <svg class="sg" viewBox="0 0 160 118" role="img" aria-labelledby="sg1">
+        <title id="sg1">A pad with full-thickness friction material against a rotor.</title>
+        <rect class="iron" x="110" y="8" width="42" height="84"/>
+        <path class="vane" d="M124 20 L138 34 M124 48 L138 62 M124 76 L138 90"/>
+        <rect class="back" x="52" y="20" width="12" height="60"/>
+        <rect class="fric" x="64" y="20" width="46" height="60"/>
+        <path class="dim" d="M64 90 V100 M110 90 V100 M64 95 H110"/>
+        <text class="dlbl" x="60" y="114">full thickness</text>
+      </svg>
+      <h3>New</h3>
+      <p>The friction layer is obviously thicker than the steel plate behind it.
+         Braking is quiet, the pedal is firm, and the rotor face is uniformly gray
+         with faint machining swirl.</p>
+      <span class="verdict">Nothing to do</span>
+    </div>
+
+    <div class="scard">
+      <svg class="sg" viewBox="0 0 160 118" role="img" aria-labelledby="sg2">
+        <title id="sg2">A pad worn to roughly half its original friction material.</title>
+        <rect class="iron" x="110" y="8" width="42" height="84"/>
+        <path class="vane" d="M124 20 L138 34 M124 48 L138 62 M124 76 L138 90"/>
+        <rect class="back" x="74" y="20" width="12" height="60"/>
+        <rect class="fric" x="86" y="20" width="24" height="60"/>
+        <path class="dim" d="M86 90 V100 M110 90 V100 M86 95 H110"/>
+        <text class="dlbl" x="74" y="114">about half</text>
+      </svg>
+      <h3>Serviceable</h3>
+      <p>Friction material and backing plate look roughly comparable in thickness.
+         A faint lip has started at the outer edge of the rotor where the pad never
+         sweeps. This is the ordinary middle of a pad's life.</p>
+      <span class="verdict">Watch it</span>
+    </div>
+
+    <div class="scard">
+      <svg class="sg" viewBox="0 0 160 118" role="img" aria-labelledby="sg3">
+        <title id="sg3">A pad worn close to its limit, with only a sliver of friction material left.</title>
+        <rect class="iron" x="110" y="8" width="42" height="84"/>
+        <path class="vane" d="M124 20 L138 34 M124 48 L138 62 M124 76 L138 90"/>
+        <rect class="back" x="90" y="20" width="12" height="60"/>
+        <rect class="thin" x="102" y="20" width="8" height="60"/>
+        <path class="dim" d="M102 90 V100 M110 90 V100 M102 95 H110"/>
+        <text class="dlbl" x="64" y="114">near the limit</text>
+      </svg>
+      <h3>At or near the limit</h3>
+      <p>The friction layer is now a sliver against a plate that has not changed.
+         Many pads have a metal tab that squeals at this point, and many do not.
+         The lip on the rotor edge is now something you can catch a fingernail on.</p>
+      <span class="verdict">Measure it</span>
+    </div>
+
+  </div>
+
+  <p>Notice what those three cards do not contain: a number. That is deliberate.
+     The thickness at which a pad is finished is set by the people who made the
+     car and the people who made the pad, and it is not the same figure across
+     vehicles, axles or friction compounds. Anyone who tells you the limit is a
+     single universal number is quoting a memory, not a specification.</p>
+
+  <h2>The four measurements</h2>
+
+  <p>If the eyeball check lands anywhere near the third card, stop guessing and
+     measure. All four of these are quick, and all four are things you can ask a
+     shop to do and report back in writing.</p>
+
+  <div class="meas">
+
+    <div class="mrow">
+      <h3>1. Friction material thickness</h3>
+      <div class="mgrid">
+        <div><span>How</span>A brake gauge or a caliper on the thinnest visible
+          point of the pad, not the thickest. Measure the friction layer only — do
+          not include the steel backing plate.</div>
+        <div><span>Compare against</span>The minimum in the service information
+          for that specific vehicle, or the pad manufacturer's own published
+          figure. Not a number from a forum.</div>
+      </div>
+    </div>
+
+    <div class="mrow">
+      <h3>2. Rotor thickness</h3>
+      <div class="mgrid">
+        <div><span>How</span>A micrometer across the swept face, taken at several
+          points around the disc rather than one.</div>
+        <div><span>Compare against</span>The minimum-thickness figure that is
+          usually cast or stamped into the rotor's hat or outer edge — look for
+          wording like <em>MIN TH</em>. If it is not legible, the number is in the
+          vehicle's service data.</div>
+      </div>
+    </div>
+
+    <div class="mrow">
+      <h3>3. Variation around the disc</h3>
+      <div class="mgrid">
+        <div><span>How</span>Same micrometer, eight points around the rotor,
+          written down. You are looking for the spread between the readings, not
+          the readings themselves.</div>
+        <div><span>Compare against</span>Itself. Uneven thickness is what a
+          pulsing pedal usually is. The allowable variation is small and is
+          specified per vehicle.</div>
+      </div>
+    </div>
+
+    <div class="mrow">
+      <h3>4. Side to side on the same axle</h3>
+      <div class="mgrid">
+        <div><span>How</span>Measure both sides. Left and right pads on one axle
+          should be wearing at broadly the same rate.</div>
+        <div><span>Compare against</span>Each other. A large difference points at
+          the caliper — a seized slide pin or a sticking piston — and replacing
+          pads without fixing it just buys the same problem again.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>What the car tells you without being asked</h2>
+
+  <p>A squeal on light braking that disappears when you press harder is the
+     classic wear-indicator behavior, where the car has one. A grinding that
+     arrives with pedal pressure and gets louder with it is a different
+     conversation and usually a more expensive one. A pedal that pulses under
+     steady pressure is generally thickness variation rather than pad wear at all.
+     And a car that pulls to one side under braking is telling you about a caliper
+     or a hose, not about the pads.</p>
+
+  <p>Rust on a rotor face after a wet night means nothing; it wipes off in the
+     first three stops. Rust on a rotor face that survives a drive is a rotor the
+     pads are not sweeping properly, which is worth looking into.</p>
+
+  <h2>What we do with this</h2>
+
+  <p>Every car on our lot gets measured rather than glanced at, and the numbers go
+     on the inspection sheet we publish for that car — pads front and rear, rotor
+     thickness, and whether anything was replaced during reconditioning. We do it
+     partly because it is the honest thing and partly because it is cheaper: a car
+     that goes out with pads near the limit comes back, and a car that comes back
+     costs more than a set of pads.</p>
+
+  <p>If you are looking at a car somewhere else, the ask is simple and reasonable.
+     Not "how are the brakes" — every car's brakes are fine, in the sense that the
+     car arrived. Ask for the measured pad thickness at all four corners and the
+     measured rotor thickness, and ask what the limit is for that vehicle. A
+     dealer who has the numbers will hand them over. A dealer who does not have
+     them has just told you something useful anyway.</p>
+
+  <p class="endnote">The drawings on this page are schematic and the wear stages
+     are illustrative — they show proportions, not measurements. Minimum pad and
+     rotor thicknesses are vehicle-specific; confirm them in the manufacturer's
+     service information or with a licensed repair facility rather than from any
+     general figure, including ours. Drive Thru Deals is a used car dealership,
+     not a repair shop, and nothing here is a substitute for an inspection by a
+     qualified technician.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/reading-a-tire/">Reading a tire
+        <span>The sidewall codes, the date stamp, and four wear patterns that name their own cause.</span></a></li>
+      <li><a href="/articles/what-a-lift-shows-you/">What a lift shows you
+        <span>A walk from nose to tail underneath a car, zone by zone.</span></a></li>
+      <li><a href="/articles/the-test-drive-route/">How to design a test drive route
+        <span>Four legs, each built to make a specific fault show itself.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/reading-brake-wear/#article",
+   "headline": "Reading brake wear",
+   "description": "What a brake pad and rotor look like in cross-section, what three stages of wear actually look like through the wheel, and the four measurements that settle the question.",
+   "url": "https://drivethrudeals.online/articles/reading-brake-wear/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Condition",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/reading-brake-wear.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/reading-brake-wear/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Condition","item":"https://drivethrudeals.online/articles/condition/"},
+    {"@type":"ListItem","position":4,"name":"Reading brake wear"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

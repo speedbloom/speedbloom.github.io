@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Cold Start | Drive Thru Deals</title>
+<meta name="description" content="A timed observation protocol for the first ninety seconds of a used car's life on a given day - what to watch in each window, and what a problem looks like in it.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/the-cold-start/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="The cold start">
+<meta property="og:description" content="Ninety seconds, watched window by window, with a stopwatch.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/the-cold-start/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/the-cold-start.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/the-cold-start.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - The cold start">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Condition">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The cold start">
+<meta name="twitter:description" content="Ninety seconds, watched window by window, with a stopwatch.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/the-cold-start.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* An observation protocol laid out against a single 90-second axis. Every
+     entry carries a bar showing which slice of the window it occupies, so the
+     page reads as one continuous elapsed minute and a half rather than a list. */
+
+  .ruler{
+    margin:34px 0 4px; padding:10px 0 9px;
+    background:var(--navy-900); border-bottom:1px solid var(--line-2);
+  }
+  .ruler .marks{
+    position:relative; height:13px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:10.5px; color:var(--faint);
+  }
+  .ruler .marks b{
+    position:absolute; top:0; left:var(--x); transform:translateX(-50%);
+    font-weight:400;
+  }
+  .ruler .marks b:first-child{transform:none}
+  .ruler .marks b:last-child{transform:translateX(-100%)}
+  .ruler .line{
+    height:1px; background:var(--line); margin-top:3px;
+  }
+  .ruler .cap{margin:7px 0 0; font-size:11px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--faint)}
+
+  .obs{padding:20px 0 18px; border-bottom:1px solid var(--line)}
+  .obs .t{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:13px; color:var(--lime); letter-spacing:.02em;
+    font-variant-numeric:tabular-nums;
+  }
+  .tbar{
+    position:relative; height:6px; border-radius:3px; margin:8px 0 13px;
+    background:rgba(255,255,255,.05); border:1px solid var(--line);
+  }
+  .tbar i{
+    position:absolute; top:-1px; bottom:-1px;
+    left:var(--s); width:var(--d);
+    background:var(--lime); border-radius:3px;
+  }
+  .obs h3{margin:0 0 8px; font-size:19px}
+  .obs p{margin:0 0 12px; font-size:15.5px; line-height:1.62; color:var(--muted)}
+  .obs p:last-child{margin-bottom:0}
+  .flag{
+    margin:12px 0 0; padding:11px 14px;
+    background:var(--navy-800); border:1px solid var(--line);
+    border-left:2px solid var(--lime); border-radius:0 12px 12px 0;
+    font-size:14.5px; line-height:1.58; color:var(--muted);
+  }
+  .flag b{
+    display:block; color:var(--white); font-family:var(--disp);
+    font-size:12px; letter-spacing:.1em; text-transform:uppercase; margin-bottom:4px;
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/condition/">Condition</a>
+  </div>
+
+  <div class="kicker">Condition</div>
+  <h1>The cold start</h1>
+  <p class="standfirst">A warm engine is a polite one. It has thermal expansion on
+     its side, oil where oil should be, and a fuel system that has stopped
+     compensating for anything. Almost everything an engine is hiding, it hides
+     best at operating temperature — which is why the ninety seconds after a night
+     of sitting are the most informative ninety seconds you will get.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>6 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>First, the part that decides whether any of this works: <strong>the car has to
+     actually be cold.</strong> Not "they drove it around the block an hour ago"
+     cold. Sat overnight, engine at the same temperature as the air around it.</p>
+
+  <p>There is a reason cars are frequently running when you arrive, and it is not
+     always sinister — plenty of sellers are just being hospitable. It does not
+     matter why. Put the back of your hand on the hood before anything else. Warm
+     hood, reschedule. Ask for the car to be left untouched from the night before
+     and come at the appointment time. A seller who cannot accommodate that on a
+     car they want to sell has given you information for free.</p>
+
+  <p>What follows is a protocol, not a checklist — the order and the timing are the
+     whole point. Start a stopwatch. Stand outside the car for the first part if
+     you can, or better, bring somebody and split the job: one in the driver's
+     seat, one at the back of the car watching the tailpipe.</p>
+
+  <div class="ruler" aria-hidden="true">
+    <div class="marks">
+      <b style="--x:0%">0:00</b>
+      <b style="--x:33%">0:30</b>
+      <b style="--x:66%">1:00</b>
+      <b style="--x:100%">1:30</b>
+    </div>
+    <div class="line"></div>
+    <p class="cap">The protocol · ninety seconds</p>
+  </div>
+
+  <div class="obs">
+    <span class="t">−2:00 → 0:00 &nbsp;·&nbsp; before the key</span>
+    <div class="tbar"><i style="--s:0%; --d:2%"></i></div>
+    <h3>Look at the ground</h3>
+    <p>Whatever has dripped overnight is on the pavement right now, in position,
+       and it will be gone within a minute of the engine starting and the wind
+       moving. Note where it is relative to the car: front center, under a wheel,
+       mid-chassis. Touch it. Color and texture are the whole diagnosis, and we
+       have written out <a href="/articles/fluids-what-color-means/">what each
+       fluid looks like</a> separately.</p>
+    <p>Then the hood, with the back of your hand, to confirm cold. Then open it
+       and leave it open — you want to hear this engine without a steel lid over
+       it.</p>
+  </div>
+
+  <div class="obs">
+    <span class="t">0:00 → 0:04 &nbsp;·&nbsp; key on, engine off</span>
+    <div class="tbar"><i style="--s:0%; --d:5%"></i></div>
+    <h3>The bulb check</h3>
+    <p>Turn the key to the run position without cranking, and watch the
+       instrument cluster. Warning lamps are supposed to illuminate and then go
+       out, which is how the car proves the bulbs work. <strong>A lamp that never
+       lights at all is the one to notice</strong> — an airbag or check-engine
+       lamp that stays dark through the bulb check has often been removed or
+       disabled, and that is a deliberate act.</p>
+    <p>In the same four seconds, listen for the fuel pump: a short whir from
+       behind you that stops on its own. Silence there is a finding on most
+       modern cars.</p>
+  </div>
+
+  <div class="obs">
+    <span class="t">0:04 → 0:08 &nbsp;·&nbsp; cranking</span>
+    <div class="tbar"><i style="--s:4%; --d:5%"></i></div>
+    <h3>How long, and how evenly</h3>
+    <p>Count the revolutions before it fires. A healthy engine catches quickly and
+       evenly. Extended cranking on a cold engine points at fuel pressure, a
+       battery that is tired, or compression. A crank that sounds uneven — fast,
+       slow, fast — is worth writing down.</p>
+    <p>One slow, labored crank followed by a normal start usually means a battery
+       or a connection, which is cheap. Repeat it later in the visit after the car
+       has sat again for a few minutes, because a good alternator will have hidden
+       the problem by then.</p>
+  </div>
+
+  <div class="obs">
+    <span class="t">0:08 → 0:20 &nbsp;·&nbsp; first seconds running</span>
+    <div class="tbar"><i style="--s:9%; --d:13%"></i></div>
+    <h3>The tailpipe, and the first noise</h3>
+    <p>This is the window your second person is for. On a cold morning a puff of
+       white vapor that dissipates fast is condensed water and means nothing.
+       White smoke that hangs in the air, keeps coming, and carries a sweet smell
+       is a different thing entirely. Blue-tinged smoke is oil. A black puff is a
+       rich mixture.</p>
+    <p>Inside, the tachometer should jump to a fast idle and hold it. Listen for
+       anything that arrives in the first second or two and then fades — a brief
+       rattle or a diesel-like clatter at startup that goes quiet is a common
+       pattern and is often discussed in terms of oil pressure reaching the top of
+       the engine or a chain tensioner filling. <strong>What it means on a
+       specific engine is a question for that engine's service information and a
+       technician</strong>, not for a general article. Note it, time it, ask about
+       it.</p>
+    <div class="flag">
+      <b>The one that ends the visit</b>
+      An oil pressure light that stays on after the engine catches. Not a
+      question, not a negotiation — shut it off.
+    </div>
+  </div>
+
+  <div class="obs">
+    <span class="t">0:20 → 0:45 &nbsp;·&nbsp; settling</span>
+    <div class="tbar"><i style="--s:22%; --d:28%"></i></div>
+    <h3>Does the idle come down smoothly?</h3>
+    <p>Most engines idle high when cold and walk down as they warm. You are
+       watching the shape of that descent. Smooth and continuous is what you want.
+       Hunting — the tach rising and falling repeatedly on its own — is an air or
+       fuel metering issue. A stumble or a near-stall as it comes down is worth
+       noting even if the car recovers.</p>
+    <p>With the hood open, this is also when belts declare themselves. A squeal
+       that appears at start and clears as things warm is usually a belt or a
+       tensioner. A chirp that stays is a bearing in something the belt drives.</p>
+  </div>
+
+  <div class="obs">
+    <span class="t">0:45 → 1:10 &nbsp;·&nbsp; the noise census</span>
+    <div class="tbar"><i style="--s:50%; --d:28%"></i></div>
+    <h3>Stop looking and just listen</h3>
+    <p>Twenty-five seconds of doing nothing else. Ticking that fades as oil
+       circulates is common; ticking that is still there at a minute is not
+       finished. A rhythmic knock that speeds up with engine speed is the sound
+       nobody wants and the reason for this whole protocol. Exhaust ticking at the
+       front of the engine that is loudest when cold and quieter when hot is
+       typically a manifold leak, because the crack closes as the metal expands.</p>
+    <p>Smell, too. This is peak evidence for
+       <a href="/articles/the-smell-test/">most of the odors worth catching</a>,
+       because cold engines leak where warm ones have sealed themselves shut.</p>
+  </div>
+
+  <div class="obs">
+    <span class="t">1:10 → 1:30 &nbsp;·&nbsp; the last twenty seconds</span>
+    <div class="tbar"><i style="--s:78%; --d:22%"></i></div>
+    <h3>The dashboard, again, and the ground, again</h3>
+    <p>Come back to the cluster. Everything that was meant to extinguish after the
+       bulb check should be out by now. Anything still lit at ninety seconds is a
+       live fault, and you can stop treating it as a bulb.</p>
+    <p>Then walk the car once, slowly, and look at the ground underneath while it
+       is running. Some leaks only present with the system pressurized, which is
+       to say they are invisible in the driveway photo and obvious here.</p>
+    <p>Last, put the heat on full and the fan on high. In the first two minutes
+       you are not judging how hot the air is — the engine has not made heat yet —
+       you are listening to the blower for bearing noise and debris, and smelling
+       what comes out of the vents on the first air the car has moved all night.</p>
+  </div>
+
+  <h2>What to do with all of it</h2>
+
+  <p>Write it down before you drive. A cold-start observation degrades fast in
+     memory, and the test drive is about to overwrite it with new impressions —
+     which is precisely why the drive comes second and gets
+     <a href="/articles/the-test-drive-route/">a route of its own</a>. Then, if
+     the car is a serious candidate, arrange for a mechanic to see it cold too.
+     Anything on this page that you noticed and could not explain is exactly what
+     to hand them, because "it rattled for two seconds at startup, here is my
+     stopwatch" is a far better brief than "can you look it over."</p>
+
+  <h2>How we handle it</h2>
+
+  <p>Six cars at a time means we can do something a bigger lot structurally
+     cannot: every car here gets started cold, by somebody who is paying
+     attention, on more than one morning before it is offered. What that catches
+     goes onto the published inspection sheet in the same words we would use to
+     each other. And if you want to be the one standing there at eight in the
+     morning when it happens, call ahead and we will leave the car alone until you
+     get here. Nobody has ever asked us that and been told no.</p>
+
+  <p class="endnote">This protocol describes general observation technique for
+     gasoline passenger cars and is not a diagnosis. Startup behavior varies by
+     engine design, fuel type, ambient temperature and altitude; hybrids and
+     electric vehicles behave differently again. Anything you notice should be
+     confirmed by a qualified technician with access to the manufacturer's service
+     information for that vehicle.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/the-test-drive-route/">How to design a test drive route
+        <span>Four legs, each built to make a specific fault show itself.</span></a></li>
+      <li><a href="/articles/the-smell-test/">What a car smells like when something is wrong
+        <span>Ten odors, what each one usually is, and how fast it matters.</span></a></li>
+      <li><a href="/articles/dashboard-lights-ranked/">Dashboard lights, ranked
+        <span>From finish your drive to stop the car now, with the reasoning for each.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/the-cold-start/#article",
+   "headline": "The cold start",
+   "description": "A timed observation protocol for the first ninety seconds of a used car's day - what to watch in each window, and what a problem looks like in it.",
+   "url": "https://drivethrudeals.online/articles/the-cold-start/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Condition",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/the-cold-start.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/the-cold-start/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Condition","item":"https://drivethrudeals.online/articles/condition/"},
+    {"@type":"ListItem","position":4,"name":"The cold start"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

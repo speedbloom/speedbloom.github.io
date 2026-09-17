@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Liens, and How They Clear | Drive Thru Deals</title>
+<meta name="description" content="The payoff-to-title sequence drawn out message by message between buyer, seller, lienholder and the state - including the three waiting periods nobody plans for, and how to pay off a loan on a car you do not own yet.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/liens-and-how-they-clear/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Liens, and how they clear">
+<meta property="og:description" content="Payoff, release, transfer - the sequence message by message, and the awkward middle where nobody is holding the title.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/liens-and-how-they-clear/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/liens-and-how-they-clear.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/liens-and-how-they-clear.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Liens, and how they clear">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Paperwork">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Liens, and how they clear">
+<meta name="twitter:description" content="Payoff, release, transfer - the sequence message by message, and the awkward middle where nobody is holding the title.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/liens-and-how-they-clear.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* A sequence diagram written out in prose. Four actors are declared once,
+     then every step is a message with its sender and recipient stamped on it,
+     and the waits between messages are drawn as gaps rather than skipped -
+     because the waits are the part of this process that surprises people. */
+  .actors{
+    display:flex; flex-wrap:wrap; gap:8px; margin:30px 0 20px; padding:0;
+    list-style:none;
+  }
+  .actors li{
+    padding:6px 13px; border-radius:8px; background:var(--navy-700);
+    border:1px solid var(--line-2);
+    font-family:var(--disp); font-weight:600; font-size:12px;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--white);
+  }
+  .actors li span{display:block; font-family:var(--body); font-weight:400;
+    font-size:11.5px; letter-spacing:0; text-transform:none; color:var(--faint);
+    margin-top:2px;}
+  .seq{margin:8px 0 28px; padding:0; list-style:none; counter-reset:msg}
+  .msg{
+    counter-increment:msg; display:grid; gap:4px 0;
+    padding:15px 0 15px 20px; border-left:2px solid var(--line-2);
+    position:relative;
+  }
+  .msg::before{
+    content:""; position:absolute; left:-6px; top:22px;
+    width:10px; height:10px; border-radius:50%;
+    background:var(--lime); border:2px solid var(--navy-900);
+  }
+  .lane{
+    font-family:var(--disp); font-weight:700; font-size:10.5px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--lime);
+  }
+  .lane em{font-style:normal; color:var(--faint); margin:0 5px}
+  .msg h3{margin:2px 0 4px; font-size:16.5px}
+  .msg p{margin:0; font-size:15px; line-height:1.63; color:var(--muted)}
+  .gap{
+    display:flex; align-items:center; gap:12px;
+    padding:12px 0 12px 20px; border-left:2px dashed var(--line-2);
+    font-family:var(--disp); font-weight:600; font-size:11px;
+    letter-spacing:.16em; text-transform:uppercase; color:#FFD166;
+  }
+  .gap span{
+    font-family:var(--body); font-weight:400; font-size:14px; line-height:1.55;
+    letter-spacing:0; text-transform:none; color:var(--muted);
+  }
+  .safe{
+    background:var(--navy-800); border:1px solid var(--line-2);
+    border-radius:15px; padding:8px 20px 18px; margin:32px 0;
+  }
+  .safe h3{font-size:16px; margin:18px 0 5px}
+  .safe p{margin:0; font-size:14.8px; color:var(--muted); line-height:1.6}
+  .caution{
+    border:1px solid rgba(255,143,135,.32); background:rgba(255,143,135,.05);
+    border-radius:16px; padding:19px 21px; margin:34px 0;
+    font-size:15px; line-height:1.62; color:var(--muted);
+  }
+  .caution b{color:#FF8F87}
+  .caution :last-child{margin-bottom:0}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/paperwork/">Paperwork</a>
+  </div>
+
+  <div class="kicker">Paperwork</div>
+  <h1>Liens, and how they clear</h1>
+  <p class="standfirst">A lien is a lender's recorded interest in a car. Clearing
+     one is not complicated, but it runs through four parties in a fixed order,
+     and there is a stretch in the middle where the money has moved and nobody is
+     holding a clean title. That stretch is where private sales fall apart.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>5 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Here is the whole thing drawn out as a sequence. The case shown is the one
+     that causes the most trouble: you are buying privately, and the seller still
+     owes money on the car.</p>
+
+  <ul class="actors">
+    <li>You <span>the buyer</span></li>
+    <li>Seller <span>the recorded owner</span></li>
+    <li>Lienholder <span>the seller's lender</span></li>
+    <li>MVC <span>the state's record</span></li>
+  </ul>
+
+  <ul class="seq">
+
+    <li class="msg">
+      <span class="lane">You <em>&rarr;</em> Seller</span>
+      <h3>Ask the question before anything else</h3>
+      <p>"Is there a loan on the car, who is it with, and can you get me a written
+         payoff quote?" Ask it on the phone, before you drive anywhere. A seller
+         who does not know is a seller whose timeline you cannot plan around.</p>
+    </li>
+
+    <li class="msg">
+      <span class="lane">Seller <em>&rarr;</em> Lienholder</span>
+      <h3>Request the payoff figure</h3>
+      <p>Only the borrower can request it. The lender issues a payoff amount that
+         is good through a stated date, after which interest accrues and the
+         figure changes. Note the expiration on the quote — it is the clock the
+         rest of the sequence runs against.</p>
+    </li>
+
+    <li class="msg">
+      <span class="lane">Lienholder <em>&rarr;</em> Seller</span>
+      <h3>The quote arrives, with instructions</h3>
+      <p>It will state the amount, the good-through date, and precisely how the
+         lender wants to be paid — by wire, by certified check, at a branch, or
+         through an online portal. Those instructions are not suggestions. Paying
+         the wrong way is the most common reason a release is delayed.</p>
+    </li>
+
+    <li class="msg">
+      <span class="lane">You <em>&rarr;</em> Lienholder</span>
+      <h3>Pay the lender directly — not the seller</h3>
+      <p>This is the single most important line on the page. The payoff portion of
+         your purchase price goes to the lienholder, and only the remainder goes
+         to the seller. If the payoff exceeds the purchase price, the seller has
+         to bring the difference; if they cannot, there is no sale today and you
+         should be glad you found out at this step.</p>
+    </li>
+
+    <li class="gap">Wait
+      <span>The lender posts the payment and records the satisfaction. How long
+        this takes is a function of the lender, the payment method and the day of
+        the week — it is not something anybody can promise you.</span>
+    </li>
+
+    <li class="msg">
+      <span class="lane">Lienholder <em>&rarr;</em> Seller or State</span>
+      <h3>The release is issued</h3>
+      <p>What physically happens here depends on the state. In some, the lender
+         holds the paper title and mails it, signed off, once the loan is
+         satisfied. In others the owner holds the title all along and the lender
+         sends a separate release document. Several states record liens
+         electronically, so there is no paper at all until the release triggers a
+         title to be printed. Confirm which arrangement applies to the title in
+         front of you before you plan around it.</p>
+    </li>
+
+    <li class="gap">Wait
+      <span>Mail, processing, and in an electronic system the printing and
+        issuing of a title that did not previously exist on paper.</span>
+    </li>
+
+    <li class="msg">
+      <span class="lane">Seller <em>&rarr;</em> You</span>
+      <h3>The title, plus the release if it is separate</h3>
+      <p>Now the seller signs the assignment on the back and completes the
+         odometer disclosure. Check the lienholder line and the release document
+         together — the front of the title may still name the lender, and the
+         release is what answers it. Everything about reading that document is in
+         <a href="/articles/the-title-explained/">the title, explained</a>.</p>
+    </li>
+
+    <li class="msg">
+      <span class="lane">You <em>&rarr;</em> MVC</span>
+      <h3>Transfer and register</h3>
+      <p>The assigned title and the lien release go in together. New Jersey issues
+         a title in your name. The full counter sequence is
+         <a href="/articles/registering-a-car-in-new-jersey/">here</a>.</p>
+    </li>
+
+    <li class="msg">
+      <span class="lane">MVC <em>&rarr;</em> You or your lender</span>
+      <h3>A new title, with or without a new lien</h3>
+      <p>If you paid cash, the title is issued clear to you. If you financed the
+         purchase, your own lender is now recorded as lienholder — and the whole
+         sequence above is the one that will run again, in reverse, on the day you
+         sell it.</p>
+    </li>
+
+  </ul>
+
+  <h2>The awkward middle</h2>
+
+  <p>Look at the two waits. Between them sits a period during which your money is
+     gone, the loan is paid, and the document proving you own the car does not yet
+     exist in a form anyone can hand you. Nothing is wrong. It simply looks
+     exactly like something being wrong, and that is when people panic, make
+     phone calls to the wrong parties, and occasionally do something rash like
+     paying the seller again.</p>
+
+  <p>The defense is to know it is coming and to write it down at the table: who
+     paid what, to whom, on what date, with what confirmation number. Ask the
+     seller for a copy of the payoff quote and the payment confirmation. If you
+     paid the lender directly, you have your own confirmation, which is better.</p>
+
+  <h2>How to pay off a car you do not own yet</h2>
+
+  <div class="safe">
+    <h3>Meet at the lender's branch</h3>
+    <p>If the lienholder has a local branch, do the whole thing there. The payoff
+       is made at the counter, the seller is present, and a person employed by the
+       lender can tell you both what happens next. This is the cleanest version
+       and it is worth driving for.</p>
+
+    <h3>Pay the lender, then the seller</h3>
+    <p>Two payments in one sitting: the payoff amount to the lienholder, following
+       its stated instructions, and the remainder to the seller. Do both before
+       any keys move, and keep the confirmations.</p>
+
+    <h3>Use a neutral third party</h3>
+    <p>Some banks, credit unions and title services will handle a private-party
+       transaction for a fee, holding funds until the release is recorded. If the
+       amounts are large or the parties are strangers, the fee buys real peace.</p>
+
+    <h3>What not to do</h3>
+    <p>Hand the full purchase price to the seller and trust them to pay the bank.
+       Most people would. Some cannot — because the payoff is larger than they
+       admitted, or because the money is needed somewhere else today. You will not
+       know which until the title does not arrive.</p>
+  </div>
+
+  <h2>The dealership version</h2>
+
+  <p>When you trade in a car you still owe on, the dealership handles this whole
+     sequence for you: it obtains the payoff, sends it to your lender, and takes
+     on the timing risk. That is a genuine service and it is why trading a
+     financed car is so much simpler than selling it privately. Two things to
+     watch. First, the payoff amount and your trade allowance are separate facts
+     — a generous-sounding allowance and a quietly high price on the car you are
+     buying can net out to nothing. Second, if the payoff is larger than the
+     trade is worth, the difference does not disappear; it is generally added to
+     the new loan. Ask for both numbers, separately, in writing.</p>
+
+  <div class="caution">
+    <p><b>General information, not legal advice.</b> How liens are recorded and
+       released, what documents a release requires, and how long any of it takes
+       are determined by the lender, by the state that issued the title, and by
+       procedures that change. Nothing here is specific to your transaction or
+       your loan. Confirm with the New Jersey Motor Vehicle Commission, with the
+       lienholder itself, or with an attorney licensed in New Jersey.</p>
+  </div>
+
+  <h2>Why we will say this out loud</h2>
+
+  <p>Because a lien is the most common reason a car we would happily have bought
+     turns into a car we cannot buy this week, and the reason is almost never
+     dishonesty. It is that nobody asked at the start. Six cars at a time means
+     every purchase we make has to be titled cleanly and quickly, so the payoff
+     question is the second thing we ask about any vehicle, right after the VIN.
+     Borrow the habit. It takes one sentence on a phone call and it will save you
+     a weekend.</p>
+
+  <p class="endnote">Written for New Jersey buyers in September 2026. No
+     processing time, deadline, fee or interest figure is stated here on purpose —
+     those are set by individual lenders and states and change. Verify with the
+     New Jersey Motor Vehicle Commission and with the lienholder.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/the-title-explained/">The title, explained
+        <span>Field by field across a certificate of title, including the lienholder line.</span></a></li>
+      <li><a href="/articles/what-a-bill-of-sale-must-contain/">What a bill of sale must contain
+        <span>Every line, and the specific argument each one is there to prevent.</span></a></li>
+      <li><a href="/articles/the-last-twenty-minutes/">The last twenty minutes
+        <span>What happens in the finance office, in the order it happens, and which parts you can decline.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/liens-and-how-they-clear/#article",
+   "headline": "Liens, and how they clear",
+   "description": "The payoff-to-title sequence drawn out message by message between buyer, seller, lienholder and the state - including the three waiting periods nobody plans for, and how to pay off a loan on a car you do not own yet.",
+   "url": "https://drivethrudeals.online/articles/liens-and-how-they-clear/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Paperwork",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/liens-and-how-they-clear.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/liens-and-how-they-clear/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Paperwork","item":"https://drivethrudeals.online/articles/paperwork/"},
+    {"@type":"ListItem","position":4,"name":"Liens, and how they clear"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

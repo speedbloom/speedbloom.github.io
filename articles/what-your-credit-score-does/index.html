@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What Your Credit Score Does to a Payment | Drive Thru Deals</title>
+<meta name="description" content="One car, one loan amount, one term, six illustrative rate bands. The payment moves $192 a month and the interest moves $11,523 - and the car never changes.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/what-your-credit-score-does/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="What your credit score does to a payment">
+<meta property="og:description" content="The same car, financed six ways. Illustrative rate bands, real amortization, and the one figure the bands never touch.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/what-your-credit-score-does/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/what-your-credit-score-does.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/what-your-credit-score-does.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - What your credit score does to a payment">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Money">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What your credit score does to a payment">
+<meta name="twitter:description" content="The same car, financed six ways. Illustrative rate bands, real amortization, and the one figure the bands never touch.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/what-your-credit-score-does.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Device: a band rail. Six rungs, each one the same car at a different
+     illustrative rate, with the total interest drawn as a proportional bar so
+     the shape of the spread is visible before any number is read. */
+  .setup{
+    display:flex; flex-wrap:wrap; gap:0 34px;
+    border-top:1px solid var(--line-2); border-bottom:1px solid var(--line-2);
+    padding:16px 0; margin:30px 0 8px;
+  }
+  .setup div{padding:6px 0}
+  .setup dt{
+    font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--faint); margin:0 0 3px;
+  }
+  .setup dd{
+    margin:0; font-family:var(--disp); font-weight:700; font-size:20px;
+    color:var(--white); font-variant-numeric:tabular-nums;
+  }
+
+  .rail{margin:26px 0 8px; counter-reset:rung}
+  .rung{
+    padding:18px 0 19px; border-bottom:1px solid var(--line);
+    display:grid; grid-template-columns:auto 1fr auto; gap:3px 16px;
+    align-items:baseline;
+  }
+  .rung:first-child{border-top:1px solid var(--line)}
+  .rung .tier{
+    font-family:var(--disp); font-weight:800; font-size:13px; letter-spacing:.06em;
+    color:var(--lime-ink); background:var(--lime); border-radius:6px;
+    padding:3px 8px; align-self:center;
+  }
+  .rung .rate{
+    font-size:14px; color:var(--muted); font-variant-numeric:tabular-nums;
+  }
+  .rung .rate b{color:var(--white); font-weight:600}
+  .rung .pay{
+    font-family:var(--disp); font-weight:700; font-size:23px; letter-spacing:-.02em;
+    color:var(--white); font-variant-numeric:tabular-nums; white-space:nowrap;
+  }
+  .rung .track{
+    grid-column:1/-1; margin-top:12px; height:9px; border-radius:99px;
+    background:var(--navy-700); overflow:hidden;
+  }
+  .rung .track i{
+    display:block; height:100%; border-radius:99px; background:var(--lime);
+    width:var(--w);
+  }
+  .rung .foot{
+    grid-column:1/-1; margin-top:8px; font-size:13px; color:var(--faint);
+    display:flex; flex-wrap:wrap; gap:4px 18px;
+  }
+  .rung .foot b{color:var(--muted); font-weight:500; font-variant-numeric:tabular-nums}
+  .rung.top .track i{background:var(--muted)}
+
+  .spread{
+    background:var(--navy-700); border:1px solid var(--line-2);
+    border-radius:18px; padding:22px; margin:34px 0;
+  }
+  .spread .big{
+    font-family:var(--disp); font-weight:800; font-size:clamp(32px,6.6vw,46px);
+    letter-spacing:-.03em; line-height:1.05; color:var(--lime);
+    font-variant-numeric:tabular-nums;
+  }
+  .spread p{margin:12px 0 0; font-size:15px; color:var(--muted)}
+  .spread p:last-child{margin-bottom:0}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/money/">Money</a>
+  </div>
+
+  <div class="kicker">Money</div>
+  <h1>What your credit score does to a payment</h1>
+  <p class="standfirst">Not to your dignity, not to your odds, not to how anyone
+     treats you at the desk. To the payment. One car, one loan amount, one term,
+     six illustrative rate bands — and $11,523 of daylight between the top of the
+     rail and the bottom.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>5 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>A credit score is not a verdict on a person. It is a number a lender uses to
+     sort applicants into groups, and the only thing it directly changes about a
+     car deal is the interest rate written on the contract. Everything else about
+     the car — the price, the tax, the title work, the tires it needs in two years
+     — is exactly the same for every buyer who walks onto the lot.</p>
+
+  <p>So let's hold every one of those things still and move only the rate. Same
+     car, same money down, same number of months. The figures below are real
+     amortization, computed and checked. The rates are illustrative — invented for
+     the arithmetic, not quoted from anybody's rate sheet.</p>
+
+  <dl class="setup">
+    <div><dt>Amount financed</dt><dd>$21,000.00</dd></div>
+    <div><dt>Term</dt><dd>60 months</dd></div>
+    <div><dt>What changes</dt><dd>Only the rate</dd></div>
+  </dl>
+
+  <div class="rail">
+
+    <div class="rung top" style="--w:22.6%">
+      <span class="tier">A</span>
+      <span class="rate">Illustrative APR <b>6.00%</b></span>
+      <span class="pay">$405.99</span>
+      <span class="track"><i></i></span>
+      <span class="foot"><span>Total interest <b>$3,359.34</b></span><span>Total of payments <b>$24,359.34</b></span></span>
+    </div>
+
+    <div class="rung" style="--w:32.6%">
+      <span class="tier">B</span>
+      <span class="rate">Illustrative APR <b>8.50%</b></span>
+      <span class="pay">$430.85</span>
+      <span class="track"><i></i></span>
+      <span class="foot"><span>Total interest <b>$4,850.77</b></span><span>+$24.86 a month vs. A</span></span>
+    </div>
+
+    <div class="rung" style="--w:45.1%">
+      <span class="tier">C</span>
+      <span class="rate">Illustrative APR <b>11.50%</b></span>
+      <span class="pay">$461.84</span>
+      <span class="track"><i></i></span>
+      <span class="foot"><span>Total interest <b>$6,710.75</b></span><span>+$55.85 a month vs. A</span></span>
+    </div>
+
+    <div class="rung" style="--w:60.3%">
+      <span class="tier">D</span>
+      <span class="rate">Illustrative APR <b>15.00%</b></span>
+      <span class="pay">$499.59</span>
+      <span class="track"><i></i></span>
+      <span class="foot"><span>Total interest <b>$8,975.30</b></span><span>+$93.60 a month vs. A</span></span>
+    </div>
+
+    <div class="rung" style="--w:78.5%">
+      <span class="tier">E</span>
+      <span class="rate">Illustrative APR <b>19.00%</b></span>
+      <span class="pay">$544.75</span>
+      <span class="track"><i></i></span>
+      <span class="foot"><span>Total interest <b>$11,685.19</b></span><span>+$138.76 a month vs. A</span></span>
+    </div>
+
+    <div class="rung" style="--w:100%">
+      <span class="tier">F</span>
+      <span class="rate">Illustrative APR <b>23.50%</b></span>
+      <span class="pay">$598.05</span>
+      <span class="track"><i></i></span>
+      <span class="foot"><span>Total interest <b>$14,882.82</b></span><span>+$192.06 a month vs. A</span></span>
+    </div>
+
+  </div>
+
+  <p class="plain">Bars are drawn in proportion to total interest, with band F set
+     to full width. Each total is the sum of the interest line in a full 60-month
+     amortization schedule, so the last payment differs from the other 59 by a few
+     cents.</p>
+
+  <div class="spread">
+    <div class="big">$11,523.48</div>
+    <p>The interest gap between band A and band F on the identical $21,000, over
+       the identical five years. Nothing about the car is different. Nothing about
+       the price is different. That is the whole of what the rate does.</p>
+  </div>
+
+  <h2>Read the bars, not the payments</h2>
+
+  <p>The monthly payments look survivable all the way down the rail. $405.99 to
+     $598.05 is a real difference, but it is the kind of difference people talk
+     themselves into — a couple of dinners out, one less thing a month. The bars
+     are the honest picture, because they show what the rate takes over five years
+     rather than over thirty days.</p>
+
+  <p>Band C's bar is twice band A's. Band F's is four and a half times. Payments
+     compress the difference; totals don't. This is the same reason a monthly
+     payment is a poor unit for comparing anything in a car deal — it is an output
+     of three inputs, and it hides which one moved.</p>
+
+  <h2>The same payment buys a different car</h2>
+
+  <p>Turn the arithmetic around. Suppose the payment is the fixed thing — $405.99,
+     band A's number — and the rate is band F's 23.50%. Over 60 months, that
+     payment supports an amount financed of about <strong>$14,256</strong>.</p>
+
+  <p>Same money out of the same account every month. <strong>$6,744 less car.</strong>
+     That is the version of this arithmetic that actually decides what people drive,
+     and it is invisible if the conversation is conducted in monthly payments.</p>
+
+  <h2>Where the bands come from</h2>
+
+  <p>Lenders group applicants into tiers and price each tier differently. We are
+     not going to tell you where any particular lender draws those lines, what
+     rate sits in any tier today, or what score gets you into one — those are the
+     lender's business, they differ between lenders, they move, and anybody who
+     states them as settled fact is guessing on your behalf.</p>
+
+  <p>What is fair to say is the shape: the bands exist, they are wide, and the
+     distance between two adjacent bands is usually larger than any discount you
+     will negotiate off the price of the car. A buyer who spends an afternoon
+     arguing over $300 on the windshield and no time at all on which band they
+     land in has the effort backwards.</p>
+
+  <h2>The three things you control</h2>
+
+  <h3>1. The amount financed</h3>
+  <p>The rate is applied to a number, and you have more influence over the number
+     than over the rate. Take band D, at an illustrative 15.00%. On $21,000 over
+     60 months the interest is $8,975.30. On $19,000 — the same car with $2,000
+     more down, or $2,000 less of add-ons rolled in — it is $8,120.47. The rate
+     didn't move. <strong>$854.83</strong> of interest did.</p>
+
+  <h3>2. The term</h3>
+  <p>Same band D, same $21,000, shortened from 60 months to 48: the payment rises
+     from $499.59 to $584.45, and total interest falls from $8,975.30 to
+     <strong>$7,053.38</strong>. Stretch it the other way to 72 months and the
+     payment drops to $444.05 while the interest climbs to $10,971.10. A longer
+     term is not a cheaper loan. It is the same loan, wearing a smaller number.</p>
+
+  <h3>3. Time before you sign</h3>
+  <p>A score is a photograph of a file, and files change. Paying down a revolving
+     balance, letting a recent hard inquiry age, correcting an error on a report —
+     these take weeks, not years. If you are close to the edge of a band, the
+     cheapest thing you can do is wait and re-check. You are entitled to your
+     credit reports for free at <b>annualcreditreport.com</b>, which is where to
+     start, and errors are worth disputing before you shop rather than after.</p>
+
+  <h2>What we can and can't do about it</h2>
+
+  <p>We're a six-car lot, and we're not a lender. We can show you the arithmetic
+     on any car here, in writing, at whatever rate you actually come back with. We
+     can tell you what the out-the-door price is before financing enters the
+     conversation at all, which is the only way to keep the two decisions separate.
+     What we cannot do — and won't pretend to — is promise anyone a rate, a band,
+     or an approval. Those belong to whoever is lending the money.</p>
+
+  <p>Which is also the argument for <a href="/articles/getting-your-own-loan-first/">walking
+     in with your own approval</a>. Not because a dealer-arranged loan is
+     necessarily worse, but because a number in your pocket is the only way to
+     know whether the one you're offered is better.</p>
+
+  <div class="note">
+    <p><b>The question that surfaces your band.</b> Not "what's my payment" and not
+       "what's my rate" — <b>what rate was I approved at, and over how many
+       months?</b> Both halves matter. A payment you like at a term you didn't
+       notice is how band C's money quietly becomes band E's.</p>
+  </div>
+
+  <p class="endnote">The APRs on this page are illustrative figures chosen to space
+     the arithmetic evenly across a plausible range. They are not quotes, not
+     offers, not current market rates, and not tied to any lender's tiers or to any
+     particular credit score. All payments and interest totals were computed from
+     full amortization schedules on the stated amount and term and add up to the
+     cent. Nothing here is financial advice or an offer of credit.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/apr-is-not-the-interest-rate/">APR is not the interest rate
+        <span>One contract, two percentages, and the reason they don't match.</span></a></li>
+      <li><a href="/articles/getting-your-own-loan-first/">Getting your own loan first
+        <span>Bank-first and dealer-first, step for step, in two columns.</span></a></li>
+      <li><a href="/articles/the-longer-term-trick/">The longer-term trick
+        <span>The same car, the same monthly payment, two terms - and full amortization for both.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/what-your-credit-score-does/#article",
+   "headline": "What your credit score does to a payment",
+   "description": "One car, one loan amount, one term, six illustrative rate bands. The payment moves $192 a month and the interest moves $11,523 - and the car never changes.",
+   "url": "https://drivethrudeals.online/articles/what-your-credit-score-does/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Money",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/what-your-credit-score-does.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/what-your-credit-score-does/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Money","item":"https://drivethrudeals.online/articles/money/"},
+    {"@type":"ListItem","position":4,"name":"What your credit score does to a payment"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

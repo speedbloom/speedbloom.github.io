@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rust, and Where It Actually Matters | Drive Thru Deals</title>
+<meta name="description" content="Eleven underbody zones on a used car, each rated on a three-tier scale — cosmetic, watch, structural — so you know which orange patches are weather and which ones end the conversation.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/rust-where-it-matters/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Rust, and where it actually matters">
+<meta property="og:description" content="Eleven underbody zones, rated cosmetic, watch or structural.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/rust-where-it-matters/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/rust-where-it-matters.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/rust-where-it-matters.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Rust, and where it actually matters">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Condition">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Rust, and where it actually matters">
+<meta name="twitter:description" content="Eleven underbody zones, rated cosmetic, watch or structural.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/rust-where-it-matters.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* A graded survey. One severity ramp is defined up front, then every zone of
+     the underbody carries a three-cell strip showing where it sits on that ramp.
+     Read only the strips and you still get the article. */
+
+  .ramp{margin:32px 0 44px}
+  .ramp .rrow{
+    display:grid; grid-template-columns:1fr; gap:6px;
+    padding:14px 0; border-bottom:1px solid var(--line);
+  }
+  @media (min-width:640px){
+    .ramp .rrow{grid-template-columns:132px 1fr; gap:0 22px; align-items:start}
+  }
+  .ramp .bar{display:flex; gap:4px; align-items:center; padding-top:5px}
+  .ramp .bar i{
+    display:block; height:9px; border-radius:2px; flex:1 1 0;
+    background:rgba(255,255,255,.07); border:1px solid var(--line);
+  }
+  .ramp .bar i.on{background:var(--lime); border-color:var(--lime)}
+  .ramp h3{margin:0 0 4px; font-size:16px}
+  .ramp p{margin:0; font-size:14.5px; line-height:1.55; color:var(--muted)}
+
+  .zone{
+    margin:0; padding:22px 0 20px; border-bottom:1px solid var(--line);
+  }
+  .zone:first-of-type{border-top:1px solid var(--line-2)}
+  .tstrip{
+    display:flex; gap:4px; align-items:center; margin-bottom:11px;
+  }
+  .tstrip i{
+    display:block; width:26px; height:7px; border-radius:2px;
+    background:rgba(255,255,255,.07); border:1px solid var(--line);
+  }
+  .tstrip i.on{background:var(--lime); border-color:var(--lime)}
+  .tstrip em{
+    font-style:normal; font-size:11px; letter-spacing:.11em; text-transform:uppercase;
+    color:var(--faint); margin-left:8px;
+  }
+  .tstrip.t3 em{color:var(--lime)}
+  .zone h3{margin:0 0 4px; font-size:19px}
+  .zone .where{
+    margin:0 0 10px; font-size:12.5px; letter-spacing:.03em;
+    color:var(--faint); font-family:var(--disp); font-weight:500;
+  }
+  .zone p{margin:0 0 12px; font-size:15.5px; line-height:1.62; color:var(--muted)}
+  .zone p:last-child{margin-bottom:0}
+  .zone p b{color:var(--white); font-weight:600}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/condition/">Condition</a>
+  </div>
+
+  <div class="kicker">Condition</div>
+  <h1>Rust, and where it actually matters</h1>
+  <p class="standfirst">Every car that has spent a winter in New Jersey has rust
+     on it somewhere. That is not a finding. The finding is <em>which</em> rust —
+     because some of it is the normal appearance of iron in a salted state, and
+     some of it means the car should not be sold to anybody.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>6 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Road salt is the reason. It lowers the freezing point of water on the road,
+     which is the whole point of it, and it also keeps that water liquid and
+     conductive inside every seam and cavity of your car for months at a time.
+     Then the car dries out in April and starts again in December. A New Jersey
+     car's underside tells you how many of those cycles it has been through and
+     how well it was drained and rinsed between them.</p>
+
+  <p>What follows is a survey of the underside, zone by zone, with each zone placed
+     on a three-step severity ramp. The ramp is ours; it is a way of organizing a
+     decision, not an engineering standard.</p>
+
+  <div class="ramp">
+    <div class="rrow">
+      <div class="bar"><i class="on"></i><i></i><i></i></div>
+      <div>
+        <h3>Cosmetic</h3>
+        <p>Surface oxidation on bare or worn metal, no measurable material lost.
+           Ugly, normal, and present on nearly every car here over about three
+           winters old.</p>
+      </div>
+    </div>
+    <div class="rrow">
+      <div class="bar"><i class="on"></i><i class="on"></i><i></i></div>
+      <div>
+        <h3>Watch</h3>
+        <p>Scale you can flake off with a thumbnail, visible pitting, or rust on a
+           part that is replaceable but not cheap. Changes what the car is worth
+           and what it will cost you in three years.</p>
+      </div>
+    </div>
+    <div class="rrow">
+      <div class="bar"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+      <div>
+        <h3>Structural</h3>
+        <p>Perforation, or section loss where the car's strength or a safety
+           system's mounting lives. This is not a price negotiation. It is a
+           different car.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>The zones, front to back</h2>
+
+  <div class="zone">
+    <div class="tstrip"><i class="on"></i><i></i><i></i><em>Cosmetic</em></div>
+    <h3>Suspension arms, springs, rotor hats</h3>
+    <p class="where">Visible behind every wheel</p>
+    <p>These parts are steel or iron with a thin coating and they are supposed to
+       look like this. An orange control arm and a rust-ringed brake rotor on a
+       five-year-old car mean the car drove through winter. <b>Rust here is only a
+       finding if you can move material with a screwdriver</b> — flaking layers
+       that come away in sheets on a spring or a trailing arm are a different tier
+       than a uniform orange film.</p>
+  </div>
+
+  <div class="zone">
+    <div class="tstrip"><i class="on"></i><i class="on"></i><i></i><em>Watch</em></div>
+    <h3>Exhaust system</h3>
+    <p class="where">Center and rear underside</p>
+    <p>Exhaust rusts from the inside out, because it makes water as a byproduct of
+       combustion and short trips never get hot enough to boil it off. Pinholes,
+       weeping seams and a muffler that sounds hollow when tapped are all normal
+       aging. It is a wear item with a real replacement cost, so it belongs in the
+       price conversation — but a rusty exhaust says nothing about the car's
+       structure.</p>
+  </div>
+
+  <div class="zone">
+    <div class="tstrip"><i class="on"></i><i class="on"></i><i></i><em>Watch</em></div>
+    <h3>Wheel arch lips and the bottoms of doors</h3>
+    <p class="where">Body panels, not underbody, but the same cause</p>
+    <p>Bubbling paint along an arch or a blister at the bottom seam of a door is
+       rust that started on the inside of the panel and is arriving at the
+       surface. It is body-shop work, not a safety problem, and it is generally
+       worse than it looks because you are seeing the end of the process rather
+       than the beginning. <b>Look for a magnet not sticking</b> — that is filler
+       over a previous repair of exactly this.</p>
+  </div>
+
+  <div class="zone">
+    <div class="tstrip"><i class="on"></i><i class="on"></i><i></i><em>Watch</em></div>
+    <h3>Trunk floor and spare tire well</h3>
+    <p class="where">Lift the carpet and the spare</p>
+    <p>The spare well is the low point of the back of the car and the first place
+       a leaking taillight gasket or rear window seal collects. Standing water for
+       months makes rust from the inside of the pan. It is on the watch tier as a
+       finding on its own — but pull the spare and find a wet, silted, rust-ringed
+       well and you have also found evidence about water intrusion that belongs in
+       the conversation about <a href="/articles/what-the-history-report-misses/">what
+       a history report does not know</a>.</p>
+  </div>
+
+  <div class="zone">
+    <div class="tstrip t3"><i class="on"></i><i class="on"></i><i class="on"></i><em>Structural</em></div>
+    <h3>Brake and fuel lines</h3>
+    <p class="where">Running along the underside, usually near a frame rail or rocker</p>
+    <p>These are steel tubes carrying either hydraulic pressure or gasoline, and in
+       a salted state they are one of the most common serious corrosion failures
+       on otherwise sound cars. Rust here is not "structural" in the strict sense,
+       but it earns the tier because the failure mode is a brake pedal going to
+       the floor or fuel on the road. <b>Scaly, layered rust on a brake line is a
+       stop.</b> Lines can be replaced, and on a badly corroded car that is a real
+       job, not an afternoon.</p>
+  </div>
+
+  <div class="zone">
+    <div class="tstrip t3"><i class="on"></i><i class="on"></i><i class="on"></i><em>Structural</em></div>
+    <h3>Rocker panels and sills</h3>
+    <p class="where">Under the doors, along the bottom of the body</p>
+    <p>On a unibody car — which is nearly every car and most crossovers — the
+       rockers are structure. They are also boxed sections with drain holes that
+       clog, which is why they rot from the inside. Press along the underside of
+       the sill with a thumb: solid is solid, and a section that gives or crunches
+       is gone. <b>Perforation here is structural and it is also the place where
+       a car gets jacked</b>, which is how a bad rocker becomes an immediate
+       safety problem for the next person who changes a tire.</p>
+  </div>
+
+  <div class="zone">
+    <div class="tstrip t3"><i class="on"></i><i class="on"></i><i class="on"></i><em>Structural</em></div>
+    <h3>Floor pans, under the carpet</h3>
+    <p class="where">Footwells, front and rear</p>
+    <p>You cannot assess a floor from underneath alone, because undercoating and
+       road film hide the thin spots. Peel back a corner of carpet and press the
+       padding. Damp padding, a soft spot, or daylight is the end of the
+       examination. This is one of the reasons a musty cabin smell is worth
+       chasing rather than airing out.</p>
+  </div>
+
+  <div class="zone">
+    <div class="tstrip t3"><i class="on"></i><i class="on"></i><i class="on"></i><em>Structural</em></div>
+    <h3>Frame rails and subframes</h3>
+    <p class="where">The long members front and rear, and the cradle under the engine</p>
+    <p>These carry crash loads and hold the suspension and drivetrain. Surface
+       rust on a subframe is ordinary. Layered scale, a seam that has opened, or a
+       section you can compress is not. Look particularly where a rail changes
+       shape or meets a crossmember, because that is where mud and salt sit.</p>
+  </div>
+
+  <div class="zone">
+    <div class="tstrip t3"><i class="on"></i><i class="on"></i><i class="on"></i><em>Structural</em></div>
+    <h3>Suspension mounting points</h3>
+    <p class="where">Strut towers, control arm mounts, subframe bolt locations</p>
+    <p>A rusted-through mounting point means a suspension component is held by
+       metal that is no longer there. Strut towers are visible with the hood open;
+       lower mounts need the car in the air. Rust that has caused the metal around
+       a bolt to dish or crater is the specific thing you are looking for.</p>
+  </div>
+
+  <div class="zone">
+    <div class="tstrip"><i class="on"></i><i class="on"></i><i></i><em>Watch</em></div>
+    <h3>Fresh undercoating</h3>
+    <p class="where">Anywhere, and that is the point</p>
+    <p>A uniform black rubbery coating on a ten-year-old underside is not a
+       feature. It may be honest preventive work. It may also be a coat of
+       something sprayed over scale two weeks ago so that the car photographs
+       clean underneath. <b>Neither you nor we can tell which from a photograph</b>,
+       which is why the right response is to ask when it was done, by whom, and
+       what the metal looked like first.</p>
+  </div>
+
+  <h2>Two things worth confirming rather than assuming</h2>
+
+  <p>Manufacturers do sometimes issue corrosion-related recalls, service actions or
+     extended coverage for specific models and specific structures — frames,
+     subframes, brake lines. We are not going to name any from memory, because
+     these are model- and year-specific and they change. Run the VIN through the
+     NHTSA recall lookup and call a franchise dealer's service department for the
+     make in question. Both are free and both take minutes.</p>
+
+  <p>Likewise, what New Jersey's inspection does and does not examine on a passenger
+     vehicle is a question for the New Jersey Motor Vehicle Commission directly.
+     What we will say is that a car passing inspection is not the same statement as
+     a car being structurally sound, and neither of us should treat it as one.</p>
+
+  <h2>What we do</h2>
+
+  <p>We buy cars in a salt state, so every car we look at has rust and the question
+     is only which tier. Anything on the structural tier we do not retail — it goes
+     to auction with the condition disclosed, which we have written about in
+     <a href="/articles/the-car-we-sent-to-auction/">the car we sent to auction</a>.
+     What reaches the front row has its underside photographed and the corrosion
+     findings written out on the inspection sheet in plain language, including the
+     word "rust" where it applies. It is a used car in New Jersey. Pretending
+     otherwise would be a strange thing to build a business on.</p>
+
+  <p class="endnote">The severity ramp on this page is our own framework for making
+     a buying decision, not an engineering or regulatory standard. Structural
+     corrosion assessment requires the vehicle on a lift and a qualified
+     technician. Recall and coverage status is vehicle-specific — verify through
+     NHTSA and the manufacturer rather than any general source, this one included.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/what-a-lift-shows-you/">What a lift shows you
+        <span>Nose to tail underneath a car, zone by zone, with the car in the air.</span></a></li>
+      <li><a href="/articles/what-the-history-report-misses/">What the history report misses
+        <span>The damage, the water and the neglect that never generate a record.</span></a></li>
+      <li><a href="/articles/the-car-we-sent-to-auction/">The car we sent to auction
+        <span>Why a car we already owned never made it to the front row.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/rust-where-it-matters/#article",
+   "headline": "Rust, and where it actually matters",
+   "description": "Eleven underbody zones on a used car, each rated on a three-tier scale - cosmetic, watch, structural - so you know which orange patches are weather and which ones end the conversation.",
+   "url": "https://drivethrudeals.online/articles/rust-where-it-matters/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Condition",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/rust-where-it-matters.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/rust-where-it-matters/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Condition","item":"https://drivethrudeals.online/articles/condition/"},
+    {"@type":"ListItem","position":4,"name":"Rust, and where it actually matters"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

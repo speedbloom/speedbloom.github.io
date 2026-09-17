@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gap Insurance, Examined | Drive Thru Deals</title>
+<meta name="description" content="Five questions, asked in order, that decide whether gap coverage earns its price on your deal - built around one worked example where the shortfall peaks at $2,811.67.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/gap-insurance-examined/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Gap insurance, examined">
+<meta property="og:description" content="A decision flow: the conditions under which gap coverage earns its cost, and the conditions under which it is money for nothing.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/gap-insurance-examined/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/gap-insurance-examined.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/gap-insurance-examined.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Gap insurance, examined">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Money">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gap insurance, examined">
+<meta name="twitter:description" content="A decision flow: the conditions under which gap coverage earns its cost, and the conditions under which it is money for nothing.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/gap-insurance-examined.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Device: a decision flow. Five gates in sequence, each with two arms. The
+     reader walks down the chain and falls out of it the moment an arm says so. */
+  .flow{margin:30px 0 8px; counter-reset:gate}
+  .gate{margin:0 0 10px}
+  .gate > h3{
+    counter-increment:gate; margin:0 0 12px; display:flex; gap:12px;
+    align-items:flex-start; font-size:19px;
+  }
+  .gate > h3::before{
+    content:counter(gate); flex:none;
+    width:27px; height:27px; border-radius:50%;
+    border:1px solid var(--line-2); color:var(--faint);
+    font-family:var(--disp); font-weight:700; font-size:13px;
+    display:flex; align-items:center; justify-content:center;
+    margin-top:2px;
+  }
+  .arms{display:grid; gap:10px; margin-left:39px}
+  @media (min-width:640px){ .arms{grid-template-columns:1fr 1fr} }
+  .arm{
+    border:1px solid var(--line); border-left-width:3px;
+    border-radius:0 14px 14px 0; padding:14px 16px;
+    background:var(--navy-800); font-size:14.5px; line-height:1.6;
+    color:var(--muted);
+  }
+  .arm .tag{
+    display:block; font-family:var(--disp); font-weight:700; font-size:12px;
+    letter-spacing:.1em; text-transform:uppercase; margin-bottom:6px;
+  }
+  .arm.on{border-left-color:var(--lime)}
+  .arm.on .tag{color:var(--lime)}
+  .arm.off{border-left-color:var(--faint)}
+  .arm.off .tag{color:var(--faint)}
+  .arm p{margin:0}
+  .arm b{color:var(--white); font-weight:600}
+  .link{
+    margin:0 0 26px 39px; padding-top:12px;
+    font-size:12.5px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--faint);
+  }
+  .gate:last-of-type .link{display:none}
+
+  .worked{
+    border:1px solid var(--line-2); border-radius:18px;
+    background:var(--navy-700); padding:20px 20px 10px; margin:32px 0;
+  }
+  .worked h3{margin:0 0 4px}
+  .worked > p.sub{margin:0 0 14px; font-size:13.5px; color:var(--faint)}
+  .worked table{margin:0 0 14px; font-size:14.5px}
+  .worked th,.worked td{padding:9px 10px}
+  .worked td:not(:first-child),.worked th:not(:first-child){
+    text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap;
+  }
+  .worked td:first-child{color:var(--white)}
+  .worked .peak td{color:var(--white); font-weight:600}
+  .worked td.up{color:#FF8F87}
+  .worked td.dn{color:var(--lime)}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/money/">Money</a>
+  </div>
+
+  <div class="kicker">Money</div>
+  <h1>Gap insurance, examined</h1>
+  <p class="standfirst">It is sold as a reflex and refused as a reflex, and both
+     reflexes are wrong about half the time. Gap coverage is a bet on one specific
+     number — the distance between what a car is worth and what is owed on it —
+     and that number is knowable before you decide.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>5 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Here is the mechanism, stripped of the sales language. If a financed car is
+     stolen or damaged beyond repair, an auto policy is written to pay out some
+     measure of the car's value at the moment of the loss — not the loan balance.
+     If the balance is larger than that payout, the difference is still owed, on a
+     car that no longer exists. Gap coverage is a product that pays that
+     difference.</p>
+
+  <p>So the whole question is: on your deal, how big is that difference, for how
+     long, and what is the coverage being charged for it? Five gates, in order.
+     Walk out of the chain the moment an arm sends you out.</p>
+
+  <div class="flow">
+
+    <div class="gate">
+      <h3>Is there a gap at all?</h3>
+      <div class="arms">
+        <div class="arm on"><span class="tag">Yes — continue</span>
+          <p>The balance on day one is above what the car would fetch. This is
+             normal when tax and fees are financed, when the down payment is small,
+             or when a prior loan was rolled in.</p></div>
+        <div class="arm off"><span class="tag">No — stop here</span>
+          <p>You paid cash, or put enough down that the balance started under the
+             car's value. There is nothing for the product to cover. <b>Decline
+             it.</b></p></div>
+      </div>
+      <p class="link">then</p>
+    </div>
+
+    <div class="gate">
+      <h3>How large does it get, and when does it close?</h3>
+      <div class="arms">
+        <div class="arm on"><span class="tag">Thousands, for years</span>
+          <p>Long term, little down, tax and fees financed. The gap widens before
+             it narrows. This is the case the product was built for.</p></div>
+        <div class="arm off"><span class="tag">Hundreds, for months</span>
+          <p>Short term, real money down. The gap closes early and never gets
+             large. <b>The exposure may be smaller than the premium.</b></p></div>
+      </div>
+      <p class="link">then</p>
+    </div>
+
+    <div class="gate">
+      <h3>Could you write that check today?</h3>
+      <div class="arms">
+        <div class="arm on"><span class="tag">No</span>
+          <p>Insurance exists to convert a loss you cannot absorb into a cost you
+             can. If the shortfall would go on a credit card, that is precisely the
+             loss worth insuring.</p></div>
+        <div class="arm off"><span class="tag">Yes, comfortably</span>
+          <p>Then you are deciding whether to pay someone to carry a risk you can
+             already carry. Sometimes worth it for the certainty. Often not.</p></div>
+      </div>
+      <p class="link">then</p>
+    </div>
+
+    <div class="gate">
+      <h3>What does this specific contract say?</h3>
+      <div class="arms">
+        <div class="arm on"><span class="tag">You have read it</span>
+          <p>Check the term length, whether it covers your auto policy's
+             deductible, how it treats a loan you paid ahead on, whether it is
+             cancelable for a partial refund, and what happens if you sell the car
+             early. These vary contract to contract — we will not tell you what
+             yours says.</p></div>
+        <div class="arm off"><span class="tag">You have not</span>
+          <p>Then you do not yet know what you are buying. <b>Do not sign it in
+             the finance office at the end of a four-hour day.</b> Ask for the
+             form, take it out to the car, read it.</p></div>
+      </div>
+      <p class="link">then</p>
+    </div>
+
+    <div class="gate">
+      <h3>Where is it cheapest?</h3>
+      <div class="arms">
+        <div class="arm on"><span class="tag">Compare before you sign</span>
+          <p>The same protection is sold by auto insurers, by some credit unions
+             and banks, and in the finance office. Prices and terms differ. Call
+             your own insurer and ask what they charge to add it — that is a
+             two-minute phone call that happens before, not after.</p></div>
+        <div class="arm off"><span class="tag">Rolled into the loan</span>
+          <p>A premium added to the amount financed is itself financed. You then
+             pay interest on it for the life of the loan, and it slightly widens
+             the very gap it covers.</p></div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>What the gap looks like when it's real</h2>
+
+  <p>Gate two is the one that decides most deals, so here it is with numbers. One
+     car, financed the way that produces a genuine gap: nothing down, everything
+     rolled in, a long term.</p>
+
+  <div class="worked">
+    <h3>The deal</h3>
+    <p class="sub">Vehicle $23,000.00 · NJ sales tax at 6.625% $1,523.75 · title,
+       registration and documentary fee $310.00 · out the door $24,833.75 · nothing
+       down · illustrative APR 9.50% over 72 months · payment $453.83.</p>
+    <table>
+      <thead>
+        <tr><th>Month</th><th>Loan balance</th><th>Assumed value</th><th>Shortfall</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>0</td><td>$24,833.75</td><td>$23,000.00</td><td class="up">$1,833.75</td></tr>
+        <tr><td>6</td><td>$23,259.50</td><td>$20,827.39</td><td class="up">$2,432.11</td></tr>
+        <tr><td>12</td><td>$21,608.98</td><td>$18,860.00</td><td class="up">$2,748.98</td></tr>
+        <tr class="peak"><td>16 — peak</td><td>$20,464.44</td><td>$17,652.77</td><td class="up">$2,811.67</td></tr>
+        <tr><td>24</td><td>$18,064.15</td><td>$15,465.20</td><td class="up">$2,598.95</td></tr>
+        <tr><td>36</td><td>$14,167.54</td><td>$12,681.46</td><td class="up">$1,486.08</td></tr>
+        <tr><td>46</td><td>$10,626.51</td><td>$10,748.49</td><td class="dn">closed</td></tr>
+        <tr><td>48</td><td>$9,884.18</td><td>$10,398.80</td><td class="dn">-$514.62</td></tr>
+      </tbody>
+    </table>
+    <p class="sub">Balances are from a full 72-month amortization schedule at the
+       stated illustrative rate. Values assume the car loses 18% of its worth each
+       year, smoothly — an assumption chosen to draw the line, not a forecast.</p>
+  </div>
+
+  <p>Read the shortfall column. It gets <em>worse</em> for sixteen months before it
+     gets better, peaking at <strong>$2,811.67</strong>, and it does not close
+     until month 46 — nearly four years into a six-year loan. For 45 of the 72
+     months on this contract, a total loss ends with the buyer owing money on a car
+     they no longer have.</p>
+
+  <p>And the exposure is slightly larger than the shortfall column suggests, because
+     an auto policy is written with a deductible. If yours is $500, the month-18
+     exposure on this deal is closer to <strong>$3,300.03</strong> than to
+     $2,800.03 — unless the gap contract covers the deductible, which some do and
+     some don't. That is gate four, and it is answered by reading, not by asking us.</p>
+
+  <h2>Now run the other deal</h2>
+
+  <p>Same reasoning, different inputs: $4,500 down on a car around $17,000, financed
+     over 60 months. Under the same assumption that deal is
+     <a href="/articles/the-down-payment-question/">never upside down at all</a> —
+     the balance starts below the value and stays there. Gate one ends it. Whatever
+     the finance office charges for gap coverage on that deal, it is buying
+     protection against an event the arithmetic has already ruled out.</p>
+
+  <p>Same product. Same price, probably. Completely different value, decided
+     entirely by a down payment and a term that were chosen an hour earlier.</p>
+
+  <h2>What we do about it here</h2>
+
+  <p>We don't sell it. We're a six-car lot with no finance office and no product
+     menu, so there is nothing in this for us either way — which is the only reason
+     an article like this one is worth reading from a dealer.</p>
+
+  <p>What we will do is run the gap for you on paper before you decide: the balance
+     schedule against a value assumption you pick, so you can see whether there is
+     anything to insure. Then call your own insurer and ask their price. If the
+     numbers say buy it, buy it. If they say gate one, keep the money.</p>
+
+  <div class="note">
+    <p><b>One thing that is easy to get wrong.</b> Gap coverage protects the
+       <b>lender's</b> position and, through it, yours. It is not a substitute for
+       comprehensive and collision coverage — it only pays what is left after that
+       policy pays. Dropping either one does not leave the other standing.</p>
+  </div>
+
+  <p class="endnote">Nothing on this page describes what any insurer, lender or gap
+     administrator actually covers, charges or requires; those terms vary by
+     contract and by company, and the only reliable source is the document in front
+     of you. Rates and values here are illustrative, computed to the cent from a
+     full amortization schedule and a stated depreciation assumption, and are not
+     offers, quotes or predictions. Nothing here is financial or insurance advice.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/negative-equity-drawn/">Negative equity, drawn
+        <span>The same two lines, plotted, with the gap between them shaded in.</span></a></li>
+      <li><a href="/articles/the-down-payment-question/">How much to put down
+        <span>Three down payments on one car, followed to their consequences.</span></a></li>
+      <li><a href="/articles/dealer-speak-decoded/">Dealer-speak, decoded
+        <span>Four-square, pack, holdback, spot delivery - the vocabulary, defined plainly.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/gap-insurance-examined/#article",
+   "headline": "Gap insurance, examined",
+   "description": "Five questions, asked in order, that decide whether gap coverage earns its price on your deal - built around one worked example where the shortfall peaks at $2,811.67.",
+   "url": "https://drivethrudeals.online/articles/gap-insurance-examined/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Money",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/gap-insurance-examined.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/gap-insurance-examined/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Money","item":"https://drivethrudeals.online/articles/money/"},
+    {"@type":"ListItem","position":4,"name":"Gap insurance, examined"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>New vs Used, Three Years In | Drive Thru Deals</title>
+<meta name="description" content="A month-by-month cash timeline over 36 months, new car beside used car, with every assumption stated - and the one number we refuse to invent left for you to fill in.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/new-vs-used-three-years-in/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="New vs used, three years in">
+<meta property="og:description" content="Thirty-six months of cash, side by side, with every assumption stated and one number left blank on purpose.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/new-vs-used-three-years-in/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/new-vs-used-three-years-in.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/new-vs-used-three-years-in.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - New vs used, three years in">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Buying">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="New vs used, three years in">
+<meta name="twitter:description" content="Thirty-six months of cash, side by side, with every assumption stated and one number left blank on purpose.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/new-vs-used-three-years-in.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Device: a 36-month timeline on a rail. Events hang off month markers with
+     both columns shown; each anniversary posts a cumulative bar. */
+  .tl{position:relative; margin:32px 0; padding-left:62px}
+  .tl::before{
+    content:""; position:absolute; left:26px; top:6px; bottom:6px;
+    width:2px; background:var(--line-2);
+  }
+  .ev{position:relative; padding:0 0 20px}
+  .mo{
+    position:absolute; left:-62px; top:0; width:52px; text-align:right;
+    font-family:var(--disp); font-weight:700; font-size:11px;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--faint);
+    font-variant-numeric:tabular-nums;
+  }
+  .ev::before{
+    content:""; position:absolute; left:-39px; top:5px;
+    width:9px; height:9px; border-radius:50%;
+    background:var(--navy-900); border:2px solid var(--line-2);
+  }
+  .ev.big::before{background:var(--lime); border-color:var(--lime)}
+  .cols{display:grid; grid-template-columns:1fr; gap:9px}
+  @media (min-width:600px){ .cols{grid-template-columns:1fr 1fr; gap:12px} }
+  .cell{
+    border:1px solid var(--line); border-radius:11px; padding:11px 13px;
+    background:var(--navy-850);
+  }
+  .cell.none{opacity:.5}
+  .cell .tag{
+    font-family:var(--disp); font-weight:700; font-size:9.5px;
+    letter-spacing:.15em; text-transform:uppercase; color:var(--faint);
+    display:block; margin-bottom:5px;
+  }
+  .cell.newcar .tag{color:#8FB8FF}
+  .cell.usedcar .tag{color:var(--lime)}
+  .cell .amt{
+    font-family:var(--disp); font-weight:700; font-size:18px;
+    color:var(--white); font-variant-numeric:tabular-nums; display:block;
+  }
+  .cell p{margin:4px 0 0; font-size:13.5px; line-height:1.5; color:var(--muted)}
+
+  .mile{
+    margin:6px 0 24px; padding:15px 16px; border-radius:13px;
+    background:var(--navy-700); border:1px solid var(--line-2);
+  }
+  .mile .hd{
+    font-family:var(--disp); font-weight:700; font-size:10.5px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--faint);
+    margin:0 0 11px;
+  }
+  .bar{margin:0 0 10px}
+  .bar:last-child{margin-bottom:0}
+  .bar .lab{
+    display:flex; justify-content:space-between; gap:12px;
+    font-size:13px; color:var(--muted); margin-bottom:4px;
+  }
+  .bar .lab b{color:var(--white); font-variant-numeric:tabular-nums}
+  .bar .track{height:9px; border-radius:5px; background:rgba(255,255,255,.08)}
+  .bar .fill{height:9px; border-radius:5px; background:#4B84E8}
+  .bar.u .fill{background:var(--lime)}
+
+  .assump{
+    border:1px solid var(--line); border-radius:15px; padding:18px 20px;
+    background:var(--navy-800); margin:30px 0;
+  }
+  .assump h3{margin:0 0 12px; font-size:16px}
+  .assump dl{margin:0; font-size:14.5px}
+  .assump dt{
+    font-family:var(--disp); font-weight:600; color:var(--white);
+    font-size:14px; margin-top:12px;
+  }
+  .assump dt:first-child{margin-top:0}
+  .assump dd{margin:3px 0 0; color:var(--muted); line-height:1.55}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/buying/">Buying</a>
+  </div>
+
+  <div class="kicker">Buying</div>
+  <h1>New vs used, three years in</h1>
+  <p class="standfirst">Thirty-six months of cash, the same model on both sides, laid
+     out month by month. Every figure below is arithmetic we did ourselves from
+     assumptions we state out loud — and there is one number we deliberately leave
+     blank, because inventing it is how this comparison usually goes wrong.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>The honest version of this comparison is unusual in one respect: it refuses to
+     tell you what either car is worth at the end. Resale value is the largest single
+     term in the equation, it is specific to a model and a market, and the confident
+     percentages that circulate for it are exactly the kind of number we will not
+     manufacture. So we have built the cash side completely, and then turned the
+     resale question into something you can look up in ten minutes.</p>
+
+  <div class="assump">
+    <h3>The assumptions — all chosen by us, all illustrative</h3>
+    <dl>
+      <dt>Same model, same trim, both bought outright</dt>
+      <dd>New at <b>$32,000</b> out the door. A three-year-old example of the same car at <b>$21,000</b> out the door. Round numbers picked to make the arithmetic legible.</dd>
+      <dt>Cash, not financed</dt>
+      <dd>Deliberate. Interest would add to both columns and the larger balance accrues more of it at any given rate, which would widen the gap rather than change its direction.</dd>
+      <dt>Insurance and fuel held equal</dt>
+      <dd>Same model, same driver. Premiums are quoted per vehicle and per driver by each insurer — get both quotes yourself rather than letting an assumption do the work here.</dd>
+      <dt>Routine maintenance held equal at $200 a year</dt>
+      <dd>Oil, filters, wipers. The same car needs the same things regardless of when you bought it.</dd>
+      <dt>Wear items assumed on the used car only</dt>
+      <dd>The used car arrives partway through its tires, brakes and battery. The new one does not. This is the real age difference, and it is the one we have priced.</dd>
+      <dt>A repair reserve on the used car</dt>
+      <dd><b>$1,200</b> set aside for something unbudgeted. Whatever original factory coverage a new car carries is set by the manufacturer and differs by brand and term — we have represented it as an allowance rather than stating a term we cannot verify for your car.</dd>
+    </dl>
+  </div>
+
+  <div class="tl">
+
+    <div class="ev big">
+      <span class="mo">Month 0</span>
+      <div class="cols">
+        <div class="cell newcar"><span class="tag">New</span><span class="amt">$32,000</span>
+          <p>Out the door — vehicle, tax, title, registration, fees.</p></div>
+        <div class="cell usedcar"><span class="tag">Used, 3 yrs old</span><span class="amt">$21,000</span>
+          <p>Out the door, same basis. Plus an inspection at your own shop.</p></div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <span class="mo">Month 8</span>
+      <div class="cols">
+        <div class="cell newcar none"><span class="tag">New</span><span class="amt">—</span>
+          <p>Nothing. This is what you are paying the premium for.</p></div>
+        <div class="cell usedcar"><span class="tag">Used</span><span class="amt">$220</span>
+          <p>Battery. A six-year-old car would have needed one; a three-year-old one is on borrowed time.</p></div>
+      </div>
+    </div>
+
+    <div class="ev big">
+      <span class="mo">Month 12</span>
+      <div class="cols">
+        <div class="cell newcar"><span class="tag">New — routine</span><span class="amt">$200</span></div>
+        <div class="cell usedcar"><span class="tag">Used — routine</span><span class="amt">$200</span></div>
+      </div>
+    </div>
+
+    <div class="mile">
+      <p class="hd">Cumulative at 12 months</p>
+      <div class="bar"><div class="lab"><span>New</span><b>$32,200</b></div>
+        <div class="track"><div class="fill" style="width:98.8%"></div></div></div>
+      <div class="bar u"><div class="lab"><span>Used</span><b>$21,420</b></div>
+        <div class="track"><div class="fill" style="width:65.7%"></div></div></div>
+    </div>
+
+    <div class="ev">
+      <span class="mo">Month 18</span>
+      <div class="cols">
+        <div class="cell newcar none"><span class="tag">New</span><span class="amt">—</span>
+          <p>Original tires, roughly half worn.</p></div>
+        <div class="cell usedcar"><span class="tag">Used</span><span class="amt">$900</span>
+          <p>Four tires and an alignment. The car came to you with tread left, and it ran out.</p></div>
+      </div>
+    </div>
+
+    <div class="ev">
+      <span class="mo">Month 20</span>
+      <div class="cols">
+        <div class="cell newcar none"><span class="tag">New</span><span class="amt">—</span></div>
+        <div class="cell usedcar"><span class="tag">Used</span><span class="amt">$700</span>
+          <p>Brakes — pads and rotors, one axle.</p></div>
+      </div>
+    </div>
+
+    <div class="ev big">
+      <span class="mo">Month 24</span>
+      <div class="cols">
+        <div class="cell newcar"><span class="tag">New — routine</span><span class="amt">$200</span></div>
+        <div class="cell usedcar"><span class="tag">Used — routine</span><span class="amt">$200</span></div>
+      </div>
+    </div>
+
+    <div class="mile">
+      <p class="hd">Cumulative at 24 months</p>
+      <div class="bar"><div class="lab"><span>New</span><b>$32,400</b></div>
+        <div class="track"><div class="fill" style="width:99.4%"></div></div></div>
+      <div class="bar u"><div class="lab"><span>Used</span><b>$23,220</b></div>
+        <div class="track"><div class="fill" style="width:71.2%"></div></div></div>
+    </div>
+
+    <div class="ev">
+      <span class="mo">Month 26</span>
+      <div class="cols">
+        <div class="cell newcar none"><span class="tag">New</span><span class="amt">—</span>
+          <p>Whatever factory coverage applies is doing its job, or nothing has happened yet.</p></div>
+        <div class="cell usedcar"><span class="tag">Used</span><span class="amt">$1,200</span>
+          <p>The reserve, spent. A wheel bearing and a sensor, in our illustration — the unbudgeted thing that is the real argument against a used car.</p></div>
+      </div>
+    </div>
+
+    <div class="ev big">
+      <span class="mo">Month 36</span>
+      <div class="cols">
+        <div class="cell newcar"><span class="tag">New — routine</span><span class="amt">$200</span></div>
+        <div class="cell usedcar"><span class="tag">Used — routine</span><span class="amt">$200</span></div>
+      </div>
+    </div>
+
+    <div class="mile">
+      <p class="hd">Cumulative at 36 months — total cash out</p>
+      <div class="bar"><div class="lab"><span>New</span><b>$32,600</b></div>
+        <div class="track"><div class="fill" style="width:100%"></div></div></div>
+      <div class="bar u"><div class="lab"><span>Used</span><b>$24,620</b></div>
+        <div class="track"><div class="fill" style="width:75.5%"></div></div></div>
+    </div>
+
+  </div>
+
+  <h2>The number we won't invent</h2>
+
+  <p>Cash out over three years: <strong>$32,600 against $24,620</strong>, a
+     difference of <strong>$7,980</strong>. The used car spent more on everything
+     except the thing that mattered, and still finished eight thousand dollars ahead.</p>
+
+  <p>But at month 36 you own two different cars. The new one is now three years old.
+     The used one is six. One of them is worth more than the other, and that
+     difference is the missing term. So instead of a percentage, here is the test:</p>
+
+  <blockquote>
+    <p>For the new car to have been the better financial decision, it has to be worth
+       at least <strong>$7,980 more</strong> at month 36 than the six-year-old car is
+       worth at the same moment.</p>
+  </blockquote>
+
+  <p>That is a question you can answer in ten minutes with a valuation site and the
+     two model years in question. Look up what a three-year-old example sells for and
+     what a six-year-old one sells for, take the difference, and compare it to
+     $7,980. If the gap is bigger, the new car won. If it is smaller, the used car
+     did. We are not going to tell you which, because the answer genuinely differs by
+     model, and any figure we published would be wrong for most readers.</p>
+
+  <h2>What this timeline does not price</h2>
+
+  <p><strong>Risk distribution.</strong> The used column has a $1,200 reserve in it
+     as a single tidy line. In reality that money arrives as a phone call on a
+     Tuesday. Two people with identical finances can feel very differently about the
+     same expected cost depending on when it lands.</p>
+
+  <p><strong>Time and attention.</strong> Inspections, a shop relationship, a
+     Saturday spent on a lift. Real costs that do not show up in dollars.</p>
+
+  <p><strong>The three-year-old car's own history.</strong> Every figure above assumes
+     a sound used example that was inspected before purchase. A used car bought
+     without that step has a completely different distribution of outcomes, and no
+     timeline can rescue it.</p>
+
+  <div class="note">
+    <p><b>Where the used case is strongest.</b> Not in the purchase price — in the
+       fact that somebody else absorbed the steepest part of the depreciation curve
+       and you inherited the car afterward. Where it is weakest is the reserve line.
+       If $1,200 arriving unannounced would be a genuine problem, that is a real
+       argument for the newer car, and it is a better argument than any of the
+       arithmetic.</p>
+  </div>
+
+  <p class="endnote">Every dollar figure on this page is arithmetic we performed
+     from assumptions we chose and stated, for illustration only. They are not
+     averages, survey results, or observed prices for any vehicle. No resale value,
+     depreciation rate, insurance premium, warranty term or financing rate is
+     asserted anywhere here — look those up for the specific cars you are comparing.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/price-not-payment/">Shopping by price, not payment
+        <span>Two buyers, one car, and the two different places the payment path and the price path end.</span></a></li>
+      <li><a href="/articles/where-you-buy-changes-what-you-pay/">Where you buy changes what you pay
+        <span>Franchise, independent, private party, online. The same car, four different deals.</span></a></li>
+      <li><a href="/articles/color-options-and-value/">Color, options, and what holds value
+        <span>Three questions that explain resale without a single invented percentage.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/new-vs-used-three-years-in/#article",
+   "headline": "New vs used, three years in",
+   "description": "A month-by-month cash timeline over 36 months, new car beside used car, with every assumption stated - and the one number we refuse to invent left for you to fill in.",
+   "url": "https://drivethrudeals.online/articles/new-vs-used-three-years-in/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Buying",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/new-vs-used-three-years-in.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/new-vs-used-three-years-in/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Buying","item":"https://drivethrudeals.online/articles/buying/"},
+    {"@type":"ListItem","position":4,"name":"New vs used, three years in"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

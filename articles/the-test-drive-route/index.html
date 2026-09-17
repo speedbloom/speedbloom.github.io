@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to Design a Test Drive Route | Drive Thru Deals</title>
+<meta name="description" content="Seven legs - parking lot, broken pavement, stop-and-go, hill, highway, empty straight, return - each chosen to make a specific fault show itself, with what a bad car does on each.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/the-test-drive-route/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="How to design a test drive route">
+<meta property="og:description" content="Seven legs, each built to make a specific fault show itself.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/the-test-drive-route/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/the-test-drive-route.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/the-test-drive-route.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - How to design a test drive route">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Condition">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to design a test drive route">
+<meta name="twitter:description" content="Seven legs, each built to make a specific fault show itself.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/the-test-drive-route.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Written as a directions sheet. Legs run in sequence, joined by a dotted
+     connector, and every leg splits the same way: what the road is for, and what
+     a bad car does on it. The reader should be able to drive off the page. */
+
+  .route{margin:36px 0}
+  .leg{position:relative; padding:0 0 8px 0}
+  .leg + .leg{margin-top:8px}
+  .leg + .leg::before{
+    content:""; display:block; height:26px; width:0; margin:0 0 14px 11px;
+    border-left:2px dotted var(--line-2);
+  }
+  .lh{
+    display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 12px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11.5px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--faint); margin-bottom:8px;
+  }
+  .lh b{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:24px; height:24px; border-radius:6px;
+    background:var(--lime); color:var(--lime-ink);
+    font-family:var(--disp); font-size:12px; font-weight:800;
+  }
+  .lh .mins{margin-left:auto; color:var(--muted)}
+  .leg h3{margin:0 0 8px; font-size:21px}
+  .leg > p{margin:0 0 14px; font-size:15.5px; line-height:1.62; color:var(--muted)}
+  .split{display:grid; grid-template-columns:1fr; gap:10px; margin-top:4px}
+  @media (min-width:620px){ .split{grid-template-columns:1fr 1fr; gap:16px} }
+  .split section{
+    padding:13px 15px; border-radius:13px;
+    background:var(--navy-800); border:1px solid var(--line);
+  }
+  .split h4{
+    margin:0 0 7px; font-family:var(--disp); font-weight:700;
+    font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--lime);
+  }
+  .split section.tells h4{color:var(--muted)}
+  .split ul{margin:0; padding-left:17px}
+  .split li{margin:0 0 6px; font-size:14.5px; line-height:1.55; color:var(--muted)}
+  .split li:last-child{margin-bottom:0}
+  .split b{color:var(--white); font-weight:600}
+  .rules{
+    margin:30px 0; padding:19px 21px; border-radius:16px;
+    background:var(--navy-700); border:1px solid var(--line-2);
+  }
+  .rules h2{margin:0 0 10px; font-size:19px}
+  .rules ol{margin:0; padding-left:20px}
+  .rules li{margin:0 0 8px; font-size:15px; line-height:1.6; color:var(--muted)}
+  .rules li:last-child{margin-bottom:0}
+  .rules b{color:var(--white)}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/condition/">Condition</a>
+  </div>
+
+  <div class="kicker">Condition</div>
+  <h1>How to design a test drive route</h1>
+  <p class="standfirst">The standard test drive — a right, a right, a right and a
+     right, ten minutes, back to the lot — is designed to be pleasant. A useful
+     one is designed to make specific faults reveal themselves, and it needs about
+     half an hour and four kinds of road. Here is the route, leg by leg.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>6 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Two things before the route. First, plan it on a map at home, before you go,
+     so that you are not navigating and evaluating at the same time. Second — and
+     this is the part that does most of the work — <strong>drive the same route on
+     every car you look at.</strong> Almost nothing on this page is judged
+     absolutely. It is judged against the last car, and you cannot do that if
+     every drive happened somewhere different.</p>
+
+  <div class="rules">
+    <h2>The conditions</h2>
+    <ol>
+      <li><b>Radio off. Windows down for the first half.</b> You are listening,
+        and a car's sounds reflect off the buildings you pass.</li>
+      <li><b>Ask the seller not to narrate.</b> Politely, once, at the start.
+        Conversation is how ten minutes pass without you noticing anything.</li>
+      <li><b>The engine starts cold</b>, and you have already watched it do that —
+        see <a href="/articles/the-cold-start/">the cold start</a>. The drive is
+        step two, not step one.</li>
+      <li><b>Bring a phone note</b> and stop twice to write in it. Impressions
+        from leg two do not survive leg five.</li>
+    </ol>
+  </div>
+
+  <div class="route">
+
+    <div class="leg">
+      <div class="lh"><b>1</b><span>Parking lot · walking pace</span><span class="mins">4 min</span></div>
+      <h3>Full lock, both directions, forward and back</h3>
+      <p>Before you go anywhere, use the empty lot. At full steering lock and
+         walking speed, the driveline and steering are under the most awkward
+         loading they ever see, and several expensive things announce themselves
+         here and nowhere else.</p>
+      <div class="split">
+        <section>
+          <h4>What this leg tests</h4>
+          <ul>
+            <li>CV joints — tight circles both ways, windows down</li>
+            <li>Power steering — for effort that varies as the wheel turns</li>
+            <li>Transmission engagement into drive and reverse</li>
+            <li>Low-speed brake noise, with the windows open</li>
+            <li>Parking brake, on a slope if the lot has one</li>
+          </ul>
+        </section>
+        <section class="tells">
+          <h4>What a bad one does</h4>
+          <ul>
+            <li>A rhythmic <b>clicking</b> that speeds up with the wheels — a CV joint</li>
+            <li>A <b>groan</b> at lock, or a heavy spot mid-rotation</li>
+            <li>A <b>delay</b> of a second or more before reverse engages, or a thump when it does</li>
+            <li>Grinding that is present at 5 mph and gone at 30</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="leg">
+      <div class="lh"><b>2</b><span>Broken pavement · 20–30 mph</span><span class="mins">5 min</span></div>
+      <h3>The worst-maintained road you can find</h3>
+      <p>Every town has one. Frost heaves, patched trenches, a railroad crossing.
+         This is the suspension and body-structure leg, and it is the reason to
+         keep the windows down and the radio off.</p>
+      <div class="split">
+        <section>
+          <h4>What this leg tests</h4>
+          <ul>
+            <li>Struts and shocks — the car should settle in one motion</li>
+            <li>Bushings, links and mounts</li>
+            <li>Interior trim and how well the car is screwed together</li>
+            <li>Whether anything in the trunk sloshes</li>
+          </ul>
+        </section>
+        <section class="tells">
+          <h4>What a bad one does</h4>
+          <ul>
+            <li><b>Clunks</b> over single bumps — usually links or bushings, cheap to find, annoying to ignore</li>
+            <li>Continued <b>float</b> after a dip, two or three oscillations</li>
+            <li>A rattle from the dash that was not there on smooth road</li>
+            <li>Steering that <b>tugs</b> at your hands over ruts</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="leg">
+      <div class="lh"><b>3</b><span>Stop and go · a commercial strip</span><span class="mins">6 min</span></div>
+      <h3>Traffic lights, on purpose</h3>
+      <p>Find the arterial with a light every block and catch all of them. Most of
+         a car's life is this, and most transmission and drivability faults live in
+         the first three gears and the first quarter of the throttle.</p>
+      <div class="split">
+        <section>
+          <h4>What this leg tests</h4>
+          <ul>
+            <li>Low-gear shift quality, both directions</li>
+            <li>Throttle response from a standstill</li>
+            <li>Brake feel at ordinary pressures</li>
+            <li>Idle quality in gear, stopped, with the air conditioning on</li>
+          </ul>
+        </section>
+        <section class="tells">
+          <h4>What a bad one does</h4>
+          <ul>
+            <li>A <b>flare</b> — engine speed rising between gears without the car accelerating</li>
+            <li>A shift you feel as a shove rather than a change</li>
+            <li>A <b>shudder</b> at light throttle around 30–45 mph</li>
+            <li>Shaking at a light that smooths out in neutral</li>
+            <li>Air conditioning that cycles on and off every few seconds</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="leg">
+      <div class="lh"><b>4</b><span>The hill · up, then down</span><span class="mins">4 min</span></div>
+      <h3>Load, heat and engine braking</h3>
+      <p>New Jersey has plenty of usable grade if you look — a long bridge
+         approach counts. Climb it at a steady speed, then come back down without
+         riding the brakes the whole way.</p>
+      <div class="split">
+        <section>
+          <h4>What this leg tests</h4>
+          <ul>
+            <li>The engine under sustained load</li>
+            <li>The transmission's willingness to pick a gear and stay in it</li>
+            <li>The cooling system, watched on the gauge</li>
+            <li>On the way down: engine braking and brake heat</li>
+          </ul>
+        </section>
+        <section class="tells">
+          <h4>What a bad one does</h4>
+          <ul>
+            <li><b>Hunting</b> — shifting up and down repeatedly on a steady climb</li>
+            <li>A temperature needle that climbs and does not come back</li>
+            <li>Loss of power that arrives after a minute rather than immediately</li>
+            <li>A hot, sharp smell at the bottom of the descent — see <a href="/articles/the-smell-test/">the smell test</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="leg">
+      <div class="lh"><b>5</b><span>Highway · on-ramp and five miles</span><span class="mins">8 min</span></div>
+      <h3>Full-throttle merge, then cruise</h3>
+      <p>Use the on-ramp properly — a real merge is the only legitimate excuse to
+         open the throttle all the way, and it is where a tired engine or a slipping
+         transmission stops hiding. Then settle at highway speed and hold it for
+         several miles, which is longer than it sounds and is the point.</p>
+      <div class="split">
+        <section>
+          <h4>What this leg tests</h4>
+          <ul>
+            <li>Full-load acceleration and upper-gear shifts</li>
+            <li>Vibration at speed — wheels, tires, driveline</li>
+            <li>Straight-line tracking with a light grip</li>
+            <li>Wind noise and door seals</li>
+            <li>Cruise control, which nobody remembers to try</li>
+          </ul>
+        </section>
+        <section class="tells">
+          <h4>What a bad one does</h4>
+          <ul>
+            <li>Engine speed <b>climbing without the car doing the same</b></li>
+            <li>A vibration that appears in a narrow speed band and then clears</li>
+            <li>A wheel-speed shimmy through the steering wheel</li>
+            <li>Whistling from a door seal — often a sign a door has been off</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="leg">
+      <div class="lh"><b>6</b><span>Empty straight · one hard stop</span><span class="mins">2 min</span></div>
+      <h3>The braking test, done safely</h3>
+      <p>An empty, flat, dry road with nobody behind you. Check the mirror, warn
+         your passenger, then brake firmly — not an emergency stop, but harder than
+         you would ever brake by accident — from about forty. Do it once.</p>
+      <div class="split">
+        <section>
+          <h4>What this leg tests</h4>
+          <ul>
+            <li>Whether the car stops straight</li>
+            <li>Pedal feel under real pressure</li>
+            <li>Rotor condition, felt rather than measured</li>
+            <li>With light fingers on the wheel for two seconds: alignment pull</li>
+          </ul>
+        </section>
+        <section class="tells">
+          <h4>What a bad one does</h4>
+          <ul>
+            <li><b>Pulls</b> to one side — a caliper or a hose, not the pads</li>
+            <li><b>Pulses</b> through the pedal — thickness variation in a rotor</li>
+            <li>A pedal that goes further than expected and feels soft</li>
+            <li>Drifts steadily one way on a flat, crowned-road-corrected straight</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <div class="leg">
+      <div class="lh"><b>7</b><span>Return · the car is now hot</span><span class="mins">3 min</span></div>
+      <h3>Park it, get out, and leave it running</h3>
+      <p>The most useful minute of the drive happens after it. The car is at full
+         operating temperature for the first time today, which is a state it was
+         not in when you arrived.</p>
+      <div class="split">
+        <section>
+          <h4>What this leg tests</h4>
+          <ul>
+            <li>Leaks that only appear hot and pressurized</li>
+            <li>Cooling fans — they should run and then stop</li>
+            <li>Smells that the engine bay was too cold to produce earlier</li>
+            <li><b>The hot restart:</b> shut it off, wait a minute, start it again</li>
+          </ul>
+        </section>
+        <section class="tells">
+          <h4>What a bad one does</h4>
+          <ul>
+            <li>Drips on fresh pavement where there were none this morning</li>
+            <li>A fan that never runs, or one that never stops</li>
+            <li>Long cranking on a hot restart when the cold start was fine</li>
+            <li>Sweet steam at the front, which is coolant and ends the visit</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Then go somewhere else</h2>
+
+  <p>A test drive is not an inspection. Everything above is what a car will tell
+     you from the driver's seat, and there is a whole second category of finding
+     that only exists with the wheels off the ground —
+     <a href="/articles/what-a-lift-shows-you/">what a lift shows you</a> covers
+     it. If the drive goes well, that is the next appointment, not the last one.</p>
+
+  <h2>Our version of this</h2>
+
+  <p>Take the car. Take it for half an hour, take it on the highway, take it past
+     your own mechanic if he is open. We are not going to ride along narrating,
+     and we are not going to hand you a pre-planned loop that happens to avoid the
+     bad pavement on Route 9. Six cars at a time means we already know what each
+     one does on every leg above, because somebody here drove it that way before it
+     went on the row — and it is all written on the inspection sheet in the window.</p>
+
+  <p class="endnote">Drive within the speed limit and within conditions; the hard
+     stop described in leg six should only be attempted on a clear, dry road with
+     no traffic behind you. This is general guidance for evaluating a vehicle, not
+     a substitute for a pre-purchase inspection by a qualified technician.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/the-cold-start/">The cold start
+        <span>Ninety seconds before the drive, watched window by window.</span></a></li>
+      <li><a href="/articles/what-a-lift-shows-you/">What a lift shows you
+        <span>Nose to tail underneath, and what to ask in each zone.</span></a></li>
+      <li><a href="/articles/questions-for-a-private-seller/">Questions for a private seller
+        <span>What to ask, in what order, and what the pauses mean.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/the-test-drive-route/#article",
+   "headline": "How to design a test drive route",
+   "description": "Seven legs - parking lot, broken pavement, stop-and-go, hill, highway, empty straight, return - each chosen to make a specific fault show itself.",
+   "url": "https://drivethrudeals.online/articles/the-test-drive-route/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Condition",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/the-test-drive-route.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/the-test-drive-route/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Condition","item":"https://drivethrudeals.online/articles/condition/"},
+    {"@type":"ListItem","position":4,"name":"How to design a test drive route"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Floorplan: The Loan on the Cars | Drive Thru Deals</title>
+<meta name="description" content="There is a second loan in every used car transaction and it isn't yours. How inventory financing works unit by unit - the draw, the held title, curtailment, the surprise audit - and what it explains about the lot you're standing on.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/floorplan/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Floorplan: the loan on the cars">
+<meta property="og:description" content="The draw, the held title, the curtailment, and the day somebody walks the lot counting VINs.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/floorplan/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="/articles/og/floorplan.jpg">
+<meta property="og:image:secure_url" content="/articles/og/floorplan.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Floorplan: the loan on the cars">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Money">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Floorplan: the loan on the cars">
+<meta name="twitter:description" content="The draw, the held title, the curtailment, and the day somebody walks the lot counting VINs.">
+<meta name="twitter:image" content="/articles/og/floorplan.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* The device is a cycle: one advance followed around the loop from draw to
+     payoff and back to available credit, each phase carrying its own failure
+     mode. Deliberately not a cost ledger - no totals anywhere on this page. */
+  .cycle{margin:34px 0}
+  .phase{
+    position:relative; border:1px solid var(--line); border-left:3px solid var(--lime);
+    border-radius:0 14px 14px 0; background:var(--navy-800);
+    padding:16px 18px; margin:0;
+  }
+  .phase h3{
+    margin:0 0 9px; font-size:17px; display:flex; align-items:baseline; gap:10px;
+    flex-wrap:wrap;
+  }
+  .phase h3 em{
+    font-style:normal; font-family:var(--body); font-weight:600; font-size:11px;
+    letter-spacing:.15em; text-transform:uppercase; color:var(--faint);
+  }
+  .phase p{margin:0 0 11px; font-size:15px; line-height:1.6; color:var(--muted)}
+  .phase p:last-child{margin-bottom:0}
+  .phase .risk{
+    display:block; font-size:13.5px; line-height:1.55; color:#FFC24D;
+    border-top:1px dashed var(--line); padding-top:10px; margin-top:12px;
+  }
+  .phase .risk b{color:#FFC24D; font-weight:600}
+  .arrow{
+    height:26px; display:flex; align-items:center; justify-content:center;
+    color:var(--faint); font-size:15px; line-height:1;
+  }
+  .loop{
+    margin-top:18px; text-align:center; font-family:var(--disp); font-weight:600;
+    font-size:13px; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--lime);
+  }
+
+  .formula{
+    background:var(--navy-700); border:1px solid var(--line-2); border-radius:16px;
+    padding:20px; margin:32px 0;
+  }
+  .formula code{
+    display:block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:15px; color:var(--white); letter-spacing:.01em;
+    padding:12px 14px; background:rgba(0,0,0,.28); border-radius:10px;
+    margin:0 0 14px; overflow-x:auto;
+  }
+  .formula p{margin:0 0 12px; font-size:14.5px; color:var(--muted)}
+  .formula p:last-child{margin-bottom:0}
+
+  .vars{margin:30px 0; border-top:1px solid var(--line-2)}
+  .vars div{
+    display:flex; gap:14px; align-items:baseline; flex-wrap:wrap;
+    padding:12px 0; border-bottom:1px solid var(--line);
+  }
+  .vars dt, .vars .k{
+    font-family:var(--disp); font-weight:600; font-size:15px; color:var(--white);
+    flex:0 0 auto; min-width:168px;
+  }
+  .vars .v{font-size:14.5px; color:var(--muted); flex:1 1 220px; line-height:1.55}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/money/">Money</a>
+  </div>
+
+  <div class="kicker">Money</div>
+  <h1>Floorplan: the loan on the cars</h1>
+  <p class="standfirst">There is a second loan involved in buying a used car and it
+     is not yours. Before any dealer arranges financing for you, somebody financed
+     the car itself — and the terms of that arrangement quietly explain the lot's
+     pricing, its patience, and how long it takes to hand you a title.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>6 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>A floorplan — sometimes called a floor plan line or inventory finance — is a
+     revolving credit line secured by the vehicles themselves. It is not one loan
+     for the business. It is a loan <em>per car</em>: you draw against the line when
+     you buy a unit, that unit carries its own balance and its own clock, and you
+     repay that specific advance when that specific car sells. Twenty cars on a lot
+     can mean twenty separate live advances with twenty different ages.</p>
+
+  <p>Floorplan lines are written by banks, by specialty finance companies, by
+     lenders affiliated with the auctions themselves, and for franchise stores
+     sometimes by a manufacturer's finance arm. Every one of them writes different
+     terms. That is not a hedge to avoid being specific — it is the most important
+     single fact about the subject, and we will come back to it.</p>
+
+  <h2>One advance, followed around the loop</h2>
+
+  <div class="cycle">
+
+    <div class="phase">
+      <h3>Draw <em>day 0</em></h3>
+      <p>You buy a car and the lender pays for it — frequently paying the auction
+         or the selling dealer directly rather than routing money through you. The
+         advance is generally a percentage of some measure of the car's value: the
+         purchase price, a book value, whichever the lender's policy uses. Whatever
+         it doesn't cover comes out of the dealer's own cash.</p>
+      <span class="risk"><b>Where it bites:</b> advance rates are not 100%. Buy a
+         car the lender values below what you paid and the shortfall is yours that
+         day, which is a quiet check on overbidding.</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="phase">
+      <h3>The title goes to the lender <em>immediately</em></h3>
+      <p>The lender secures the advance against the vehicle, which in practice means
+         it holds the title or a lien position on it, along with a trust receipt
+         naming the unit. The dealer physically possesses a car whose title it does
+         not hold free and clear.</p>
+      <span class="risk"><b>Where it bites:</b> this is the real reason a title can
+         take days after a sale. The floorplan advance has to be paid off and the
+         title released before it can be assigned to you or your lender.</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="phase">
+      <h3>Interest accrues, daily, per unit <em>every day</em></h3>
+      <p>Not monthly, not on a statement cycle you can game — daily, on each car,
+         from the day it was drawn. Many lines also carry per-unit fees at draw and
+         at each extension. Weekends count. Holidays count. The day nobody came in
+         counts.</p>
+      <span class="risk"><b>Where it bites:</b> it is small enough per day to ignore
+         and large enough per quarter to matter, which is exactly the profile of a
+         cost businesses handle badly.</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="phase">
+      <h3>Curtailment <em>on a schedule</em></h3>
+      <p>Lines typically require principal paydowns on units that haven't sold by
+         certain ages — a share of the advance at one milestone, more at the next,
+         and eventually the unit paid off entirely whether or not it has found a
+         buyer. Intervals and percentages differ from lender to lender.</p>
+      <span class="risk"><b>Where it bites:</b> this is the mechanism that turns an
+         aging car from an irritation into a cash demand on a specific date. It is
+         the hidden reason a price on a stale car moves, and it moves on the
+         lender's calendar rather than the dealer's mood.</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="phase">
+      <h3>The floor check <em>unannounced</em></h3>
+      <p>Somebody arrives, without warning, with a list of every unit the lender has
+         financed, and walks the lot matching VINs to that list. Every car must be
+         physically present, or accounted for with documentation — sold and paid
+         off, at a shop, out on a demonstration with a record.</p>
+      <span class="risk"><b>Where it bites:</b> a car that is gone and not paid off
+         is "sold out of trust," which is the single fastest way to lose a line.
+         At small-dealer scale these agreements are usually personally guaranteed,
+         so it is not only the business that is exposed.</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="phase">
+      <h3>Payoff <em>within days of the sale</em></h3>
+      <p>When the car sells, the advance is due — typically within a short window
+         after the sale, not whenever the dealer's own money arrives. That timing
+         gap is real: a financed retail sale is usually funded by the customer's
+         lender several business days after delivery, while the floorplan payoff
+         clock started at delivery.</p>
+      <span class="risk"><b>Where it bites:</b> the dealer is frequently paying off
+         a car before being paid for it, out of working capital. A thin operator
+         feels this every single week.</span>
+    </div>
+
+    <div class="loop">↻ credit becomes available again — and the cycle restarts</div>
+
+  </div>
+
+  <h2>The only arithmetic on this page</h2>
+
+  <div class="formula">
+    <code>daily carry  =  advance × annual rate ÷ 365</code>
+    <p>That is the whole calculation. We are not going to put a rate in it, because
+       floorplan pricing varies by lender, by dealer, by credit profile and by the
+       week, and a number written here would be quoted back as though it were a
+       market fact. Run it with a rate you have actually been offered.</p>
+    <p>As a purely illustrative shape: on a $20,000 advance, every full percentage
+       point of annual rate is roughly <strong>55 cents a day</strong> on that one
+       car — about $17 a month, or about $50 over a quarter. Multiply by the rate
+       you're paying, then by the number of cars, then by the number of days they
+       sit, and the significance of "it's been here a while" becomes obvious.</p>
+  </div>
+
+  <h2>What varies — which is most of it</h2>
+
+  <div class="vars">
+    <div><span class="k">Advance rate</span><span class="v">What share of the car the lender will fund, and against which value measure.</span></div>
+    <div><span class="k">Interest basis</span><span class="v">Fixed, or floating over an index; charged daily, billed monthly.</span></div>
+    <div><span class="k">Per-unit fees</span><span class="v">Origination or administration charges at draw, and sometimes at extension.</span></div>
+    <div><span class="k">Curtailment schedule</span><span class="v">When paydowns start, how large they are, and when a unit must be retired entirely.</span></div>
+    <div><span class="k">Payoff window</span><span class="v">How many days after a sale the advance is due.</span></div>
+    <div><span class="k">Audit frequency</span><span class="v">How often someone counts the cars, and what documentation satisfies an absence.</span></div>
+    <div><span class="k">Guarantees</span><span class="v">Whether individuals stand behind the line personally — at small scale, usually yes.</span></div>
+  </div>
+
+  <p>Any dealer who has a line knows all seven of their own numbers. None of them
+     are ours to publish and none of them are universal.</p>
+
+  <h2>What it explains about a lot</h2>
+
+  <p><strong>Why old cars get repriced rather than defended.</strong> The lender's
+     calendar arrives whether or not the dealer has made peace with being wrong.
+     The public form of that is a windshield number changing, which is the subject
+     of <a href="/articles/why-a-price-changes-while-it-sits/">why a price changes
+     while it sits</a>.</p>
+
+  <p><strong>Why a slow car is worse than it looks.</strong> Interest is the small
+     part. The large part is that capital is finite: money tied up in the car
+     nobody wants is money that is not available on Tuesday morning when the right
+     car crosses the block. The true cost of a stale unit is the unit you couldn't
+     buy — and on a six-car lot, one sixth of the business is standing still.</p>
+
+  <p><strong>Why "just let me take it home for the weekend" is complicated.</strong>
+     Every car on the property is on somebody's list, and that list gets checked
+     without notice. A casual arrangement that would be friendly and harmless in
+     any other retail business is, here, a compliance problem.</p>
+
+  <p><strong>Why the title conversation matters.</strong> Ask <em>is the title in
+     hand, and if not, when?</em> There are perfectly ordinary reasons for a delay —
+     a recent purchase, a trade with a lienholder, a payoff in transit. There are
+     also bad reasons, and a dealer who cannot answer plainly is telling you
+     something about the state of their line.</p>
+
+  <p>We are not describing somebody else's business here. Holding inventory on
+     borrowed money is how lots our size operate, ours included, and every pressure
+     above is one we work under. It is also a healthy one: a structure that charges
+     rent on indecision is a reasonable defense against a lot full of cars that
+     should have gone back to the auction months ago.</p>
+
+  <div class="note">
+    <p><b>If you're buying.</b> Two questions, both ordinary and both revealing:
+       <em>how long has this car been on the lot?</em> and <em>is the title in hand?</em>
+       Neither is confrontational, both have factual answers, and the manner in
+       which they are answered is worth as much as the answers.</p>
+  </div>
+
+  <p class="endnote">Floorplan terms — advance rates, interest, fees, curtailment
+     schedules, payoff windows, audit practices and guarantees — are set in
+     individual agreements and vary widely by lender and by dealer. Nothing here
+     states the policy of any particular lender, auction or finance company, and no
+     rate quoted or implied on this page should be treated as a market figure. The
+     single illustrative calculation above is arithmetic, not a quotation.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/why-a-price-changes-while-it-sits/">Why a price changes while it sits
+        <span>The cost-of-carry curve, drawn, and why a repriced car isn't a worse car.</span></a></li>
+      <li><a href="/articles/wholesale-and-retail/">Wholesale and retail are two prices
+        <span>Why the same car is worth two different numbers at the same moment.</span></a></li>
+      <li><a href="/articles/what-a-dealer-makes-on-a-used-car/">What a dealer actually makes on a used car
+        <span>The full ledger, from the auction block to the front row.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/floorplan/#article",
+   "headline": "Floorplan: the loan on the cars",
+   "description": "There is a second loan in every used car transaction and it isn't yours. How inventory financing works unit by unit - the draw, the held title, curtailment, the surprise audit - and what it explains about the lot you're standing on.",
+   "url": "https://drivethrudeals.online/articles/floorplan/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Money",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/floorplan.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/floorplan/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Money","item":"https://drivethrudeals.online/articles/money/"},
+    {"@type":"ListItem","position":4,"name":"Floorplan: the loan on the cars"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shopping by Price, Not Payment | Drive Thru Deals</title>
+<meta name="description" content="Two buyers, same car, same day. One shops for a monthly payment and one shops for a price. The two paths are followed stage by stage to the two different places they end up.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/price-not-payment/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="Shopping by price, not payment">
+<meta property="og:description" content="Two buyers, one car. The payment path and the price path, followed side by side to their different endings.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/price-not-payment/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://drivethrudeals.online/articles/og/price-not-payment.jpg">
+<meta property="og:image:secure_url" content="https://drivethrudeals.online/articles/og/price-not-payment.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - Shopping by price, not payment">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Buying">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shopping by price, not payment">
+<meta name="twitter:description" content="Two buyers, one car. The payment path and the price path, followed side by side to their different endings.">
+<meta name="twitter:image" content="https://drivethrudeals.online/articles/og/price-not-payment.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Device: two parallel paths. Each stage is a labeled band with the same
+     moment shown twice - payment path on the left, price path on the right -
+     so the divergence is read across, not down. */
+  .paths{margin:34px 0}
+  .stage{margin:0 0 20px}
+  .stage-h{
+    display:flex; align-items:baseline; gap:10px; margin:0 0 10px;
+    padding-bottom:7px; border-bottom:1px solid var(--line-2);
+  }
+  .stage-h .n{
+    font-family:var(--disp); font-weight:800; font-size:13px;
+    color:var(--lime); font-variant-numeric:tabular-nums;
+  }
+  .stage-h .t{
+    font-family:var(--disp); font-weight:600; font-size:15px;
+    letter-spacing:-.01em; color:var(--white);
+  }
+  .pair{display:grid; grid-template-columns:1fr; gap:11px}
+  @media (min-width:680px){ .pair{grid-template-columns:1fr 1fr; gap:14px} }
+  .lane{border-radius:13px; padding:15px 16px; border:1px solid var(--line)}
+  .lane.pay{background:var(--navy-850)}
+  .lane.price{background:var(--navy-700); border-color:var(--line-2)}
+  .lane .hd{
+    font-family:var(--disp); font-weight:700; font-size:10.5px;
+    letter-spacing:.14em; text-transform:uppercase; margin:0 0 7px;
+  }
+  .lane.pay .hd{color:#FF8F87}
+  .lane.price .hd{color:var(--lime)}
+  .lane p{margin:0; font-size:14.5px; line-height:1.6; color:var(--muted)}
+  .lane p + p{margin-top:8px}
+  .lane em{color:var(--white); font-style:normal; font-weight:500}
+  .ends{
+    display:grid; grid-template-columns:1fr; gap:12px; margin:34px 0;
+  }
+  @media (min-width:680px){ .ends{grid-template-columns:1fr 1fr; gap:14px} }
+  .end{
+    border:1px solid var(--line-2); border-radius:16px; padding:20px;
+    background:var(--navy-800);
+  }
+  .end .lab{
+    font-family:var(--disp); font-weight:700; font-size:10.5px;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--faint);
+    margin:0 0 9px;
+  }
+  .end h3{margin:0 0 9px; font-size:17px}
+  .end p{margin:0; font-size:14.5px; color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/buying/">Buying</a>
+  </div>
+
+  <div class="kicker">Buying</div>
+  <h1>Shopping by price, not payment</h1>
+  <p class="standfirst">Two people walk onto the same lot on the same afternoon
+     wanting the same car. One of them is shopping for a number per month. The other
+     is shopping for a number, full stop. Here is the day, stage by stage, on both
+     paths at once.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>4 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>Nobody chooses the payment path on purpose. It is chosen for you, gently, by
+     the first question you get asked, and after that everything downstream follows
+     from it. The two paths below are the same eight moments, twice.</p>
+
+  <div class="paths">
+
+    <div class="stage">
+      <div class="stage-h"><span class="n">01</span><span class="t">How the search starts</span></div>
+      <div class="pair">
+        <div class="lane pay">
+          <p class="hd">Payment path</p>
+          <p>Filters set to <em>under $400/month</em>. The listings that come back
+             are sorted by a number that does not exist yet — it depends on term,
+             rate, down payment and tax, none of which have been decided.</p>
+        </div>
+        <div class="lane price">
+          <p class="hd">Price path</p>
+          <p>Filters set to <em>under $19,000</em>. The number is a property of the
+             car. It will still mean the same thing in two weeks, at a different
+             dealership, on a different website.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-h"><span class="n">02</span><span class="t">The first question</span></div>
+      <div class="pair">
+        <div class="lane pay">
+          <p class="hd">Payment path</p>
+          <p>"What are you looking to spend a month?" Answered honestly: <em>about
+             four hundred.</em> That sentence has now set the ceiling for the entire
+             day, and it is a ceiling on comfort rather than on cost.</p>
+        </div>
+        <div class="lane price">
+          <p class="hd">Price path</p>
+          <p>Same question, different answer: <em>I'd rather settle the price of the
+             car first, then talk about how I pay for it.</em> Not confrontational.
+             It just moves the money conversation to the end.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-h"><span class="n">03</span><span class="t">What gets shown</span></div>
+      <div class="pair">
+        <div class="lane pay">
+          <p class="hd">Payment path</p>
+          <p>Cars that reach $400 a month — which, with enough term, includes cars
+             well above the price range this buyer would have set for themselves.
+             Nothing dishonest has happened. The constraint simply stretched.</p>
+        </div>
+        <div class="lane price">
+          <p class="hd">Price path</p>
+          <p>Cars under $19,000. Fewer of them, and some are plainer than what the
+             other path is being walked toward. The range does not stretch, because
+             a price cannot be stretched by a term.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-h"><span class="n">04</span><span class="t">The test drive</span></div>
+      <div class="pair">
+        <div class="lane pay">
+          <p class="hd">Payment path</p>
+          <p>Identical. Both buyers drive the same car, hear the same rattle over
+             the same expansion joint, and like it the same amount. This is the one
+             stage where the paths are genuinely the same.</p>
+        </div>
+        <div class="lane price">
+          <p class="hd">Price path</p>
+          <p>Identical — with one difference at the end. This buyer asks for the
+             out-the-door number in writing before the conversation moves inside,
+             which takes about four minutes.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-h"><span class="n">05</span><span class="t">The negotiation</span></div>
+      <div class="pair">
+        <div class="lane pay">
+          <p class="hd">Payment path</p>
+          <p>Conducted in dollars per month. Every concession is offered in the same
+             units: <em>I can get you to $389.</em> Whether that came from the price,
+             the term, the rate or the down payment is not stated, and there is no
+             way to tell from the number alone.</p>
+        </div>
+        <div class="lane price">
+          <p class="hd">Price path</p>
+          <p>Conducted in one figure: the itemized out-the-door total. Vehicle,
+             sales tax, title, registration, documentary fee. Concessions have to
+             land somewhere visible, because there is only one line that can move.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-h"><span class="n">06</span><span class="t">The trade-in</span></div>
+      <div class="pair">
+        <div class="lane pay">
+          <p class="hd">Payment path</p>
+          <p>Folded in. A better trade allowance and a firmer car price arrive
+             together as one improved monthly figure, and the two movements cancel
+             out somewhere the buyer cannot see. It feels like a win either way.</p>
+        </div>
+        <div class="lane price">
+          <p class="hd">Price path</p>
+          <p>Kept separate, deliberately. Price of the car agreed first, in writing.
+             Trade valued second, as its own number. Two transactions, each of which
+             can be checked against the outside world.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-h"><span class="n">07</span><span class="t">The finance office</span></div>
+      <div class="pair">
+        <div class="lane pay">
+          <p class="hd">Payment path</p>
+          <p>Products are offered in payment terms too: <em>the service contract only
+             adds eleven dollars a month.</em> Eleven dollars is a small number.
+             Multiplied by the term it is not a small number, and the term is rarely
+             restated at that moment.</p>
+        </div>
+        <div class="lane price">
+          <p class="hd">Price path</p>
+          <p>Same products, same room, different question: <em>what does that cost
+             in total, and what does it cover?</em> Some of them survive the
+             question. That is the point — the good ones do.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="stage-h"><span class="n">08</span><span class="t">Signing</span></div>
+      <div class="pair">
+        <div class="lane pay">
+          <p class="hd">Payment path</p>
+          <p>The payment matches what was promised. It genuinely does. The amount
+             financed, the term and the total of payments are all printed on the
+             contract, and they are being read for the first time at the end of a
+             four-hour day.</p>
+        </div>
+        <div class="lane price">
+          <p class="hd">Price path</p>
+          <p>The contract is compared to the written out-the-door sheet from stage
+             four. Two numbers, one comparison, about ninety seconds. Either they
+             agree or there is a conversation to have.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Where the two paths end</h2>
+
+  <div class="ends">
+    <div class="end">
+      <p class="lab">Payment path</p>
+      <h3>A payment that fits and a total that wasn't chosen</h3>
+      <p>Everything was affordable at every step, because affordability was the only
+         thing ever measured. The term, the total financed and the products all moved
+         to protect one number, and that number was met.</p>
+    </div>
+    <div class="end">
+      <p class="lab">Price path</p>
+      <h3>A price that was chosen and a payment that followed from it</h3>
+      <p>Possibly a plainer car. Possibly a larger monthly figure on a shorter term.
+         But every element was decided in units the buyer could compare to something
+         outside the building.</p>
+    </div>
+  </div>
+
+  <h2>Why a payment can hide so much</h2>
+
+  <p>Because it is an output of four inputs, and you are usually shown only the
+     output. Take one piece of arithmetic, purely illustrative: <strong>$420 a month
+     for 60 months is $25,200 handed over. The same $420 for 84 months is
+     $35,280.</strong> That is simple multiplication and it ignores interest
+     entirely — the real gap is wider. The monthly figure is identical in both lines,
+     and it is identical in a way that feels like good news.</p>
+
+  <p>None of which makes financing a trap. Most people finance cars, we help people
+     finance cars, and a loan that fits a real budget is a perfectly sane
+     instrument. The argument here is narrower: <strong>decide what the car costs
+     before deciding how to pay for it</strong>, because those are two negotiations
+     and combining them means neither one can be checked.</p>
+
+  <div class="note">
+    <p><b>One sentence to carry in.</b> "Let's agree on the out-the-door price
+       first, and then I'm happy to talk about financing." It is polite, it is
+       normal, and it puts every stage above back on the right-hand path. Nobody at
+       a straight dealership will mind hearing it.</p>
+  </div>
+
+  <p class="endnote">The $420 illustration is arithmetic we computed for this page —
+     a multiplication chosen to make the shape of the problem legible, not a quoted
+     rate, an offer of credit, or a description of any actual loan. Terms, rates and
+     approvals are set by lenders, not by us.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/where-you-buy-changes-what-you-pay/">Where you buy changes what you pay
+        <span>Franchise, independent, private party, online. The same car, four different deals.</span></a></li>
+      <li><a href="/articles/dealer-speak-decoded/">Dealer-speak, decoded
+        <span>Twenty-two words you will hear in a car deal, defined plainly.</span></a></li>
+      <li><a href="/articles/new-vs-used-three-years-in/">New vs used, three years in
+        <span>The same thirty-six months, costed out on both sides, with the arithmetic shown.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/price-not-payment/#article",
+   "headline": "Shopping by price, not payment",
+   "description": "Two buyers, same car, same day. One shops for a monthly payment and one shops for a price. The two paths are followed stage by stage to the two different places they end up.",
+   "url": "https://drivethrudeals.online/articles/price-not-payment/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Buying",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/price-not-payment.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/price-not-payment/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Buying","item":"https://drivethrudeals.online/articles/buying/"},
+    {"@type":"ListItem","position":4,"name":"Shopping by price, not payment"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>

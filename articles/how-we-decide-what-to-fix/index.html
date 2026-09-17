@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How We Decide What to Fix | Drive Thru Deals</title>
+<meta name="description" content="A reconditioning call, taken apart. The four questions every item on a car goes through in order, applied to one composite punch list - and the rule that makes declining work expensive instead of free.">
+<link rel="canonical" href="https://drivethrudeals.online/articles/how-we-decide-what-to-fix/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#000B22">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Drive Thru Deals">
+<meta property="og:title" content="How we decide what to fix">
+<meta property="og:description" content="Four questions, in order, applied to one car's punch list - and why the declined items are the informative ones.">
+<meta property="og:url" content="https://drivethrudeals.online/articles/how-we-decide-what-to-fix/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="/articles/og/how-we-decide-what-to-fix.jpg">
+<meta property="og:image:secure_url" content="/articles/og/how-we-decide-what-to-fix.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Drive Thru Deals - How we decide what to fix">
+<meta property="article:published_time" content="2026-09-17">
+<meta property="article:section" content="Condition">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How we decide what to fix">
+<meta name="twitter:description" content="Four questions, in order, applied to one car's punch list - and why the declined items are the informative ones.">
+<meta name="twitter:image" content="/articles/og/how-we-decide-what-to-fix.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="/articles/article.css">
+<style>
+  /* Two devices, in sequence: the ordered gates that make the decision, then the
+     shop sheet those gates produce, with a verdict chip on every line. */
+  .gate{
+    margin:26px 0; padding:20px; border-radius:16px;
+    background:var(--navy-800); border:1px solid var(--line);
+  }
+  .gate .q{
+    display:block; font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--faint); margin-bottom:8px;
+  }
+  .gate h3{
+    margin:0 0 12px; font-size:clamp(19px,3.4vw,23px); font-weight:700;
+    letter-spacing:-.02em; color:var(--white);
+  }
+  .gate p{margin:0 0 12px; font-size:15.5px}
+  .gate p:last-child{margin-bottom:0}
+  .gate .verdict{
+    margin-top:14px; padding-top:12px; border-top:1px solid var(--line);
+    font-size:14.5px; color:var(--muted);
+  }
+  .gate .verdict b{color:var(--lime)}
+
+  .sheet{
+    margin:34px 0; border:1px solid var(--line-2); border-radius:18px;
+    overflow:hidden; background:var(--navy-850);
+  }
+  .sheet .hd{
+    padding:14px 18px; border-bottom:1px solid var(--line-2);
+    font-family:var(--disp); font-weight:700; font-size:13px;
+    letter-spacing:.12em; text-transform:uppercase; color:var(--muted);
+  }
+  .row{padding:15px 18px; border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:0}
+  .row .top{
+    display:flex; gap:12px; align-items:baseline; justify-content:space-between;
+    flex-wrap:wrap;
+  }
+  .row .item{
+    font-family:var(--disp); font-weight:600; font-size:16px; color:var(--white);
+    flex:1 1 auto;
+  }
+  .row .meas{
+    display:block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:12.5px; color:var(--faint); font-weight:400; margin-top:3px;
+    letter-spacing:.01em;
+  }
+  .v{
+    flex:0 0 auto; font-family:var(--disp); font-weight:700; font-size:10.5px;
+    letter-spacing:.13em; text-transform:uppercase; padding:5px 10px;
+    border-radius:999px; white-space:nowrap;
+  }
+  .v-fix{background:rgba(100,220,60,.14); color:var(--lime); border:1px solid rgba(100,220,60,.35)}
+  .v-note{background:rgba(255,194,77,.12); color:#FFC24D; border:1px solid rgba(255,194,77,.34)}
+  .v-no{background:rgba(255,143,135,.11); color:#FF8F87; border:1px solid rgba(255,143,135,.32)}
+  .row p{margin:10px 0 0; font-size:14.5px; line-height:1.58; color:var(--muted)}
+
+  .never{
+    margin:34px 0; padding:20px 22px; border-radius:16px;
+    border:1px solid rgba(255,143,135,.3); background:rgba(255,143,135,.05);
+  }
+  .never h3{margin:0 0 12px; color:#FF8F87}
+  .never ul{margin:0; padding-left:20px; font-size:15px; line-height:1.6; color:var(--muted)}
+  .never li{margin-bottom:10px}
+  .never li:last-child{margin-bottom:0}
+  .never b{color:var(--white)}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <a href="/" aria-label="Drive Thru Deals - home">
+    <img src="/img/logo.png" srcset="/img/logo.png 900w, /img/logo@2x.png 1800w" sizes="124px"
+         width="900" height="294" alt="Drive Thru Deals">
+  </a>
+  <nav>
+    <a href="/articles/">Articles</a>
+    <a href="/#stock">Inventory</a>
+    <a class="cta" href="/#visit">Visit the lot</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <div class="crumb">
+    <a href="/">Home</a> › <a href="/articles/">Articles</a> › <a href="/articles/condition/">Condition</a>
+  </div>
+
+  <div class="kicker">Condition</div>
+  <h1>How we decide what to fix</h1>
+  <p class="standfirst">A car comes off the truck with a list, and almost none of the
+     decisions on it are "is this broken." They're "who is going to be driving this
+     in March, and what has to be true for that to go well." Here is the actual
+     order the questions get asked in — and one composite car's sheet, decision by
+     decision.</p>
+
+  <div class="byline">
+    <span>Drive Thru Deals</span> · <span>September 17, 2026</span> · <span>6 min read</span>
+  </div>
+
+  <div class="body">
+
+  <p>The car below is a composite: the items, measurements and calls are
+     representative of how a reconditioning morning runs on a lot this size, not a
+     transcript of one vehicle's service order. The process, though, is exactly the
+     process.</p>
+
+  <p>One thing to say before the gates. Reconditioning money comes straight out of
+     the car's gross profit, and the person deciding whether the work is necessary
+     is the person whose money it is. That conflict is ours, and it runs opposite to
+     a customer-pay shop's — see
+     <a href="/articles/how-service-departments-make-money/">how service departments
+     make money</a>. The gates exist partly to keep it from doing the deciding.</p>
+
+  <h2>The four gates, in order</h2>
+
+  <div class="gate">
+    <span class="q">Gate one</span>
+    <h3>Is it safety?</h3>
+    <p>Brakes, tires, steering, suspension, lights, wipers, restraint systems,
+       anything that bears on stopping or staying pointed where it's aimed, and
+       anything that has to pass New Jersey's inspection.</p>
+    <p>There is no judgment at this gate, which is the point of putting it first.
+       An item that lands here is done at whatever it costs, and if that ruins the
+       car's economics, the conclusion is that we made a bad buy — not that the
+       item is optional.</p>
+    <div class="verdict"><b>Rule:</b> safety items are never a pricing decision.
+       If the arithmetic and the brake job disagree, the arithmetic is wrong.</div>
+  </div>
+
+  <div class="gate">
+    <span class="q">Gate two</span>
+    <h3>Does it do what it's supposed to do?</h3>
+    <p>Air conditioning, heat, windows, locks, mirrors, the backup camera, the
+       stereo, every warning light, the second key. Not safety — function.</p>
+    <p>Anything here gets one of two outcomes and never a third: repaired, or
+       written on the published inspection in plain language before a price is set.
+       "The passenger window is slow" is an acceptable thing for a car to have. It
+       is not an acceptable thing to discover in a parking garage.</p>
+    <div class="verdict"><b>Rule:</b> broken is allowed. Undisclosed is not.</div>
+  </div>
+
+  <div class="gate">
+    <span class="q">Gate three</span>
+    <h3>Does it become a problem on the next owner's watch?</h3>
+    <p>The gate with real judgment in it. Items that work today but are near the
+       end of their service life: a battery that load-tests marginal, a belt
+       cracked across the ribs, a tire at the wear bars, a seal weeping without
+       dripping.</p>
+    <p>The test we apply out loud: <em>if this car is driven twelve thousand miles
+       over the next year, does this item become a roadside event or a large
+       bill?</em> If yes, it gets done now. If it degrades slowly and announces
+       itself first, it gets measured, written down, and priced in.</p>
+    <div class="verdict"><b>Rule:</b> anything that fails without warning gets
+       replaced. Anything that fails with warning gets documented.</div>
+  </div>
+
+  <div class="gate">
+    <span class="q">Gate four</span>
+    <h3>Is it cosmetic?</h3>
+    <p>Mostly, the answer is that we don't. Cosmetic work is the most satisfying
+       money a dealer spends and frequently the least useful. A scuff buffed out, a
+       trim clip, a headlight restoration, a proper interior clean — cheap, honest,
+       done. A repainted panel is a different category: it permanently changes what
+       a paint gauge reads on that car, for every future buyer, in exchange for a
+       cosmetic gain today.</p>
+    <p>So a bumper with a real scrape gets photographed rather than sprayed, and the
+       price reflects it. The buyer keeps the option to fix it, and keeps a car
+       whose panels still read like a car nobody has repainted.</p>
+    <div class="verdict"><b>Rule:</b> we don't buy a nicer photograph with a
+       permanent change to the car's history.</div>
+  </div>
+
+  <h2>One car's sheet</h2>
+
+  <p>Composite crossover, four years old, mid-mileage, bought at auction and on the
+     lift the next morning. Twelve of the findings and what happened to each.</p>
+
+  <div class="sheet">
+    <div class="hd">Reconditioning calls — composite</div>
+
+    <div class="row">
+      <div class="top"><span class="item">Front brake pads<span class="meas">4.5 mm remaining · rotors within spec</span></span><span class="v v-fix">Fix</span></div>
+      <p>Gate one. Pads replaced; rotors machined rather than replaced, because the
+         measurement supported it.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Rear brake pads<span class="meas">7 mm remaining</span></span><span class="v v-note">Note</span></div>
+      <p>Plenty of life. Replacing them would look good on a list of work performed
+         and would be somebody else's money spent for our benefit.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Front tires<span class="meas">4/32 in. both · rears 7/32 in., matched date codes</span></span><span class="v v-fix">Fix</span></div>
+      <p>Both fronts, not one. A single new tire across an axle is a false economy
+         and, on some drivetrains, a mechanical problem. Rears stay, with their
+         depth written down.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Serpentine belt<span class="meas">cracking across ribs, no chunking</span></span><span class="v v-fix">Fix</span></div>
+      <p>Gate three, unambiguous. Inexpensive part; failure mode is a car stopped on
+         a shoulder with no warning, which is exactly the profile the gate is
+         built to catch.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Battery<span class="meas">load test marginal, holds surface charge</span></span><span class="v v-fix">Fix</span></div>
+      <p>It would have started every morning on our lot and failed on the first
+         genuinely cold one.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Air conditioning<span class="meas">cools, not to spec at idle</span></span><span class="v v-fix">Fix</span></div>
+      <p>Gate two. Diagnosed and repaired rather than topped off, because a system
+         that needs refrigerant has a reason for needing it, and the reason is what
+         the buyer inherits.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Oil weep, pan rail<span class="meas">damp, no accumulation, no drip on the floor</span></span><span class="v v-note">Note</span></div>
+      <p>The honest call, and the one we get asked about most. Tearing into it means
+         significant labor to chase something that may not progress for years. It is
+         measured, photographed, published, and comes with a direct suggestion: have
+         your own mechanic look at it before you buy.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Cabin and engine air filters<span class="meas">gray, restricted</span></span><span class="v v-fix">Fix</span></div>
+      <p>Cheap, visible, and the sort of thing whose absence tells a buyer how the
+         car was treated.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Windshield chip<span class="meas">passenger side, outside sweep of driver's view</span></span><span class="v v-fix">Fix</span></div>
+      <p>Repaired, not replaced. A chip repair is inexpensive and stops the crack
+         that a cold morning turns into a windshield.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Rear bumper scuff<span class="meas">approx. 4 in., paint broken, no substrate damage</span></span><span class="v v-no">Decline</span></div>
+      <p>Gate four. Photographed from the angle that shows it worst, not best, and
+         priced in. Spraying a bumper to sell a car faster is a decision the next
+         three owners live with.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Keys<span class="meas">one key, one fob</span></span><span class="v v-note">Note</span></div>
+      <p>A second key is a real cost on a modern car. Published as a known gap, so
+         it can be budgeted rather than discovered at home.</p>
+    </div>
+
+    <div class="row">
+      <div class="top"><span class="item">Aftermarket stereo<span class="meas">non-factory wiring behind dash</span></span><span class="v v-note">Note</span></div>
+      <p>Inspected for spliced or unfused connections — a safety question wearing a
+         cosmetic costume. Wiring found sound; the modification stays disclosed,
+         because a future electrical gremlin has an obvious suspect and the next
+         owner deserves to know where to look.</p>
+    </div>
+  </div>
+
+  <h2>The rule underneath all four gates</h2>
+
+  <p>Everything we decline is published. The inspection is written as the car is
+     found and goes out whole — the declined rear pads with their millimeters, the
+     weep with its photograph, the bumper, the single key. That is what makes the
+     gates real rather than decorative.</p>
+
+  <p>Declining work in private costs a dealer nothing. Declining it on a page next
+     to the price, where a buyer's own mechanic can read it, costs something every
+     time — which beats a recon budget policed by nothing but our good intentions
+     on a slow month.</p>
+
+  <div class="never">
+    <h3>Four things that never happen here</h3>
+    <ul>
+      <li><b>No repaint to hide a repair.</b> If a panel was apart, the sheet says
+        so and the gauge readings go on it.</li>
+      <li><b>No steam-cleaned engine bay before photos.</b> A degreased bay hides a
+        leak for about a month — long enough to sell the car, not long enough to be
+        honest.</li>
+      <li><b>No clearing a code to quiet a light.</b> A light that was on gets
+        diagnosed and repaired or disclosed, not reset before a test drive.</li>
+      <li><b>No tire dressing over dry rot.</b> Shine hides sidewall cracking, which
+        is exactly the thing a buyer most needs to see.</li>
+    </ul>
+  </div>
+
+  <h2>What to do with this as a buyer</h2>
+
+  <p><strong>Read the declined items, not the repaired ones.</strong> Every dealer
+     will happily list what they replaced; that list is marketing, and sometimes an
+     admission that the car needed a lot. The informative document is what was found
+     and left alone, with measurements next to it. A lot that publishes one is
+     handing you the tools to argue with them.</p>
+
+  <p>And bring your own mechanic anyway. Ours is a good sheet written by people with
+     an interest in the outcome. An hour of somebody else's lift is the cheapest
+     insurance in the transaction, and a dealer who discourages it has told you more
+     than the inspection would have.</p>
+
+  <p class="endnote">The vehicle, findings and measurements above are a composite
+     assembled to show how these calls are made, not a record of any one car's
+     service order. Thresholds and the right answer on any given item vary by
+     vehicle and by what a lift actually shows. Nothing here states a manufacturer's
+     service requirement — your owner's manual and a licensed mechanic are the
+     authorities for your car.</p>
+
+  </div>
+
+  <section class="more">
+    <h2>Related reading</h2>
+    <ul>
+      <li><a href="/articles/the-cars-we-dont-buy/">The cars we don't buy
+        <span>The rejection list, entry by entry, with the reason for each.</span></a></li>
+      <li><a href="/articles/how-service-departments-make-money/">How service departments make money
+        <span>The book hour, the parts margin, and the opposite incentive inside a recon bay.</span></a></li>
+      <li><a href="/articles/certified-pre-owned-examined/">Certified pre-owned, examined
+        <span>What the certification actually buys, and what it doesn't.</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="in">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/articles/">Articles</a>
+      <a href="/#stock">Inventory</a>
+      <a href="/#inspection">Inspection</a>
+      <a href="/#finance">Financing</a>
+      <a href="/#visit">Visit</a>
+    </div>
+    <p>Drive Thru Deals is an independent used car dealership. Nothing on this page
+       is financial advice, and no figure here is an offer of credit. &copy; 2026
+       Drive Thru Deals.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "BlogPosting",
+   "@id": "https://drivethrudeals.online/articles/how-we-decide-what-to-fix/#article",
+   "headline": "How we decide what to fix",
+   "description": "A reconditioning call, taken apart. The four questions every item on a car goes through in order, applied to one composite punch list - and the rule that makes declining work expensive instead of free.",
+   "url": "https://drivethrudeals.online/articles/how-we-decide-what-to-fix/",
+   "datePublished": "2026-09-17",
+   "dateModified": "2026-09-17",
+   "articleSection": "Condition",
+   "inLanguage": "en-US",
+   "image": "https://drivethrudeals.online/articles/og/how-we-decide-what-to-fix.jpg",
+   "author": {"@type": "Organization", "name": "Drive Thru Deals", "url": "https://drivethrudeals.online/"},
+   "publisher": {"@id": "https://drivethrudeals.online/#dealer"},
+   "mainEntityOfPage": {"@type": "WebPage", "@id": "https://drivethrudeals.online/articles/how-we-decide-what-to-fix/"}
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://drivethrudeals.online/"},
+    {"@type":"ListItem","position":2,"name":"Articles","item":"https://drivethrudeals.online/articles/"},
+    {"@type":"ListItem","position":3,"name":"Condition","item":"https://drivethrudeals.online/articles/condition/"},
+    {"@type":"ListItem","position":4,"name":"How we decide what to fix"}
+   ]
+  }
+ ]
+}
+</script>
+</body>
+</html>
