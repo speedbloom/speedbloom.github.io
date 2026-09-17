@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://speedbloom.github.io/sitemap.xml
+Sitemap: https://drivethrudeals.online/sitemap.xml

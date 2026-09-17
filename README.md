@@ -1,4 +1,4 @@
-# Speedbloom Motors
+# Drive Thru Deals
 
 Static site for an independent used-car dealership. No build step, no dependencies —
 `index.html` plus a folder of images.
@@ -19,6 +19,6 @@ All vehicle photography is public domain or CC0, so no attribution is required.
 2. Update the six `<article class="car">` blocks and the matching JSON-LD entries
 3. Add address, phone and NJ dealer licence number — the `LocalBusiness` schema has
    fields waiting for them, and NJ requires the licence number on dealer advertising
-4. Swap every absolute `https://speedbloom.github.io` URL for the live domain:
+4. Swap every absolute `https://drivethrudeals.online` URL for the live domain:
    canonical, `og:url`, `og:image`, `twitter:image`, sitemap, robots and JSON-LD
 5. Regenerate `og-image.jpg` with the dealer's name

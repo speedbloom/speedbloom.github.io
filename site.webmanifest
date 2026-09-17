@@ -1,11 +1,11 @@
 {
-  "name": "Speedbloom Motors",
-  "short_name": "Speedbloom",
+  "name": "Drive Thru Deals",
+  "short_name": "Drive Thru",
   "description": "Independent used car dealership — six hand-picked vehicles, published inspection, posted prices.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F4F7F7",
-  "theme_color": "#0E2A33",
+  "background_color": "#000B22",
+  "theme_color": "#000B22",
   "icons": [
     { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
